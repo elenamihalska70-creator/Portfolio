@@ -1,0 +1,323 @@
+/* ====== BASE ====== */
+body {
+  background-color: #F4F1FA; /* светло-сиреневый */
+  color: #2C2A3D; /* тёмно-серый с фиолетовым подтоном */
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.notice {
+  background: #aaf1dc;
+  border: 1px solid #48f4d7;
+  color: #222;
+  padding: 4px 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center; /* выравнивание по центру */
+  position: fixed; /* зафиксируем наверху */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  z-index: 9999; /* поверх всего */
+}
+body {
+  padding-top: 50px; /* чтобы текст не налезал на шапку */
+}
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #4B306A; /* тёмный сливовый */
+  margin-bottom: 0.5rem;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #8E6EBE; /* средний фиолетовый */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+header p {
+  font-size: 2rem;
+  margin: 0;
+}
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #5a2d82; /* насыщенный фиолетовый */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ====== PROJECT CARD ====== */
+.projet-card {
+  background-color: #ffffff;
+  border-left: 6px solid #8E6EBE;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(142, 110, 190, 0.1);
+}
+
+.projet-card h3 {
+  margin-top: 0;
+}
+
+.projet-card p {
+  margin: 0.5rem 0;
+}
+
+.projet-card a {
+  color: #8E6EBE;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.projet-card a:hover {
+  text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #2E1A47; /* глубокий фиолетовый */
+  color: #dcd3f2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.competences {
+  background-color: #f0f4f8;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.competences h2 {
+  font-size: 1.6rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.competences ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competences li {
+  margin: 0.5rem 0;
+  color: #4b5563;
+  font-size: 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.gallery figure {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.gallery figure:hover {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+
+.competences-list li {
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.competences-list li:hover {
+  color: #7D2D2D;
+  text-shadow: 0 0 1px #7D2D2D;
+}
+/* ===== Lightbox styles ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  overflow: auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.lightbox-content {
+  display: inline-block;
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #000;
+}
+.lightbox-controls {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 1001;
+}
+
+.lightbox-controls button {
+  background-color: #ffffffcc;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.lightbox-controls button:hover {
+  background-color: #dddddd;
+}
+/* запрет прокрутки, когда открыт лайтбокс */
+body.no-scroll { overflow: hidden; }
+
+/* центрирование изображения и мягкое масштабирование */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.95);
+  z-index: 1000;
+  padding: 40px;
+  text-align: center;
+}
+
+.lightbox-content {
+  display: inline-block;
+  max-width: 90vw;   /* чтобы не вылезало за экран */
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #000;
+  transition: transform 0.2s ease;
+}
+/* Ссылки на документы (PDF, DOC, PPT и т.п.) */
+a[href$=".pdf"],
+a[href$=".doc"],
+a[href$=".docx"],
+a[href$=".ppt"],
+a[href$=".pptx"] {
+    color: #6a0dad; /* Фирменный фиолетовый */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a[href$=".pdf"]:hover,
+a[href$=".doc"]:hover,
+a[href$=".docx"]:hover,
+a[href$=".ppt"]:hover,
+a[href$=".pptx"]:hover {
+    color: #007BFF; /* Ярко-синий при наведении */
+    text-decoration: underline;
+/* Заголовки: явные размеры + адаптивность */
+h1 { font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem); }
+h2 { font-size: clamp(1.6rem, 1.2rem + 1.0vw, 2.0rem); }
+h3 { font-size: clamp(1.3rem, 1.05rem + 0.6vw, 1.6rem); }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+/* На всякий случай — если внутри семантических секций */
+section h1, article h1, nav h1, aside h1 { font-size: inherit; }
+
+/* Чёткий цвет текста и ссылок */
+body { color:#222; }
+a { color:#3b5bdd; }
+a:hover, a:focus { color:#2b46b0; text-decoration: underline; }
+
+/* Фокус видно везде (клавиатура) */
+:focus-visible {
+  outline: 3px solid #9ACD32;  /* видимая рамка */
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Кнопки: контрастная заливка и состояние */
+button, .btn {
+  background:#3b5bdd; color:#fff; border:none;
+  padding:.6rem 1rem; border-radius:.5rem; cursor:pointer;
+}
+button:hover, .btn:hover { background:#2b46b0; }
+button:disabled, .btn:disabled { background:#9aa4d6; cursor:not-allowed; }
+/* Исправление для Lighthouse — явный размер h1 внутри семантических секций */
+section h1,
+article h1,
+nav h1,
+aside h1 {
+  font-size: 2rem;     /* или clamp(...) если хочешь адаптивность */
+  line-height: 1.2;
+}
