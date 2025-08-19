@@ -2,27 +2,35 @@
 body {
   background-color: #F4F1FA; /* светло-сиреневый */
   color: #2C2A3D; /* тёмно-серый с фиолетовым подтоном */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
-.notice {
-  background: #aaf1dc;
-  border: 1px solid #48f4d7;
-  color: #222;
-  padding: 4px 14px;
-  border-radius: 10px;
-  font-size: 1rem;
-  text-align: center; /* выравнивание по центру */
-  position: fixed; /* зафиксируем наверху */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 100%;
-  z-index: 9999; /* поверх всего */
+/* Полоса-уведомление сверху */
+.notice{
+  position: fixed;
+  top: 0; left: 0; right: 0;           /* занимает всю ширину без transform */
+  background: #aaf1dc;                 /* нежно-зелёный фон */
+  border-bottom: 1px solid #48f4d7;
+  color: #0a3d2e;                      /* более тёмный текст для контраста */
+  padding: 8px 48px 8px 14px;          /* место под кнопку справа */
+  font-size: 0.95rem;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
 }
+
+/* Кнопка закрытия */
+.notice-close{
+  position: absolute; top: 0; right: 6px;
+  height: 100%;
+  padding: 0 12px;
+  border: 0; background: transparent; color: #0a3d2e;
+  font-size: 1.25rem; line-height: 1; cursor: pointer;
+}
+.notice-close:hover, .notice-close:focus { color:#063025; }
+
 body {
   padding-top: 50px; /* чтобы текст не налезал на шапку */
 }
@@ -114,7 +122,7 @@ footer {
   margin: 2rem auto;
   max-width: 900px;
   border-radius: 8px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .competences h2 {
@@ -270,7 +278,7 @@ a[href$=".doc"],
 a[href$=".docx"],
 a[href$=".ppt"],
 a[href$=".pptx"] {
-    color: #6a0dad; /* Фирменный фиолетовый */
+    color: ; /* Фирменный фиолетовый */
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -281,7 +289,7 @@ a[href$=".doc"]:hover,
 a[href$=".docx"]:hover,
 a[href$=".ppt"]:hover,
 a[href$=".pptx"]:hover {
-    color: #007BFF; /* Ярко-синий при наведении */
+    color: #f0e6f6 ; /* Ярко-синий при наведении */
     text-decoration: underline;
 /* Заголовки: явные размеры + адаптивность */
 h1 { font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem); }
@@ -293,31 +301,55 @@ h6 { font-size: 0.875rem; }
 
 /* На всякий случай — если внутри семантических секций */
 section h1, article h1, nav h1, aside h1 { font-size: inherit; }
-
-/* Чёткий цвет текста и ссылок */
-body { color:#222; }
-a { color:#3b5bdd; }
-a:hover, a:focus { color:#2b46b0; text-decoration: underline; }
-
-/* Фокус видно везде (клавиатура) */
-:focus-visible {
-  outline: 3px solid #9ACD32;  /* видимая рамка */
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Кнопки: контрастная заливка и состояние */
-button, .btn {
-  background:#3b5bdd; color:#fff; border:none;
-  padding:.6rem 1rem; border-radius:.5rem; cursor:pointer;
-}
-button:hover, .btn:hover { background:#2b46b0; }
-button:disabled, .btn:disabled { background:#9aa4d6; cursor:not-allowed; }
-/* Исправление для Lighthouse — явный размер h1 внутри семантических секций */
+/* Явный размер заголовков (оставь только этот блок) */
 section h1,
 article h1,
 nav h1,
 aside h1 {
-  font-size: 2rem;     /* или clamp(...) если хочешь адаптивность */
+  font-size: 2rem;
   line-height: 1.2;
+}
+
+/* Футер */
+footer {
+  background: #2e014d;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* контейнер иконок */
+footer .footer-icons {
+  margin-bottom: 10px;
+}
+
+/* ссылки-иконки: сразу перекрашиваем + страхуем visited */
+footer .footer-icons a,
+footer .footer-icons a:visited {
+  color: #f0e6f6 !important;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem; /* размер иконок */
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+/* сами иконки берут цвет ссылки */
+footer .footer-icons i,
+footer .footer-icons svg {
+  color: inherit;
+  fill: currentColor; /* если где-то svg */
+}
+
+/* hover — подчёркивание и чуть ярче */
+footer .footer-icons a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* подпись внизу */
+footer p {
+  color: #f0e6f6;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }

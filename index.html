@@ -40,10 +40,20 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 
 <body>
+  <div class="notice" id="siteNotice" role="status" aria-live="polite">
+    🔧 Ce site est en cours d’enrichissement. Certaines sections seront complétées prochainement.
+    <button class="notice-close" aria-label="Fermer l’annonce">×</button>
+  </div>
+
+  <!-- дальше твой контент -->
+
+
   <!-- HERO SECTION -->
   <section id="hero">
     <h1>Olena Mykhalska</h1>
@@ -66,7 +76,7 @@
    
 <!-- COMPÉTENCES -->
 <section id="competences">
-  <h2>Compétences & réalisations</h2>
+  <h2>Compétences et réalisations</h2>
 
   <!-- COMP 1 -->
   <ul class="competences-list">
@@ -921,13 +931,19 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Me contacter</h2>
-    <p>Email : olenamykhalska@email.com</p>
-    <p>LinkedIn : <a href="https://linkedin.com" target="_blank">linkedin.com/in/olena</a></p>
+    <p>Email : <a href="mailto:elenamihalska70@email.com">elenamihalska70@email.com</a>
+    <p>
+  🌐 Retrouvez-moi sur 
+  <a href="https://www.linkedin.com/in/olena-mykhalska-90ab5730b" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+</p>
   </section>
 
   <footer>
     <p>© 2025 Olena Mykhalska – Portfolio</p>
   </footer>
+
 
   <script>
     function toggleDetails(id) {
@@ -950,6 +966,36 @@
 
 <!-- Если ещё не подключён -->
 <script src="script.js" defer></script>
+<script>
+  (function () {
+    const bar = document.getElementById('siteNotice');
+    if (!bar) return;
+
+    // если ранее закрывали — не показываем
+    if (localStorage.getItem('noticeHidden') === '1') {
+      bar.style.display = 'none';
+      return;
+    }
+
+    // добавить отступ, чтобы контент не прятался под полосой
+    function applyBodyOffset() {
+      document.body.style.paddingTop = bar.offsetHeight + 'px';
+    }
+    applyBodyOffset();
+    // на случай изменения размеров шрифта/масштаба
+    window.addEventListener('resize', applyBodyOffset);
+
+    // обработчик закрытия
+    const btn = bar.querySelector('.notice-close');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        localStorage.setItem('noticeHidden', '1');
+        bar.remove();
+        document.body.style.paddingTop = '';
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
