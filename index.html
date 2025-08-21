@@ -534,9 +534,8 @@
     <img src="image/farm_devtools_1.png" alt="Outils de développement - Inspecteur">
     <figcaption>Outils de développement – Inspecteur</figcaption>
   </figure>
-
   <figure>
-    <img src="image/farm_code_php.png" alt="Code PHP">
+    <img src="image/farm_code_PHP.png" alt="Code PHP">
     <figcaption>Code PHP</figcaption>
   </figure>
   <figure>
@@ -562,65 +561,98 @@
   <button onclick="toggleDetails('comp5')">⬅️ Revenir</button>
   </div>
 
-  <!-- COMP 6 – Base de données & back‑end -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp6')">
-      <strong>Base de données & back-end :</strong> MySQL, PDO – projet <em>La Ferme des Amandiers</em>.
-    </li>
-  </ul>
-  <div id="comp6" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Projet : La Ferme des Amandiers – base de données & back‑end</h4>
-      <h4>Base de données & back-end</h4>
-  <p>
-    🔹 Conception de la base MySQL avec plusieurs tables (produits, saisons, jours)<br>
-    🔹 Intégration des données via PDO (connexion sécurisée)<br>
-    🔹 Requêtes dynamiques pour afficher les produits selon la saison et le jour<br>
-    🔹 Site e-commerce simplifié : filtres interactifs pour les paniers de légumes
-  </p>
+<!-- COMPÉTENCE — Base de données & back‑end -->
+<ul class="competences-list">
+  <li role="button" tabindex="0" aria-controls="comp-db" aria-expanded="false"
+      onclick="toggleDetails('comp-db')" onkeypress="if(event.key==='Enter'){toggleDetails('comp-db')}">
+    <strong>Base de données & back‑end</strong> — MySQL, PDO, UML, SQLite, KPI SQL
+    <em>(projets : La Ferme des Amandiers, ArtisanConnect)</em>
+  </li>
+</ul>
 
-  <div class="gallery">
-    <!-- Résultats sur le site -->
-    <figure>
-      <img src="image/0031.png" alt="Page produits – Ferme des Amandiers">
-      <figcaption>Affichage dynamique des produits (Vue 1)</figcaption>
-    </figure>
-    <figure>
-      <img src="image/0032.png" alt="Page produits – Ferme des Amandiers">
-      <figcaption>Affichage dynamique des produits (Vue 2)</figcaption>
-    </figure>
-    <figure>
-      <img src="image/0033.png" alt="Page produits – Ferme des Amandiers">
-      <figcaption>Affichage dynamique des produits (Vue 3)</figcaption>
-    </figure>
+<div id="comp-db" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <h4>Base de données & back‑end — Projets</h4>
 
-    <!-- Partie technique -->
-    <figure>
-      <img src="image/0034.png" alt="Structure de la base MySQL">
-      <figcaption>Structure de la base MySQL</figcaption>
-    </figure>
-    <figure>
-      <img src="image/0035.png" alt="Code connexion PDO">
-      <figcaption>Connexion PDO à la base de données</figcaption>
-    </figure>
-    <figure>
-      <img src="image/0036.png" alt="Requête SQL avec PDO">
-      <figcaption>Requête SQL avec PDO pour récupérer les produits</figcaption>
-    </figure>
-  </div>
-     <a href="https://github.com/elenamihalska70-creator/fermedesamandiers" 
-   target="_blank" rel="noopener noreferrer" class="btn">
-    📂 Voir le code sur GitHub
-</a>
+  <!-- Projet 1 : La Ferme des Amandiers -->
+  <section aria-labelledby="proj-amandiers">
+    <h5 id="proj-amandiers">Projet 1 — La Ferme des Amandiers (MySQL, PDO)</h5>
+    <ul>
+      <li>Conception de la base MySQL (tables : produits, saisons, jours)</li>
+      <li>Connexion sécurisée via PDO + requêtes dynamiques (filtres saison/jour)</li>
+      <li>Catalogue type e‑commerce : filtres interactifs pour paniers de légumes</li>
+    </ul>
 
-<a href="#" class="btn" style="opacity:0.6; pointer-events:none;">
-    🌐 Voir le site en ligne (à venir)
-</a>
+    <div class="gallery">
+      <!-- Résultats sur le site -->
+      <figure>
+        <img src="image/0031.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 1">
+        <figcaption>Affichage dynamique des produits — Vue 1</figcaption>
+      </figure>
+      <figure>
+        <img src="image/0032.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 2">
+        <figcaption>Affichage dynamique des produits — Vue 2</figcaption>
+      </figure>
+      <figure>
+        <img src="image/0033.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 3">
+        <figcaption>Affichage dynamique des produits — Vue 3</figcaption>
+      </figure>
 
+      <!-- Partie technique -->
+      <figure>
+        <img src="image/0034.png" loading="lazy" alt="Schéma des tables MySQL du projet">
+        <figcaption>Structure de la base MySQL</figcaption>
+      </figure>
+      <figure>
+        <img src="image/0035.png" loading="lazy" alt="Exemple de code de connexion PDO">
+        <figcaption>Connexion PDO à la base</figcaption>
+      </figure>
+      <figure>
+        <img src="image/0036.png" loading="lazy" alt="Exemple de requête SQL exécutée via PDO">
+        <figcaption>Requête SQL via PDO (récupération produits)</figcaption>
+      </figure>
+    </div>
 
-  <p style="margin-top:1em;">
-     <a href="#" target="_blank">  🌐 Voir le site en ligne (à venir)</a>
-  </p>
-  <button onclick="toggleDetails('compBDD')">⬅️ Revenir</button>
+    <p class="actions" style="margin-top:0.75em;">
+      <a class="btn" href="https://github.com/elenamihalska70-creator/fermedesamandiers" target="_blank" rel="noopener noreferrer">📂 Code GitHub</a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">🌐 Démo en ligne (à venir)</a>
+    </p>
+  </section>
+
+  <hr style="border:none; border-top:1px solid #e5e5e5; margin:1.25em 0;">
+
+  <!-- Projet 2 : ArtisanConnect -->
+  <section aria-labelledby="proj-artisan">
+    <h5 id="proj-artisan">Projet 2 — ArtisanConnect (UML, SQLite, KPI SQL)</h5>
+    <ul>
+      <li>Modélisation UML (clients, artisans, produits, commandes, avis)</li>
+      <li>Création BDD SQLite + jeu de données simulé</li>
+      <li>Requêtes KPI : panier moyen, CA par catégorie, top produits…</li>
+    </ul>
+
+    <div class="gallery">
+      <figure>
+        <img src="image/uml.png" loading="lazy" alt="Diagramme UML des entités et relations">
+        <figcaption>Schéma UML (entités & relations)</figcaption>
+      </figure>
+      <figure>
+        <img src="image/db.png" loading="lazy" alt="Aperçu des tables peuplées dans SQLite">
+        <figcaption>SQLite — tables peuplées</figcaption>
+      </figure>
+      <figure>
+        <img src="image/kpi.png" loading="lazy" alt="Exemples de requêtes SQL pour KPI">
+        <figcaption>Extraits de requêtes KPI</figcaption>
+      </figure>
+    </div>
+
+    <p class="actions" style="margin-top:0.75em;">
+      📄 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Scripts SQL (création + KPI)</a><br>
+      📄 <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Schéma UML (PDF)</a>
+    </p>
+  </section>
+
+  <button type="button" onclick="toggleDetails('comp-db')" aria-controls="comp-db" aria-expanded="true">
+    ⬅️ Revenir
+  </button>
 </div>
 
 
@@ -687,10 +719,10 @@
   </div>
 
   <p style="margin-top:1em; font-style:italic; color:gray;">
-    🚀 Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
+     Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
   </p>
 <p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
+   <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
     Télécharger la présentation (PDF)
   </a>
   |
@@ -726,7 +758,7 @@
   🔧 Le site Portfolio est encore en cours de développement — certaines sections seront complétées prochainement.
 </p>
 
-    <h5>🖼️ Exemples :</h5>
+    <h5> Exemples :</h5>
     <div class="gallery"><!-- images à ajouter --></div>
     <button onclick="toggleDetails('comp10')">⬅️ Revenir</button>
   </div>
@@ -747,7 +779,7 @@
     🔹 Préparation des données et storytelling visuel
   </p>
 
-  <h5>🖼️ Exemples :</h5>
+  <h5> Exemples :</h5>
   <div class="gallery">
     <figure><img src="image/BD-002.png" alt="Carte des contenus par pays"><figcaption>Carte par pays</figcaption></figure>
     <figure><img src="image/BD-001.png" alt="Répartition films vs séries"><figcaption>Films vs séries</figcaption></figure>
@@ -789,7 +821,7 @@
     <li>Traçabilité : logs d’accès/modification, journal des consentements.</li>
   </ul>
 
-  <h5>🧩 Mise en œuvre</h5>
+  <h5> Mise en œuvre</h5>
   <ul>
     <li><strong>PDO préparé</strong> (anti-injection) : 
       <code>SELECT p.id, p.nom FROM produits p WHERE p.saison_id = :sid</code></li>
@@ -860,28 +892,54 @@
     <button onclick="toggleDetails('comp11')">⬅️ Revenir</button>
   </div>
 
-  <!-- COMP 12 – Sécurité digitale -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp12')">
-      <strong>Sécurité digitale :</strong> bonnes pratiques e‑commerce.
-      <span class="badge-en-cours">⏳ En cours</span>
-    </li>
+  <!-- COMP – Sécurité & RGPD (Back-end & Données) -->
+<ul class="competences-list">
+  <li onclick="return toggleDetails('compRGPDDB')">
+    <strong>Sécurité & RGPD (Back-end & Données) :</strong> gouvernance des données, conformité, sécurité applicative & BDD.
+    <span class="badge-soon">⏳ En cours</span>
+  </li>
+</ul>
+
+<div id="compRGPDDB" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <h4>Projet : Sécurité & RGPD — focalisé sur base de données</h4>
+
+  <p><strong>Objectifs principaux :</strong></p>
+  <ul>
+    <li>Schéma BDD conforme RGPD (minimisation, finalité, pseudonymisation, rétention).</li>
+    <li>Accès sécurisé : rôles, vues restreintes, sauvegardes chiffrées.</li>
+    <li>Prévention : injections SQL (requêtes préparées PDO), XSS/CSRF, gestion des secrets (.env).</li>
+    <li>Traçabilité : logs d’accès/modification, journal des consentements.</li>
   </ul>
-  <div id="comp12" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Sécurité digitale – e‑commerce</h4>
-    <p>
-      🔹 Mises à jour, backups, rôles & permissions<br>
-      🔹 HTTPS, headers sécurité, mots de passe hashés<br>
-      🔹 Prévention XSS/CSRF, honeypots anti‑spam
-    </p>
-      <div class="project-card in-progress">
-    <h3>Projet Sécurité & RGPD</h3>
-    <p>⏳ En développement – intégration prévue dans la prochaine mise à jour.</p>
+
+  <h5>Mise en œuvre</h5>
+  <ul>
+    <li><strong>PDO préparé</strong> (anti-injection) : <code>SELECT p.id, p.nom FROM produits p WHERE p.saison_id = :sid</code></li>
+    <li><strong>Hashing</strong> : <code>password_hash()</code> / <code>password_verify()</code></li>
+    <li><strong>Secrets</strong> via <code>.env</code>, <strong>CSRF token</strong></li>
+    <li><strong>Rétention</strong> & anonymisation (droit à l’oubli)</li>
+  </ul>
+
+  <h5>🖼️ Exemples</h5>
+  <div class="gallery gallery-2">
+    <figure><img src="image/rgpd_schema_bdd.png" alt="Schéma RGPD de la base"><figcaption>Schéma BDD : consentement & rétention</figcaption></figure>
+    <figure><img src="image/phpmyadmin_rgpd.png" alt="phpMyAdmin – structure & rôles"><figcaption>Structure & contrôles d’accès</figcaption></figure>
+    <figure><img src="image/pdo_prepare_sample.png" alt="PDO préparé"><figcaption>Requêtes préparées (PDO)</figcaption></figure>
+    <figure><img src="image/logs_consent.png" alt="Journal des consentements"><figcaption>Journal des consentements</figcaption></figure>
+    <figure><img src="image/backup_encrypt.png" alt="Sauvegardes chiffrées"><figcaption>Sauvegardes chiffrées / rotation</figcaption></figure>
+    <figure><img src="image/policy_retention.png" alt="Politique de rétention"><figcaption>Politique de rétention & purge</figcaption></figure>
   </div>
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter --></div>
-    <button onclick="toggleDetails('comp12')">⬅️ Revenir</button>
-  </div>
+
+  <p class="note" style="margin-top:1em;">
+    🔧 Le livrable est en cours d’assemblage (documentation & captures réelles). Cette section sera complétée prochainement.
+  </p>
+
+  <p style="margin-top:.5em;">
+    <a class="btn" style="opacity:.6; pointer-events:none;">📄 Audit & doc (à venir)</a>
+    <a class="btn" style="opacity:.6; pointer-events:none;">🌐 Démo (à venir)</a>
+  </p>
+
+  <button onclick="return toggleDetails('compRGPDDB')">⬅️ Revenir</button>
+</div>
 
   <!-- COMP 13 – Conformité RGPD (focus légal) -->
   <ul class="competences-list">
