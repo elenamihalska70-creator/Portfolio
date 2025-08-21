@@ -215,62 +215,94 @@
     
   <!-- ... твои существующие <li> ... -->
 
-  <li onclick="toggleDetails('compLooker')">
-    <strong>Analyse de performance :</strong> Looker Studio & GA – projets Éclat, Ferme.
+    <!-- COMP – Analyse & Data visualisation -->
+
+  <li onclick="toggleDetails('compVizGlobal')">
+    <strong>Analyse & Data visualisation :</strong> Looker Studio & GA – projets <em>Éclat Lifestyle, Ferme des Amandiers, ArtisanConnect</em>.
   </li>
-  <div id="compLooker" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Data analytics — Looker Studio & Google Analytics</h4>
-  <p>
-    🔹 Tableau de bord audience & engagement (Looker Studio)<br>
-    🔹 Suivi des performances publicitaires (GA/Looker)
-  </p>
 
-  <div class="gallery">
-    <figure>
-      <img src="image/page-0008.jpg" alt="Looker Studio — Audience & Engagement">
-      <figcaption>Audience & Engagement (Looker Studio)</figcaption>
-    </figure>
-    <figure>
-      <img src="image/page-0009.jpg" alt="Looker Studio — Performance publicitaire">
-      <figcaption>Performance publicitaire</figcaption>
-    </figure>
-        <figure>
-      <img src="image/page-0010.jpg" alt="Looker Studio — Performance publicitaire">
-      <figcaption>Performance publicitaire</figcaption>
-    </figure>
-        <figure>
-      <img src="image/page-0011.jpg" alt="Looker Studio — Performance publicitaire">
-      <figcaption>Performance publicitaire</figcaption>
-    </figure>
-     <figure>
-      <img src="image/page-0012.jpg" alt="Looker Studio — Performance publicitaire">
-      <figcaption>Performance publicitaire</figcaption>
-    </figure>
-     <figure>
-      <img src="image/page-0013.jpg" alt="Looker Studio — Performance publicitaire">
-      <figcaption>Performance publicitaire</figcaption>
-    </figure>
-  </div>
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
+<div id="compVizGlobal" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <h4>Analyse & Data visualisation</h4>
 
+  <!-- Section 1 : Éclat + Ferme -->
+  <section>
+    <h5>Projets Éclat Lifestyle & Ferme des Amandiers</h5>
+    <p>
+      🔹 Tableau de bord audience & engagement (Looker Studio)<br>
+      🔹 Suivi des performances publicitaires (GA/Looker)<br>
+      🔹 Analyse SEO & reporting visuel
+    </p>
 
-  <button onclick="toggleDetails('compLooker')">⬅️ Revenir</button>
+    <div class="gallery">
+      <figure>
+        <img src="image/page-0008.jpg" alt="Looker Studio — Audience & Engagement">
+        <figcaption>Audience & Engagement (Looker Studio)</figcaption>
+      </figure>
+      <figure>
+        <img src="image/page-0009.jpg" alt="Looker Studio — Performance publicitaire">
+        <figcaption>Performance publicitaire</figcaption>
+      </figure>
+      <figure>
+        <img src="image/page-0010.jpg" alt="Looker Studio — Performance publicitaire">
+        <figcaption>Performance publicitaire</figcaption>
+      </figure>
+      <figure>
+        <img src="image/page-0011.jpg" alt="Looker Studio — Performance publicitaire">
+        <figcaption>Performance publicitaire</figcaption>
+      </figure>
+      <figure>
+        <img src="image/page-0012.jpg" alt="Looker Studio — Performance publicitaire">
+        <figcaption>Performance publicitaire</figcaption>
+      </figure>
+      <figure>
+        <img src="image/page-0013.jpg" alt="Looker Studio — Performance publicitaire">
+        <figcaption>Performance publicitaire</figcaption>
+      </figure>
+    </div>
+
+    <p class="doc-links" style="margin-top:1em;">
+      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
+        Télécharger la présentation (PDF)
+      </a>
+      |
+      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
+            target="_blank" rel="noopener noreferrer">
+        Voir la présentation en ligne
+      </a>
+    </p>
+  </section>
+
+  <hr style="margin:1.5em 0; border:none; border-top:1px solid #ccc;">
+
+  <!-- Section 2 : ArtisanConnect -->
+  <section>
+    <h5>Projet ArtisanConnect</h5>
+    <p>
+      🔹 Tableau de bord interactif dans Looker Studio<br>
+      🔹 Visualisation de 6 KPI (artisans actifs, panier moyen, commandes, CA, top produits, notes)<br>
+      🔹 Outil d’aide à la décision pour le pilotage de la marketplace
+    </p>
+    <p>
+      📊 Liens vers démos Looker Studio :<br>
+      <a href="https://lookerstudio.google.com/s/mJKQ8TlTMqU" target="_blank">KPI 1 – Artisans actifs</a><br>
+      <a href="https://lookerstudio.google.com/s/vWBDcBREIMw" target="_blank">KPI 2 – Panier moyen</a><br>
+      <a href="https://lookerstudio.google.com/s/ogPl5zbtDNk" target="_blank">KPI 3 – Commandes par statut</a><br>
+      <a href="https://lookerstudio.google.com/s/r-GF4DHhC2Y" target="_blank">KPI 4 – Avis clients</a><br>
+      <a href="https://lookerstudio.google.com/s/otO_LsDmDDU" target="_blank">KPI 5 – Top produits</a><br>
+      <a href="https://lookerstudio.google.com/s/mtNAZbqmwOs" target="_blank">KPI 6 – Notes moyennes</a>
+    </p>
+  </section>
+
+  <button onclick="toggleDetails('compVizGlobal')">⬅️ Revenir</button>
 </div>
+
 
 
   <div id="compLooker" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
   <h4>Data analytics — Looker Studio & Google Analytics</h4>
 
   </ul>
+
 
   <ul class="competences-list">
   <li onclick="toggleDetails('compKPI')">
@@ -803,68 +835,7 @@
 </div>
 
 <!-- COMP – Sécurité & RGPD (Back-end & Données) -->
-<ul class="competences-list">
-  <li onclick="toggleDetails('compRGPDDB')">
-    <strong>Sécurité & RGPD (Back-end & Données) :</strong> gouvernance des données, conformité, sécurité applicative & BDD.
-    <span class="badge-soon">⏳ En cours</span>
-  </li>
-</ul>
 
-<div id="compRGPDDB" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Projet : Sécurité & RGPD — focalisé sur base de données</h4>
-
-  <p><strong>Objectifs principaux :</strong></p>
-  <ul>
-    <li>Schéma BDD conforme RGPD (minimisation, finalité, pseudonymisation, rétention).</li>
-    <li>Accès sécurisé : rôles, vues restreintes, sauvegardes chiffrées.</li>
-    <li>Prévention : injections SQL (requêtes préparées PDO), XSS/CSRF, gestion des secrets (.env).</li>
-    <li>Traçabilité : logs d’accès/modification, journal des consentements.</li>
-  </ul>
-
-  <h5> Mise en œuvre</h5>
-  <ul>
-    <li><strong>PDO préparé</strong> (anti-injection) : 
-      <code>SELECT p.id, p.nom FROM produits p WHERE p.saison_id = :sid</code></li>
-    <li><strong>Hashing</strong> des mots de passe : <code>password_hash()</code> / <code>password_verify()</code>.</li>
-    <li><strong>Secrets</strong> via <code>.env</code> (no hard-code), <strong>CSRF token</strong> для форм.</li>
-    <li><strong>Politique de rétention</strong> & suppression/anonymisation sur demande (droit à l’oubli).</li>
-  </ul>
-
-  <h5>🖼️ Exemples</h5>
-  <div class="gallery gallery-2">
-    <!-- Подставь свои файлы -->
-    <figure><img src="image/rgpd_schema_bdd.png" alt="Schéma RGPD de la base">
-      <figcaption>Schéma BDD : tables consentement & rétention</figcaption></figure>
-
-    <figure><img src="image/phpmyadmin_rgpd.png" alt="phpMyAdmin – structure & rôles">
-      <figcaption>Structure & contrôles d’accès</figcaption></figure>
-
-    <figure><img src="image/pdo_prepare_sample.png" alt="PDO préparé">
-      <figcaption>Requêtes préparées (PDO)</figcaption></figure>
-
-    <figure><img src="image/logs_consent.png" alt="Journal des consentements">
-      <figcaption>Journal des consentements</figcaption></figure>
-
-    <figure><img src="image/backup_encrypt.png" alt="Sauvegardes chiffrées">
-      <figcaption>Sauvegardes chiffrées / rotation</figcaption></figure>
-
-    <figure><img src="image/policy_retention.png" alt="Politique de rétention">
-      <figcaption>Politique de rétention & purge</figcaption></figure>
-  </div>
-
-  <p class="note" style="margin-top:1em;">
-    🔧 Le livrable est en cours d’assemblage (documentation & captures réelles). Cette section sera complétée prochainement.
-  </p>
-
-  <p style="margin-top:.5em;">
-    <a href="#" class="btn" style="opacity:.6; pointer-events:none;">📄 Audit & doc (à venir)</a>
-    <a href="#" class="btn" style="opacity:.6; pointer-events:none;">🌐 Démo (à venir)</a>
-  </p>
-
-  <button onclick="toggleDetails('compRGPDDB')">⬅️ Revenir</button>
-</div>
-
-  
   <!-- COMP 11 – Green IT & RSE -->
   <ul class="competences-list">
     <li onclick="toggleDetails('comp11')">
@@ -887,79 +858,48 @@
 
 </div>
 
-    <h5>🖼️ Exemples :</h5>
+    <h5> Exemples :</h5>
     <div class="gallery"><!-- images à ajouter --></div>
     <button onclick="toggleDetails('comp11')">⬅️ Revenir</button>
   </div>
 
   <!-- COMP – Sécurité & RGPD (Back-end & Données) -->
+   <!-- COMP – RGPD & documentation (ArtisanConnect) -->
 <ul class="competences-list">
-  <li onclick="return toggleDetails('compRGPDDB')">
-    <strong>Sécurité & RGPD (Back-end & Données) :</strong> gouvernance des données, conformité, sécurité applicative & BDD.
-    <span class="badge-soon">⏳ En cours</span>
+  <li onclick="toggleDetails('compRGPD')">
+    <strong>RGPD & documentation :</strong> Protection des données – projet <em>ArtisanConnect</em>.
   </li>
 </ul>
+<div id="compRGPD" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <h4>ArtisanConnect — RGPD & documentation</h4>
+  <p>
+    🔹 Rédaction complète d’une documentation de conformité<br>
+    🔹 Données traitées : identité, transactions, avis<br>
+    🔹 Bases légales : consentement, exécution de contrat, obligation légale<br>
+    🔹 Droits des utilisateurs : accès, rectification, effacement, opposition<br>
+    🔹 Mesures de sécurité : HTTPS/TLS, hashage bcrypt, sauvegardes, rôles & permissions<br>
+    🔹 Politique de conservation des données<br>
+    🔹 PIA (Privacy Impact Assessment)<br><br>
+    ✅ Résultat : un guide RGPD adapté à une marketplace artisanale
+  </p>
 
-<div id="compRGPDDB" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Projet : Sécurité & RGPD — focalisé sur base de données</h4>
-
-  <p><strong>Objectifs principaux :</strong></p>
-  <ul>
-    <li>Schéma BDD conforme RGPD (minimisation, finalité, pseudonymisation, rétention).</li>
-    <li>Accès sécurisé : rôles, vues restreintes, sauvegardes chiffrées.</li>
-    <li>Prévention : injections SQL (requêtes préparées PDO), XSS/CSRF, gestion des secrets (.env).</li>
-    <li>Traçabilité : logs d’accès/modification, journal des consentements.</li>
-  </ul>
-
-  <h5>Mise en œuvre</h5>
-  <ul>
-    <li><strong>PDO préparé</strong> (anti-injection) : <code>SELECT p.id, p.nom FROM produits p WHERE p.saison_id = :sid</code></li>
-    <li><strong>Hashing</strong> : <code>password_hash()</code> / <code>password_verify()</code></li>
-    <li><strong>Secrets</strong> via <code>.env</code>, <strong>CSRF token</strong></li>
-    <li><strong>Rétention</strong> & anonymisation (droit à l’oubli)</li>
-  </ul>
-
-  <h5>🖼️ Exemples</h5>
-  <div class="gallery gallery-2">
-    <figure><img src="image/rgpd_schema_bdd.png" alt="Schéma RGPD de la base"><figcaption>Schéma BDD : consentement & rétention</figcaption></figure>
-    <figure><img src="image/phpmyadmin_rgpd.png" alt="phpMyAdmin – structure & rôles"><figcaption>Structure & contrôles d’accès</figcaption></figure>
-    <figure><img src="image/pdo_prepare_sample.png" alt="PDO préparé"><figcaption>Requêtes préparées (PDO)</figcaption></figure>
-    <figure><img src="image/logs_consent.png" alt="Journal des consentements"><figcaption>Journal des consentements</figcaption></figure>
-    <figure><img src="image/backup_encrypt.png" alt="Sauvegardes chiffrées"><figcaption>Sauvegardes chiffrées / rotation</figcaption></figure>
-    <figure><img src="image/policy_retention.png" alt="Politique de rétention"><figcaption>Politique de rétention & purge</figcaption></figure>
+  <!-- Galerie avec images -->
+  <div class="gallery">
+    <figure>
+      <img src="image/RGPD1.jpg" alt="Documentation RGPD – introduction et données traitées">
+      <figcaption>Documentation RGPD – Introduction & types de données</figcaption>
+    </figure>
+    <figure>
+      <img src="image/RGPD2.jpg" alt="Documentation RGPD – droits, sécurité et conservation">
+      <figcaption>Documentation RGPD – Droits, sécurité, conservation</figcaption>
+    </figure>
   </div>
 
-  <p class="note" style="margin-top:1em;">
-    🔧 Le livrable est en cours d’assemblage (documentation & captures réelles). Cette section sera complétée prochainement.
+  <p style="margin-top:1em;">
+      <a href="https://docs.google.com/document/d/1Ih1_00DKwYdZ6EwTvevMp0oFo8_3N0W0/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Documentation RGPD (PDF)</a>
   </p>
-
-  <p style="margin-top:.5em;">
-    <a class="btn" style="opacity:.6; pointer-events:none;">📄 Audit & doc (à venir)</a>
-    <a class="btn" style="opacity:.6; pointer-events:none;">🌐 Démo (à venir)</a>
-  </p>
-
-  <button onclick="return toggleDetails('compRGPDDB')">⬅️ Revenir</button>
+  <button onclick="toggleDetails('compRGPD')">⬅️ Revenir</button>
 </div>
-
-  <!-- COMP 13 – Conformité RGPD (focus légal) -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp13')">
-      <strong>Conformité RGPD :</strong> consentement, données, mentions légales.
-       <span class="badge-en-cours">⏳ En cours</span>
-    </li>
-  </ul>
-  <div id="comp13" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Conformité RGPD – gouvernance des données</h4>
-    <p>
-      🔹 Cartographie des traitements & registre<br>
-      🔹 Consentement granulaire & droit d’accès/suppression<br>
-      🔹 Clauses légales & conservation limitée
-    </p>
-    <p>⏳ En développement – intégration prévue dans la prochaine mise à jour.</p>
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter --></div>
-    <button onclick="toggleDetails('comp13')">⬅️ Revenir</button>
-  </div>
 
   <!-- COMP 14 – Analyse comportementale & IA -->
   <ul class="competences-list">
@@ -971,20 +911,21 @@
   <div id="comp14" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
     <h4>Analyse comportementale & IA</h4>
     <p>
-      🔹 Parcours utilisateurs & heatmaps (concepts)<br>
-      🔹 Rédaction/UX assistées par IA (prompts, itérations)<br>
-      🔹 Charte d’usage éthique & conformité
+    🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
+    🔹 Réalisée dans Jupyter Notebook<br>
+    🔹 Préparation intégration API Mistral<br>
+    🔹 Permet d’identifier rapidement la satisfaction et les points faibles
     </p>
+      <p>
+     <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Notebook d’analyse IA</a>
+  </p>
     <p>⏳ En développement – intégration prévue dans la prochaine mise à jour.</p>
-    <h5>🖼️ Exemples :</h5>
+    <h5> Exemples :</h5>
     <div class="gallery"><!-- images à ajouter --></div>
-    <button onclick="toggleDetails('comp14')">⬅️ Revenir</button>
-  </div>
+   
   </section>
+
   <!-- ========= FIN DES AJOUTS ========= -->
-
-
-
 
   <!-- CONTACT -->
   <section id="contact">
