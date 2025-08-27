@@ -73,50 +73,81 @@
   </section>
 
   <!-- COMPÉTENCES -->
-   
-<!-- COMPÉTENCES -->
-<section id="competences">
-  <h2>Compétences et réalisations</h2>
-
-  <!-- COMP 1 -->
+<!-- ================= COMPÉTENCES (CLEAN) ================= -->
+<section id="competences" aria-labelledby="comp-title">
+  <h2 id="comp-title">Compétences & réalisations</h2>
+  
+     <!-- 1) Design & Front-end -->
   <ul class="competences-list">
-    <li onclick="toggleDetails('comp1')">
-      <strong>UI/UX Design :</strong> création de maquettes responsives dans Figma pour un site de restaurants – projet <em>OhMyFood</em>.
+    <li role="button" tabindex="0" aria-controls="c-design" aria-expanded="false"
+        onclick="toggleDetails('c-design')"
+        onkeypress="if(event.key==='Enter'){toggleDetails('c-design')}">
+      <strong>Design & Front‑end</strong> — UI/UX, intégration, accessibilité
     </li>
   </ul>
-  <div id="comp1" class="details" style="display:none; padding: 1em; border-left: 3px solid #7D2D2D;">
-    <h4>Projet : OhMyFood + Communication bénévole</h4>
-    <p>
-      🔹 <strong>Design complet sur Figma, réalisé de zéro</strong> : wireframe, logo, maquette responsive d’un site vitrine (Accueil, À propos, Restaurants)<br>
-      🔹 <strong>Développement WordPress à partir du design</strong> : intégration responsive, formulaire de contact (CF7), pop-up, conformité RGPD<br>
-      🔹 <strong>Créations graphiques bénévoles</strong> : affiches et éléments visuels pour des événements associatifs et réseaux sociaux
-    </p>
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-      <figure><img src="image/WIREFRAMES.png" alt="Wireframes"><figcaption>Wireframes</figcaption></figure>
-      <figure><img src="image/Frame 427319282.png" alt="Frame 4273"><figcaption>Frame 4273</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-06-04 164933.png" alt="Capture écran"><figcaption>Capture écran</figcaption></figure>
-      <figure><img src="image/85a2c7a5-31fb-46d0-aea1-4fd78de2365a.png" alt="Maquette 1"><figcaption>Maquette 1</figcaption></figure>
-      <figure><img src="image/a8c67d9b-e390-4cda-820e-a3597c4cd73f.png" alt="Maquette 2"><figcaption>Maquette 2</figcaption></figure>
-      <figure><img src="image/Frame 133.png" alt="Affiche Mélodie"><figcaption>Affiche Mélodie</figcaption></figure>
-      <figure><img src="image/Group 23.png" alt="Affiche Bijoux"><figcaption>Affiche Bijoux</figcaption></figure>
-    </div>
-    <button onclick="toggleDetails('comp1')">⬅️ Revenir</button>
-  </div>
+  <div id="c-design" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
- <!-- COMP 2 -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp2')">
-      <strong>WordPress & intégration :</strong> développement d’un site dynamique – projet <em>OhMyFood</em>.
-    </li>
-  </ul>
-  <div id="comp2" class="details" style="display:none; padding: 1em; border-left: 3px solid #7D2D2D;">
-    <h4>Projet : OhMyFood – intégration WordPress</h4>
+    <!-- UI/UX Design (OhMyFood) -->
+    <details class="sub" style="margin-bottom:1rem;">
+      <summary><strong>UI/UX Design</strong> — maquettes Figma (projet <em>OhMyFood</em>)</summary>
+      <div style="margin-top:.6rem;">
+        <p>
+          🔹 <strong>Design complet sur Figma</strong> : wireframe, logo, maquettes responsives (Accueil, À propos, Restaurants)<br>
+          🔹 <strong>Passage vers WordPress</strong> : intégration responsive, formulaire (CF7), pop-up, conformité RGPD<br>
+          🔹 <strong>Créations graphiques bénévoles</strong> : affiches & visuels pour événements et réseaux sociaux
+        </p>
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img loading="lazy" src="image/WIREFRAMES.png" alt="Wireframes"><figcaption>Wireframes</figcaption></figure>
+          <figure><img loading="lazy" src="image/Frame 427319282.png" alt="Écran Figma"><figcaption>Écran Figma</figcaption></figure>
+          <figure><img loading="lazy" src="image/Снимок экрана 2025-06-04 164933.png" alt="Capture écran"><figcaption>Capture</figcaption></figure>
+          <figure><img loading="lazy" src="image/85a2c7a5-31fb-46d0-aea1-4fd78de2365a.png" alt="Maquette 1"><figcaption>Maquette 1</figcaption></figure>
+          <figure><img loading="lazy" src="image/a8c67d9b-e390-4cda-820e-a3597c4cd73f.png" alt="Maquette 2"><figcaption>Maquette 2</figcaption></figure>
+          <figure><img loading="lazy" src="image/Frame 133.png" alt="Affiche Mélodie"><figcaption>Affiche Mélodie</figcaption></figure>
+          <figure><img loading="lazy" src="image/Group 23.png" alt="Affiche Bijoux"><figcaption>Affiche Bijoux</figcaption></figure>
+        </div>
+      </div>
+    </details>
+
+    <!-- Développement front‑end (Ferme des Amandiers) -->
+    <details class="sub" style="margin-bottom:1rem;">
+      <summary><strong>Développement front‑end</strong> — site sans CMS (projet <em>La Ferme des Amandiers</em>)</summary>
+      <div style="margin-top:.6rem;">
+        <p><em>Ce que j’ai réalisé :</em></p>
+        <ul class="keypoints">
+          <li>Site dynamique en PHP, MySQL, HTML, CSS, JavaScript — sans CMS</li>
+          <li>Structure HTML5/CSS3 (Flexbox, Grid, responsive)</li>
+          <li>PHP &amp; PDO pour l’affichage dynamique</li>
+          <li>BDD MySQL (4 tables : <code>produits</code>, <code>jours</code>, <code>saisons</code>, <code>produit_jour</code>)</li>
+          <li>Filtres interactifs (JS vanilla)</li>
+          <li>Lighthouse : Perf 97, Accessibilité 92</li>
+        </ul>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img loading="lazy" src="image/farm_products_1.png" alt="Produits – Vue 1"><figcaption>Produits – Vue 1</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_mock_products1.png" alt="Mock‑up v1"><figcaption>Mock‑up v1</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_products_2.png" alt="Produits – Vue 2"><figcaption>Produits – Vue 2</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_index.png" alt="Code HTML index"><figcaption>Code HTML – index</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_mock_products2.png" alt="Mock‑up v2"><figcaption>Mock‑up v2</figcaption></figure>
+          <figure><img loading="lazy" src="image/php_myadmin.png" alt="BDD MySQL dans phpMyAdmin"><figcaption>BDD MySQL</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_mobile_1.png" alt="Version mobile"><figcaption>Mobile</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_lighthouse.png" alt="Audit Lighthouse"><figcaption>Lighthouse</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_devtools_1.png" alt="DevTools Inspecteur"><figcaption>DevTools</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_code_PHP.png" alt="Extrait de code PHP"><figcaption>Code PHP</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_code_css.png" alt="Extrait de code CSS"><figcaption>Code CSS</figcaption></figure>
+          <figure><img loading="lazy" src="image/farm_code.png" alt="Code combiné HTML/PHP/CSS"><figcaption>Code combiné</figcaption></figure>
+        </div>
+
+        <p style="margin-top:.6rem;">
+          <a href="https://github.com/elenamihalska70-creator/fermedesamandiers" class="btn" target="_blank" rel="noopener noreferrer">📂 Code GitHub</a>
+          <a href="#" class="btn" style="opacity:.6; pointer-events:none;">🌐 Démo (à venir)</a>
+        </p>
+      </div>
+          <p>Projet <em>OhMyFood</em></p>
     <p>
-      🔹 Développement d’un site WordPress à partir d’une maquette Figma<br>
       🔹 Intégration du thème enfant avec header, footer, pages, popup, formulaire CF7<br>
       🔹 Mise en conformité RGPD, accessibilité, responsive design et SEO<br>
-      🔹 Exportation du site via All-in-One WP Migration et documentation complète
     </p>
     <h5>🖼️ Exemples :</h5>
 <div class="gallery">
@@ -207,245 +238,460 @@
   </a>
 </p>
 
-  
-    <button onclick="toggleDetails('comp2')">⬅️ Revenir</button>
+    </details>
+
+    <!-- Accessibilité & conformité -->
+    <details class="sub">
+      <summary><strong>Accessibilité & conformité</strong> — audits & formulaires (projets <em>OhMyFood</em>, <em>Ferme</em>)</summary>
+      <div style="margin-top:.6rem;">
+        <p>
+          🔹 Tests de contraste, structure ARIA, navigation clavier<br>
+          🔹 Bannières cookies, mentions légales, politique de confidentialité<br>
+          🔹 Formulaires conformes + consentement explicite
+        </p>
+        <div class="gallery">
+          <figure><img loading="lazy" src="image/0041.png" alt="Audit Lighthouse OhMyFood"><figcaption>OhMyFood — Lighthouse</figcaption></figure>
+          <figure><img loading="lazy" src="image/0042.png" alt="Audit Lighthouse Ferme"><figcaption>Ferme — Lighthouse</figcaption></figure>
+          <figure><img loading="lazy" src="image/0040.png" alt="Audit Lighthouse Portfolio"><figcaption>Portfolio — Lighthouse</figcaption></figure>
+        </div>
+        <p class="notice-dev">🔧 Le Portfolio est en cours — certaines sections seront complétées prochainement.</p>
+      </div>
+    </details>
+
+    <button onclick="toggleDetails('c-design')">⬅️ Revenir</button>
   </div>
 
+
+  <!-- 2) CMS & intégration (OhMyFood) -->
   <ul class="competences-list">
-    
-  <!-- ... твои существующие <li> ... -->
-
-    <!-- COMP – Analyse & Data visualisation -->
-
-  <li onclick="toggleDetails('compVizGlobal')">
-    <strong>Analyse & Data visualisation :</strong> Looker Studio & GA – projets <em>Éclat Lifestyle, Ferme des Amandiers, ArtisanConnect</em>.
-  </li>
-
-<div id="compVizGlobal" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Analyse & Data visualisation</h4>
-
-  <!-- Section 1 : Éclat + Ferme -->
-  <section>
-    <h5>Projets Éclat Lifestyle & Ferme des Amandiers</h5>
-    <p>
-      🔹 Tableau de bord audience & engagement (Looker Studio)<br>
-      🔹 Suivi des performances publicitaires (GA/Looker)<br>
-      🔹 Analyse SEO & reporting visuel
-    </p>
-
-    <div class="gallery">
-      <figure>
-        <img src="image/page-0008.jpg" alt="Looker Studio — Audience & Engagement">
-        <figcaption>Audience & Engagement (Looker Studio)</figcaption>
-      </figure>
-      <figure>
-        <img src="image/page-0009.jpg" alt="Looker Studio — Performance publicitaire">
-        <figcaption>Performance publicitaire</figcaption>
-      </figure>
-      <figure>
-        <img src="image/page-0010.jpg" alt="Looker Studio — Performance publicitaire">
-        <figcaption>Performance publicitaire</figcaption>
-      </figure>
-      <figure>
-        <img src="image/page-0011.jpg" alt="Looker Studio — Performance publicitaire">
-        <figcaption>Performance publicitaire</figcaption>
-      </figure>
-      <figure>
-        <img src="image/page-0012.jpg" alt="Looker Studio — Performance publicitaire">
-        <figcaption>Performance publicitaire</figcaption>
-      </figure>
-      <figure>
-        <img src="image/page-0013.jpg" alt="Looker Studio — Performance publicitaire">
-        <figcaption>Performance publicitaire</figcaption>
-      </figure>
-    </div>
-
-    <p class="doc-links" style="margin-top:1em;">
-      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-        Télécharger la présentation (PDF)
-      </a>
-      |
-      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-            target="_blank" rel="noopener noreferrer">
-        Voir la présentation en ligne
-      </a>
-    </p>
-  </section>
-
-  <hr style="margin:1.5em 0; border:none; border-top:1px solid #ccc;">
-
-  <!-- Section 2 : ArtisanConnect -->
-  <section>
-    <h5>Projet ArtisanConnect</h5>
-    <p>
-      🔹 Tableau de bord interactif dans Looker Studio<br>
-      🔹 Visualisation de 6 KPI (artisans actifs, panier moyen, commandes, CA, top produits, notes)<br>
-      🔹 Outil d’aide à la décision pour le pilotage de la marketplace
-    </p>
-    <p>
-      📊 Liens vers démos Looker Studio :<br>
-      <a href="https://lookerstudio.google.com/s/mJKQ8TlTMqU" target="_blank">KPI 1 – Artisans actifs</a><br>
-      <a href="https://lookerstudio.google.com/s/vWBDcBREIMw" target="_blank">KPI 2 – Panier moyen</a><br>
-      <a href="https://lookerstudio.google.com/s/ogPl5zbtDNk" target="_blank">KPI 3 – Commandes par statut</a><br>
-      <a href="https://lookerstudio.google.com/s/r-GF4DHhC2Y" target="_blank">KPI 4 – Avis clients</a><br>
-      <a href="https://lookerstudio.google.com/s/otO_LsDmDDU" target="_blank">KPI 5 – Top produits</a><br>
-      <a href="https://lookerstudio.google.com/s/mtNAZbqmwOs" target="_blank">KPI 6 – Notes moyennes</a>
-    </p>
-  </section>
-
-  <button onclick="toggleDetails('compVizGlobal')">⬅️ Revenir</button>
-</div>
-
-
-
-  <div id="compLooker" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Data analytics — Looker Studio & Google Analytics</h4>
-
-  </ul>
-
-
-  <ul class="competences-list">
-  <li onclick="toggleDetails('compKPI')">
-    <strong>KPI & stratégie :</strong> indicateurs et recommandations – projet Éclat Lifestyle.
-  </li>
-</ul>
-
-  <ul>
-
-    <div id="compLooker" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;"></div>
-  <div id="compKPI" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>KPI marketing & recommandations</h4>
-  <p>
-    🔹 Indicateurs clés (CPC, CTR, ROAS, taux d’ouverture/clic, conversion)<br>
-    🔹 Recommandations opérationnelles & stratégiques
-  </p>
-
-  <div class="gallery">
-    <figure>
-      <img src="image/page-0022.jpg" alt="KPI — Vue d’ensemble">
-      <figcaption>KPI — vue d’ensemble</figcaption>
-    </figure>
-    <figure>
-      <img src="image/page-0023.jpg" alt="Recommandations stratégiques">
-      <figcaption>Recommandations stratégiques</figcaption>
-    </figure>
-        <figure>
-      <img src="image/page-0024.jpg" alt="Recommandations stratégiques">
-      <figcaption>Recommandations stratégiques</figcaption>
-    </figure>
-  </div>
-
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-
-
-  <button onclick="toggleDetails('compKPI')">⬅️ Revenir</button>
-</div>
-
-  <!-- ... -->
-</ul>
-
-
-  <!-- COMP SEA -->
-<ul class="competences-list">
-  <li onclick="toggleDetails('compSEA')">
-    <strong>SEA – Google Ads :</strong> création et optimisation d’une campagne publicitaire ciblée.
-  </li>
-</ul>
-<div id="compSEA" class="details" style="display:none; padding: 1em; border-left: 3px solid #7D2D2D;">
-  <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
-  <p>
-    🔹 Sélection de mots-clés et thématiques de recherche<br>
-    🔹 Définition du budget et choix de la stratégie d’enchères<br>
-    🔹 Suivi des performances et optimisation
-  </p>
-  <h5>🖼️ Exemples :</h5>
-  <div class="gallery">
-      <figure><img src="image/page-0004.jpg" alt="SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
-    <figure><img src="image/page-0005.jpg" alt="Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
-    <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
-    <figure>
-      <img src="image/googleads_keywords.png" alt="Mots-clés Google Ads">
-      <figcaption>Sélection de mots-clés</figcaption>
-    </figure>
-    <figure>
-      <img src="image/googleads_budget.png" alt="Budget Google Ads">
-      <figcaption>Définition du budget</figcaption>
-    </figure>
-    
-  </div>
-  <p style="margin-top: 1em;">
-  📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank">Google Ads – rapport complet (PDF)</a><br>
-  📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank">Audit SEO – Sustaina (PDF)</a>
-</p>
-<p class="doc-links" style="margin-top:1em;">
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-
-
-  <button onclick="toggleDetails('compSEA')">⬅️ Revenir</button>
-</div>
-
-  <!-- COMP 3 -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp3')">
-      <strong>Gestion de projet Agile / SCRUM :</strong> backlog, user stories, radar – projet <em>Purple Squirrel</em>.
+    <li role="button" tabindex="0"
+        aria-controls="c-cms" aria-expanded="false"
+        onclick="toggleDetails('c-cms')"
+        onkeypress="if(event.key==='Enter'){toggleDetails('c-cms')}">
+      <strong>CMS & intégration</strong> — WordPress, thème enfant
     </li>
   </ul>
-  <div id="comp3" class="details" style="display:none; padding: 1em; border-left: 3px solid #7D2D2D;">
-    <h4>Projet : Purple Squirrel – gestion de projet Agile / SCRUM</h4>
+  <div id="c-cms" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+    <details class="sub">
+      <summary><strong>WordPress</strong> — thème enfant, CF7, RGPD</summary>
     <p>
-      🔹 Gestion d’un projet d’équipe fictive dans Notion<br>
-      🔹 Création du backlog (EPICs, US, MoSCoW), sprint planning et suivi quotidien<br>
-      🔹 Rétrospective avec radar de satisfaction basé sur 5 critères collaboratifs<br>
-      🔹 Reporting clair et synthétique pour chaque jour de sprint
+      🔹 Développement d’un site WordPress à partir d’une maquette Figma<br>
+      🔹 Intégration du thème enfant avec header, footer, pages, popup, formulaire CF7<br>
+      🔹 Mise en conformité RGPD, accessibilité, responsive design et SEO<br>
+      🔹 Exportation du site via All-in-One WP Migration et documentation complète
     </p>
     <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-      <figure><img src="image/Снимок экрана 2025-08-06 224539.png" alt="Backlog Etape 1"><figcaption>Backlog – Étape 1</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-08-06 225044.png" alt="Reporting Sprint 1"><figcaption>Reporting – Sprint 1</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-08-06 225200.png" alt="Backlog Etape 2"><figcaption>Backlog – Étape 2</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-08-07 000337.png" alt="Sprint en cours"><figcaption>État des US (en cours / terminé)</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-08-07 000911.png" alt="Reporting Sprint 1 complet"><figcaption>Suivi détaillé (Sprint 1)</figcaption></figure>
-      <figure><img src="image/Снимок экрана 2025-08-07 005326.png" alt="Radar satisfaction"><figcaption>Radar de satisfaction</figcaption></figure>
-    </div>
-      <h5 style="margin-top:1em;">📎 Documents :</h5>
-  <ul class="doc-list">
-    <li>📄 <a href="https://www.notion.so/1da7d16d3d87809a9216dd92f5698150?v=1da7d16d3d8781c1a79e000ce930c31f&pvs=4" target="_blank">Product Backlog – Notion</a></li>
-    <li>📄 <a href="https://www.notion.so/1e47d16d3d8780c4a3a6ede1dca5dd12?v=1f17d16d3d87807d93ea000c6746f284&pvs=4" target="_blank">Sprint Board – Notion</a></li>
-    <li>📄 <a href="https://docs.google.com/document/d/1VwitO0CPmRNALIpVtcCP-UtHqZ8XWaf1/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true target="_blank">Planification des sprints (Email)</a></li>
-    <li>📄 <a href="https://docs.google.com/document/d/1Zp7Wnuamj9Z-eVqxwLPjmD2mT1jAE_S_/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank">Rétrospective Sprint 1 – Ordre du jour</a></li>
-    <li>📄 <a href="https://docs.google.com/document/d/1smdyHQEyV414LyhtTqrrvQXxmp7fm92b/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank">Plan d’action – Rétrospective Sprint 1</a></li>
-  </ul>
+<div class="gallery">
+    <!-- Nouveaux screenshots -->
+  <figure>
+    <img src="image/Ohmyfood – Accueil (desktop).jpg" alt="Page d’accueil Ohmyfood – vue bureau">
+    <figcaption>Accueil – Desktop</figcaption>
+  </figure>
+  <figure>
+    <img src="image/Ohmyfood – Accueil (mobile).jpg" alt="Page d’accueil Ohmyfood – vue mobile complète">
+    <figcaption>Accueil – Mobile (full page)</figcaption>
+  </figure>
+  <figure>
+    <img src="image/ohmyfoodcom.local_a-propos_.jpg" alt="Page À propos – vue bureau">
+    <figcaption>À propos – Desktop</figcaption>
+  </figure>
+  <figure>
+    <img src="image/ohmyfoodcom.local_a-propos_ (1).jpg" alt="Page À propos – vue mobile">
+    <figcaption>À propos – Mobile</figcaption>
+  </figure>
+  <figure>
+    <img src="image/ohmyfoodcom.local_restaurant_.jpg" alt="Page Restaurant – vue mobile complète">
+    <figcaption>Restaurant – Mobile (full page)</figcaption>
+  </figure>
+    <figure><img src="image/Снимок экрана (183).png" alt="Local"><figcaption>local connection
 
-  <button onclick="toggleDetails('comp-purple')">⬅️ Revenir</button>
+    </figcaption></figure>
+  <!-- Существующие изображения -->
+  <figure><img src="image/Снимок экрана (255).png" alt="LOGO et favicon"><figcaption>LOGO et favicon</figcaption></figure>
+  <figure><img src="image/Снимок экрана (256).png" alt="Page Restaurants"><figcaption>Page Restaurants</figcaption></figure>
+
+  <figure><img src="image/Снимок экрана (205) — копия.png" alt="Popup réservation"><figcaption>Popup réservation</figcaption></figure>
+
+  
+  <figure><img src="image/Снимок экрана (180).png" alt="Popup"><figcaption>Popup</figcaption></figure>
+  
+  <!-- 155 -->
+<figure>
+  <img src="image/Снимок экрана (155).png" alt="Contact Form 7 — настройки e-mail для формы бронирования">
+  <figcaption>CF7 — Réglages e-mail</figcaption>
+</figure>
+
+<!-- 156 -->
+<figure>
+  <img src="image/Снимок экрана (156).png" alt="Audit Lighthouse — результат 95 по доступности">
+  <figcaption>Audit Lighthouse — 95 (Accessibilité)</figcaption>
+</figure>
+
+<!-- 164 -->
+<figure>
+  <img src="image/Снимок экрана (164).png" alt="WordPress Customizer — aperçu desktop page d’accueil">
+  <figcaption>Customizer — Accueil (desktpo)</figcaption>
+</figure>
+
+<!-- 165 -->
+<figure>
+  <img src="image/Снимок экрана (165).png" alt="WordPress Customizer — aperçu planchet page d’accueil">
+  <figcaption>Customizer — Accueil (planchet)</figcaption>
+</figure>
+
+<!-- 169 -->
+<figure>
+  <img src="image/Снимок экрана (169).png" alt="Code CSS du thème enfant dans VS Code">
+  <figcaption>Thème enfant — CSS</figcaption>
+</figure>
+
+<!-- 177 -->
+<figure>
+  <img src="image/Снимок экрана (177).png" alt="Code PHP du thème enfant dans VS Code">
+  <figcaption>Thème enfant — PHP</figcaption>
+</figure>
+
+<!-- 181 -->
+<figure>
+  <img src="image/Снимок экрана (181).png" alt="Formulaire Contact — version test dans Customizer">
+  <figcaption>Formulaire — test</figcaption>
+</figure>
+
+  <!-- Добавленные изображения с проверкой -->
+  
+  
+  <figure><img src="image/Снимок экрана (160).png" alt="Git Hub"><figcaption>Git Hub – code</figcaption></figure>
+</div>
+
+    <p style="margin-top: 1em;">
+      📄 <a href="https://youtu.be/m9kf7urAnEY" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
+    </p>
+  </details>
+
+  <button type="button" onclick="toggleDetails('c-cms')">⬅️ Revenir</button>
+</div>
+
+  <!-- ================= COMPÉTENCES : SECTIONS 3–8 (version corrigée) ================= -->
+
+<!-- 3) Data & Back-end (Ferme + ArtisanConnect) -->
+<ul class="competences-list">
+  <li role="button" tabindex="0"
+      aria-controls="c-data" aria-expanded="false"
+      onclick="toggleDetails('c-data')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-data')}">
+    <strong>Data & Back-end</strong> — MySQL, PDO, UML, SQLite, KPI SQL, sécurité
+  </li>
+</ul>
+<div id="c-data" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+  <details class="sub">
+    <summary><strong>La Ferme des Amandiers</strong> — MySQL + PHP/PDO</summary>
+    <ul class="keypoints">
+      <li>Schéma MySQL (produits, saisons, jours), requêtes préparées PDO.</li>
+      <li>Filtres dynamiques (saison/jour), affichage catalogue type e-commerce.</li>
+    </ul>
+
+    <section aria-labelledby="proj-amandiers">
+      <h5 id="proj-amandiers">Projet 1 — La Ferme des Amandiers (MySQL, PDO)</h5>
+      <ul>
+        <li>Conception de la base MySQL (tables : produits, saisons, jours)</li>
+        <li>Connexion sécurisée via PDO + requêtes dynamiques</li>
+        <li>Catalogue type e-commerce (paniers de légumes)</li>
+      </ul>
+
+      <div class="gallery">
+        <figure>
+          <img src="image/0031.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 1">
+          <figcaption>Affichage dynamique — Vue 1</figcaption>
+        </figure>
+        <figure>
+          <img src="image/0032.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 2">
+          <figcaption>Affichage dynamique — Vue 2</figcaption>
+        </figure>
+        <figure>
+          <img src="image/0033.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 3">
+          <figcaption>Affichage dynamique — Vue 3</figcaption>
+        </figure>
+
+        <figure>
+          <img src="image/0034.png" loading="lazy" alt="Schéma des tables MySQL du projet">
+          <figcaption>Structure de la base MySQL</figcaption>
+        </figure>
+        <figure>
+          <img src="image/0035.png" loading="lazy" alt="Exemple de code de connexion PDO">
+          <figcaption>Connexion PDO</figcaption>
+        </figure>
+        <figure>
+          <img src="image/0036.png" loading="lazy" alt="Exemple de requête SQL exécutée via PDO">
+          <figcaption>Requête SQL via PDO</figcaption>
+        </figure>
+      </div>
+
+      <p class="actions" style="margin-top:.75em;">
+        <a class="btn" href="https://github.com/elenamihalska70-creator/fermedesamandiers" target="_blank" rel="noopener">📂 Code GitHub</a>
+        <a class="btn btn-ghost" href="#" target="_blank" rel="noopener" aria-disabled="true">🌐 Démo (à venir)</a>
+      </p>
+    </section>
+  </details>
+
+  <details class="sub">
+    <summary><strong>ArtisanConnect</strong> — UML, SQLite, KPI SQL</summary>
+    <ul class="keypoints">
+      <li>Modélisation UML (clients, artisans, produits, commandes, avis).</li>
+      <li>Requêtes KPI : panier moyen, CA par catégorie, top produits, notes.</li>
+    </ul>
+
+    <section aria-labelledby="proj-artisan">
+      <h5 id="proj-artisan">Projet 2 — ArtisanConnect (UML, SQLite, KPI SQL)</h5>
+      <div class="gallery">
+        <figure>
+          <img src="image/uml.png" loading="lazy" alt="Diagramme UML des entités et relations">
+          <figcaption>Schéma UML</figcaption>
+        </figure>
+        <figure>
+          <img src="image/db.png" loading="lazy" alt="Aperçu des tables peuplées dans SQLite">
+          <figcaption>SQLite — tables peuplées</figcaption>
+        </figure>
+        <figure>
+          <img src="image/kpi.png" loading="lazy" alt="Exemples de requêtes SQL pour KPI">
+          <figcaption>Extraits de requêtes KPI</figcaption>
+        </figure>
+      </div>
+
+      <p class="actions" style="margin-top:.75em;">
+        📄 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Scripts SQL (création + KPI)</a><br>
+        📄 <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Schéma UML (PDF)</a>
+      </p>
+    </section>
+  </details>
+
+  <button type="button" onclick="toggleDetails('c-data')">⬅️ Revenir</button>
+</div>
+
+<!-- 4) Analyse & Data visualisation (Looker + GA) -->
+<ul class="competences-list">
+  <li role="button" tabindex="0"
+      aria-controls="c-analytics" aria-expanded="false"
+      onclick="toggleDetails('c-analytics')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-analytics')}">
+    <strong>Analyse & Data visualisation</strong> — Looker Studio, Google Analytics, KPI
+  </li>
+</ul>
+<div id="c-analytics" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+  <details class="sub">
+    <summary><strong>Dashboards</strong> — Looker Studio</summary>
+    <p>Audience, acquisition, performances publicitaires, KPI marketing.</p>
+
+    <section>
+      <h5>Projets Éclat Lifestyle & Ferme des Amandiers</h5>
+      <p>
+        🔹 Tableau de bord audience & engagement (Looker Studio)<br>
+        🔹 Suivi des performances publicitaires (GA/Looker)<br>
+        🔹 Analyse SEO & reporting visuel
+      </p>
+
+      <div class="gallery">
+        <figure><img src="image/page-0008.jpg" alt="Audience & Engagement"><figcaption>Audience & Engagement</figcaption></figure>
+        <figure><img src="image/page-0009.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+        <figure><img src="image/page-0010.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+        <figure><img src="image/page-0011.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+        <figure><img src="image/page-0012.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+        <figure><img src="image/page-0013.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+      </div>
+
+      <p class="doc-links" style="margin-top:1em;">
+        📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a> |
+        🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir en ligne</a>
+      </p>
+    </section>
+
+    <hr style="margin:1.25em 0; border:none; border-top:1px solid #ccc;">
+
+    <section>
+      <h5>Projet ArtisanConnect</h5>
+      <p>
+        🔹 Tableau de bord interactif (Looker Studio)<br>
+        🔹 6 KPI : artisans actifs, panier moyen, commandes, CA, top produits, notes
+      </p>
+      <!-- KPIs ArtisanConnect -->
+<div class="gallery">
+  <figure>
+    <img src="image/KPI1-2.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 1 et 2">
+    <figcaption>KPI 1–2 : Nombre d’artisans actifs, panier moyen</figcaption>
+  </figure>
+  <figure>
+    <img src="image/KPI3-4.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 3 et 4">
+    <figcaption>KPI 3–4 : Répartition commandes, nombre total d’avis clients</figcaption>
+  </figure>
+  <figure>
+    <img src="image/KPI5-6.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 5 et 6">
+    <figcaption>KPI 5–6 : Top produits, note moyenne par produit</figcaption>
+  </figure>
+</div>
+
+      <p>
+        📊 Démos : 
+        <a href="https://lookerstudio.google.com/s/mJKQ8TlTMqU" target="_blank">KPI 1</a> ·
+        <a href="https://lookerstudio.google.com/s/vWBDcBREIMw" target="_blank">KPI 2</a> ·
+        <a href="https://lookerstudio.google.com/s/ogPl5zbtDNk" target="_blank">KPI 3</a> ·
+        <a href="https://lookerstudio.google.com/s/r-GF4DHhC2Y" target="_blank">KPI 4</a> ·
+        <a href="https://lookerstudio.google.com/s/otO_LsDmDDU" target="_blank">KPI 5</a> ·
+        <a href="https://lookerstudio.google.com/s/mtNAZbqmwOs" target="_blank">KPI 6</a>
+      </p>
+    </section>
+  </details>
+
+  <details class="sub">
+    <summary><strong>Analyse de performance</strong> — Google Analytics</summary>
+    <p>Rapports personnalisés, suivi des conversions et du ROI.</p>
+        <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
+
+    <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
+    <p>
+      🔹 Sélection de mots-clés et thématiques de recherche<br>
+      🔹 Définition du budget et choix de la stratégie d’enchères<br>
+      🔹 Suivi des performances et optimisation
+    </p>
+
+    <h5>🖼️ Exemples :</h5>
+    <div class="gallery">
+      <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
+      <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
+      <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
+      <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
+      <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+    </div>
+
+    <p style="margin-top:1em;">
+      📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
+      📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
+    </p>
+
+    <p class="doc-links" style="margin-top:1em;">
+      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
+      |
+      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
+    </p>
+  </details>
+
+  <button type="button" onclick="toggleDetails('c-analytics')">⬅️ Revenir</button>
+</div>
+
+<!-- 5) Marketing digital (SEO/SEA, Emailing, CRM, Contenu) -->
+<ul class="competences-list">
+  <li role="button" tabindex="0"
+      aria-controls="c-mkt" aria-expanded="false"
+      onclick="toggleDetails('c-mkt')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-mkt')}">
+    <strong>Marketing digital</strong> — SEO/SEA, CRM, emailing, contenu
+  </li>
+</ul>
+
+<div id="c-mkt" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+  <!-- SEA -->
+  <details class="sub">
+    <summary><strong>SEA — Google Ads</strong> (Éclat Lifestyle)</summary>
+    <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
+
+    <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
+    <p>
+      🔹 Sélection de mots-clés et thématiques de recherche<br>
+      🔹 Définition du budget et choix de la stratégie d’enchères<br>
+      🔹 Suivi des performances et optimisation
+    </p>
+
+    <h5>🖼️ Exemples :</h5>
+    <div class="gallery">
+      <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
+      <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
+      <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
+      <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
+      <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+    </div>
+
+    <p style="margin-top:1em;">
+      📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
+      📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
+    </p>
+
+    <p class="doc-links" style="margin-top:1em;">
+      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
+      |
+      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
+    </p>
+  </details>
+
+  <!-- Emailing -->
+  <details class="sub">
+    <summary><strong>Emailing & automatisation</strong> (Mailchimp)</summary>
+    <h4>Projet : Éclat Lifestyle – emailing & automatisation</h4>
+    <p>
+      🔹 Parcours automatisé (welcome → recommandation → relance)<br>
+      🔹 Personnalisation (balises, segments), A/B tests objets<br>
+      🔹 Suivi KPIs : OR, CTR, conversion
+    </p>
     
+    <h5>🖼️ Exemples :</h5>
+    <div class="gallery"><!-- images à ajouter -->
+    <figure><img src="image/page-0016.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+    <figure><img src="image/page-0017.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+    <figure><img src="image/page-0018.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
+    <figure><img src="image/page-0019.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+    <figure><img src="image/page-0020.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
+    <figure><img src="image/page-0021.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+  </div>
+<p class="doc-links" style="margin-top:1em;">
+  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
+    Télécharger la présentation (PDF)
+  </a>
+  |
+  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
+        target="_blank" rel="noopener noreferrer">
+    Voir la présentation en ligne
+  </a>
+</p>
+  </details>
+
+  <!-- CRM -->
+  <details class="sub">
+    <summary><strong>CRM & relation client</strong> (Notion)</summary>
+    <h4>Projet : Éclat Lifestyle – CRM & relation client</h4>
+
+  <p>
+    🔹 Analyse comparative des solutions CRM (Zoho, HubSpot, Pipedrive)<br>
+    🔹 Choix recommandé : HubSpot (version gratuite + NPS intégré)<br>
+    🔹 Gestion de la relation client : centralisation des données, automatisations<br>
+    🔹 Prochaine étape : mise en place d’un mini-CRM dans Notion
+  </p>
+
+  <div class="gallery">
+    <figure>
+      <img src="image/page-0023.jpg" alt="Comparaison CRM (Zoho, HubSpot, Pipedrive)">
+      <figcaption>Comparaison CRM – analyse des solutions</figcaption>
+    </figure>
   </div>
 
-    <!-- COMP 4 -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp4')">
-      <strong>Stratégie éditoriale & marketing digital :</strong> contenu, calendrier, campagnes – projet <em>Éclat Lifestyle</em>.
-    </li>
-  </ul>
-  <div id="comp4" class="details" style="display:none; padding: 1em; border-left: 3px solid #7D2D2D;">
-    <h4>Projet : Éclat Lifestyle – stratégie éditoriale & marketing digital</h4>
+  <p style="margin-top:1em; font-style:italic; color:gray;">
+     Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
+  </p>
+<p class="doc-links" style="margin-top:1em;">
+   <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
+    Télécharger la présentation (PDF)
+  </a>
+
+  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
+        target="_blank" rel="noopener noreferrer">
+    Voir la présentation en ligne
+  </a>
+</p>
+  </details>
+
+  <!-- Contenu -->
+  <details class="sub">
+    <summary><strong>Stratégie éditoriale & contenu</strong></summary>
+        <h4>Projet : Éclat Lifestyle – stratégie éditoriale & marketing digital</h4>
     <p>
       🔹 Élaboration d’une stratégie de contenu sur 3 mois : storytelling de marque, lignes éditoriales, planning de publications<br>
       🔹 Création d’un calendrier éditorial (thèmes : slow design, éthique, témoignages clients)<br>
@@ -492,319 +738,143 @@
     Voir la présentation en ligne
   </a>
 </p>
+  </details>
 
-
-
-    <button onclick="toggleDetails('comp4')">⬅️ Revenir</button>
-  </div>
-  <!-- ========= AJOUTS APRÈS COMP4, AVANT </section> ========= -->
-   
-
-  <!-- COMP 5 – Développement front‑end -->
-   
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp5')">
-      <strong>Développement front-end :</strong> site sans CMS – projet <em>La Ferme des Amandiers</em>.
-    </li>
-  </ul>
-  
-  <div id="comp5" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Projet : La Ferme des Amandiers – front-end sans CMS</h4>
-<p>Ce que j’ai réalisé :</p>
-<div class="portfolio-item">
-    <p>Site dynamique développé en PHP, MySQL, HTML, CSS, JavaScript – sans CMS.</p>
-
+  <button type="button" onclick="toggleDetails('c-mkt')">⬅️ Revenir</button>
 </div>
 
-<ul class="keypoints">
-  <li>Structure HTML5/CSS3 optimisée (Flexbox, Grid, responsive).</li>
-  <li>PHP &amp; PDO pour l’affichage dynamique des produits.</li>
-  <li>Base de données MySQL (4 tables : <code>produits</code>, <code>jours</code>, <code>saisons</code>, <code>produit_jour</code>).</li>
-  <li>Filtres interactifs par jour de retrait (JS vanilla).</li>
-  <li>Optimisation Lighthouse : Performance 97, Accessibilité 92.</li>
-</ul>
 
-
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter -->
-  <!-- 📌 Большие скриншоты сайта -->
-  <figure>
-    <img src="image/farm_products_1.png" alt="Produits disponibles - Vue 1">
-    <figcaption>Produits disponibles – Vue 1</figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/farm_mock_products1.png" alt="Mock-up produits - version 1">
-    <figcaption>Mock-up produits – Version 1</figcaption>
-  </figure>
-    <figure>
-    <img src="image/farm_products_2.png" alt="Produits disponibles - Vue 2">
-    <figcaption>Produits disponibles – Vue 2</figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/farm_index.png" alt="Code HTML - index">
-    <figcaption>Code HTML – index</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_mock_products2.png" alt="Mock-up produits - version 2">
-    <figcaption>Mock-up produits – Version 2</figcaption>
-  </figure>
-      <figure>
-    <img src="image/php_myadmin.png" alt="phpMyAdmin - Base de données">
-    <figcaption>phpMyAdmin – Base de données</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_mobile_1.png" alt="Version mobile du site">
-    <figcaption>Version mobile du site</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_lighthouse.png" alt="Audit Lighthouse">
-    <figcaption>Audit Lighthouse</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_devtools_1.png" alt="Outils de développement - Inspecteur">
-    <figcaption>Outils de développement – Inspecteur</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_code_PHP.png" alt="Code PHP">
-    <figcaption>Code PHP</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_code_css.png" alt="Code CSS">
-    <figcaption>Code CSS</figcaption>
-  </figure>
-  <figure>
-    <img src="image/farm_code.png" alt="Code HTML/PHP/CSS combiné">
-    <figcaption>Code HTML/PHP/CSS combiné</figcaption>
-  </figure>
-<p>
-<a href="https://github.com/elenamihalska70-creator/fermedesamandiers" 
-   target="_blank" rel="noopener noreferrer" class="btn">
-    📂 Voir le code sur GitHub
-</a>
-
-<a href="#" class="btn" style="opacity:0.6; pointer-events:none;">
-    🌐 Voir le site en ligne (à venir)
-</a>
-
-</p>
-   </div>
-  <button onclick="toggleDetails('comp5')">⬅️ Revenir</button>
-  </div>
-
-<!-- COMPÉTENCE — Base de données & back‑end -->
+<!-- 6) Gestion de projet & Innovation -->
 <ul class="competences-list">
-  <li role="button" tabindex="0" aria-controls="comp-db" aria-expanded="false"
-      onclick="toggleDetails('comp-db')" onkeypress="if(event.key==='Enter'){toggleDetails('comp-db')}">
-    <strong>Base de données & back‑end</strong> — MySQL, PDO, UML, SQLite, KPI SQL
-    <em>(projets : La Ferme des Amandiers, ArtisanConnect)</em>
+  <li role="button" tabindex="0"
+      aria-controls="c-innovation" aria-expanded="false"
+      onclick="toggleDetails('c-innovation')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-innovation')}">
+    <strong>Gestion de projet & Innovation</strong> — Agile/SCRUM, IA, Green IT
   </li>
 </ul>
+<div id="c-innovation" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
-<div id="comp-db" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Base de données & back‑end — Projets</h4>
-
-  <!-- Projet 1 : La Ferme des Amandiers -->
-  <section aria-labelledby="proj-amandiers">
-    <h5 id="proj-amandiers">Projet 1 — La Ferme des Amandiers (MySQL, PDO)</h5>
-    <ul>
-      <li>Conception de la base MySQL (tables : produits, saisons, jours)</li>
-      <li>Connexion sécurisée via PDO + requêtes dynamiques (filtres saison/jour)</li>
-      <li>Catalogue type e‑commerce : filtres interactifs pour paniers de légumes</li>
-    </ul>
-
-    <div class="gallery">
-      <!-- Résultats sur le site -->
-      <figure>
-        <img src="image/0031.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 1">
-        <figcaption>Affichage dynamique des produits — Vue 1</figcaption>
-      </figure>
-      <figure>
-        <img src="image/0032.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 2">
-        <figcaption>Affichage dynamique des produits — Vue 2</figcaption>
-      </figure>
-      <figure>
-        <img src="image/0033.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 3">
-        <figcaption>Affichage dynamique des produits — Vue 3</figcaption>
-      </figure>
-
-      <!-- Partie technique -->
-      <figure>
-        <img src="image/0034.png" loading="lazy" alt="Schéma des tables MySQL du projet">
-        <figcaption>Structure de la base MySQL</figcaption>
-      </figure>
-      <figure>
-        <img src="image/0035.png" loading="lazy" alt="Exemple de code de connexion PDO">
-        <figcaption>Connexion PDO à la base</figcaption>
-      </figure>
-      <figure>
-        <img src="image/0036.png" loading="lazy" alt="Exemple de requête SQL exécutée via PDO">
-        <figcaption>Requête SQL via PDO (récupération produits)</figcaption>
-      </figure>
-    </div>
-
-    <p class="actions" style="margin-top:0.75em;">
-      <a class="btn" href="https://github.com/elenamihalska70-creator/fermedesamandiers" target="_blank" rel="noopener noreferrer">📂 Code GitHub</a>
-      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">🌐 Démo en ligne (à venir)</a>
+  <details class="sub">
+    <summary><strong>Agile / SCRUM</strong> — Purple Squirrel</summary>
+        <p>Backlog, user stories, planning de sprint, rétrospective (radar).</p>
+    <h4>Projet : Purple Squirrel – gestion de projet Agile / SCRUM</h4>
+    <p>
+      🔹 Gestion d’un projet d’équipe fictive dans Notion<br>
+      🔹 Création du backlog (EPICs, US, MoSCoW), sprint planning et suivi quotidien<br>
+      🔹 Rétrospective avec radar de satisfaction basé sur 5 critères collaboratifs<br>
+      🔹 Reporting clair et synthétique pour chaque jour de sprint
     </p>
-  </section>
-
-  <hr style="border:none; border-top:1px solid #e5e5e5; margin:1.25em 0;">
-
-  <!-- Projet 2 : ArtisanConnect -->
-  <section aria-labelledby="proj-artisan">
-    <h5 id="proj-artisan">Projet 2 — ArtisanConnect (UML, SQLite, KPI SQL)</h5>
-    <ul>
-      <li>Modélisation UML (clients, artisans, produits, commandes, avis)</li>
-      <li>Création BDD SQLite + jeu de données simulé</li>
-      <li>Requêtes KPI : panier moyen, CA par catégorie, top produits…</li>
-    </ul>
-
+    <h5>🖼️ Exemples :</h5>
     <div class="gallery">
-      <figure>
-        <img src="image/uml.png" loading="lazy" alt="Diagramme UML des entités et relations">
-        <figcaption>Schéma UML (entités & relations)</figcaption>
-      </figure>
-      <figure>
-        <img src="image/db.png" loading="lazy" alt="Aperçu des tables peuplées dans SQLite">
-        <figcaption>SQLite — tables peuplées</figcaption>
-      </figure>
-      <figure>
-        <img src="image/kpi.png" loading="lazy" alt="Exemples de requêtes SQL pour KPI">
-        <figcaption>Extraits de requêtes KPI</figcaption>
-      </figure>
+      <figure><img src="image/Снимок экрана 2025-08-06 224539.png" alt="Backlog Etape 1"><figcaption>Backlog – Étape 1</figcaption></figure>
+      <figure><img src="image/Снимок экрана 2025-08-06 225044.png" alt="Reporting Sprint 1"><figcaption>Reporting – Sprint 1</figcaption></figure>
+      <figure><img src="image/Снимок экрана 2025-08-06 225200.png" alt="Backlog Etape 2"><figcaption>Backlog – Étape 2</figcaption></figure>
+      <figure><img src="image/Снимок экрана 2025-08-07 000337.png" alt="Sprint en cours"><figcaption>État des US (en cours / terminé)</figcaption></figure>
+      <figure><img src="image/Снимок экрана 2025-08-07 000911.png" alt="Reporting Sprint 1 complet"><figcaption>Suivi détaillé (Sprint 1)</figcaption></figure>
+      <figure><img src="image/Снимок экрана 2025-08-07 005326.png" alt="Radar satisfaction"><figcaption>Radar de satisfaction</figcaption></figure>
     </div>
+      <h5 style="margin-top:1em;">📎 Documents :</h5>
+  <ul class="doc-list">
+    <li>📄 <a href="https://www.notion.so/1da7d16d3d87809a9216dd92f5698150?v=1da7d16d3d8781c1a79e000ce930c31f&pvs=4" target="_blank">Product Backlog – Notion</a></li>
+    <li>📄 <a href="https://www.notion.so/1e47d16d3d8780c4a3a6ede1dca5dd12?v=1f17d16d3d87807d93ea000c6746f284&pvs=4" target="_blank">Sprint Board – Notion</a></li>
+    <li>📄 <a href="https://docs.google.com/document/d/1VwitO0CPmRNALIpVtcCP-UtHqZ8XWaf1/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true target="_blank">Planification des sprints (Email)</a></li>
+    <li>📄 <a href="https://docs.google.com/document/d/1Zp7Wnuamj9Z-eVqxwLPjmD2mT1jAE_S_/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank">Rétrospective Sprint 1 – Ordre du jour</a></li>
+    <li>📄 <a href="https://docs.google.com/document/d/1smdyHQEyV414LyhtTqrrvQXxmp7fm92b/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank">Plan d’action – Rétrospective Sprint 1</a></li>
+  </ul>
+  </details>
 
-    <p class="actions" style="margin-top:0.75em;">
-      📄 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Scripts SQL (création + KPI)</a><br>
-      📄 <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Schéma UML (PDF)</a>
+  <details class="sub">
+    <summary><strong>Innovation & Green IT</strong> — en cours</summary>
+    <p>Éco-conception, sobriété numérique, méthodologies responsables.</p>
+
+    <h4>Projet : GreenFutur – éco-conception (à venir)</h4>
+    <p>
+      🔹 Bonnes pratiques d’éco-conception web<br>
+      🔹 Mesure d’empreinte (poids pages, requêtes, CO₂ estimé)<br>
+      🔹 Plan d’action sobriété numérique
     </p>
-  </section>
 
-  <button type="button" onclick="toggleDetails('comp-db')" aria-controls="comp-db" aria-expanded="true">
-    ⬅️ Revenir
-  </button>
+    <div class="projects">
+      <div class="project-card in-progress">
+        <h3>Projet Hôtel – Stratégie Marketing</h3>
+        <p>⏳ Ce projet est en cours de réalisation. Il sera ajouté au portfolio prochainement.</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="sub">
+    <summary><strong>Analyse comportementale & IA</strong> — en cours</summary>
+    <p>
+      🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
+      🔹 Réalisée dans Jupyter Notebook<br>
+      🔹 Préparation intégration API Mistral<br>
+      🔹 Permet d’identifier rapidement la satisfaction et les points faibles
+    </p>
+    <p>
+      📓 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Notebook d’analyse IA</a>
+    </p>
+    <div class="gallery"><!-- images à ajouter --></div>
+  </details>
+
+
+  <button type="button" onclick="toggleDetails('c-innovation')">⬅️ Revenir</button>
 </div>
 
-
-  <!-- COMP 7 – Emailing & automatisation -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp7')">
-      <strong>Emailing & automatisation :</strong> Mailchimp, KPI – projet <em>Éclat Lifestyle</em>.
-    </li>
-  </ul>
-  <div id="comp7" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Projet : Éclat Lifestyle – emailing & automatisation</h4>
-    <p>
-      🔹 Parcours automatisé (welcome → recommandation → relance)<br>
-      🔹 Personnalisation (balises, segments), A/B tests objets<br>
-      🔹 Suivi KPIs : OR, CTR, conversion
-    </p>
-    
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter -->
-    <figure><img src="image/page-0016.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0017.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0018.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
-    <figure><img src="image/page-0019.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0020.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
-    <figure><img src="image/page-0021.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-  </div>
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-
-
-    <button onclick="toggleDetails('comp7')">⬅️ Revenir</button>
-  </div>
-
-  <!-- COMP 8 – CRM & relation client -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp8')">
-      <strong>CRM & relation client :</strong> mini CRM, Notion – projet <em>Éclat Lifestyle</em>.
-    </li>
-  </ul>
-
-  <div id="comp8" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Projet : Éclat Lifestyle – CRM & relation client</h4>
-
+<!-- 7) RGPD & documentation -->
+<ul class="competences-list">
+  <li role="button" tabindex="0"
+      aria-controls="c-rgpd" aria-expanded="false"
+      onclick="toggleDetails('c-rgpd')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-rgpd')}">
+    <strong>RGPD & documentation</strong> — Protection des données
+  </li>
+</ul>
+<div id="c-rgpd" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <p>Projet <em>ArtisanConnect</em> : registre de traitements, bases légales, droits, sécurité, PIA.</p>
+    <h4>ArtisanConnect — RGPD & documentation</h4>
   <p>
-    🔹 Analyse comparative des solutions CRM (Zoho, HubSpot, Pipedrive)<br>
-    🔹 Choix recommandé : HubSpot (version gratuite + NPS intégré)<br>
-    🔹 Gestion de la relation client : centralisation des données, automatisations<br>
-    🔹 Prochaine étape : mise en place d’un mini-CRM dans Notion
+    🔹 Rédaction complète d’une documentation de conformité<br>
+    🔹 Données traitées : identité, transactions, avis<br>
+    🔹 Bases légales : consentement, exécution de contrat, obligation légale<br>
+    🔹 Droits des utilisateurs : accès, rectification, effacement, opposition<br>
+    🔹 Mesures de sécurité : HTTPS/TLS, hashage bcrypt, sauvegardes, rôles & permissions<br>
+    🔹 Politique de conservation des données<br>
+    🔹 PIA (Privacy Impact Assessment)<br><br>
+    ✅ Résultat : un guide RGPD adapté à une marketplace artisanale
   </p>
 
+  <!-- Galerie avec images -->
   <div class="gallery">
     <figure>
-      <img src="image/page-0023.jpg" alt="Comparaison CRM (Zoho, HubSpot, Pipedrive)">
-      <figcaption>Comparaison CRM – analyse des solutions</figcaption>
+      <img src="image/RGPD1.jpg" alt="Documentation RGPD – introduction et données traitées">
+      <figcaption>Documentation RGPD – Introduction & types de données</figcaption>
+    </figure>
+    <figure>
+      <img src="image/RGPD2.jpg" alt="Documentation RGPD – droits, sécurité et conservation">
+      <figcaption>Documentation RGPD – Droits, sécurité, conservation</figcaption>
     </figure>
   </div>
 
-  <p style="margin-top:1em; font-style:italic; color:gray;">
-     Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
+  <p style="margin-top:1em;">
+      <a href="https://docs.google.com/document/d/1Ih1_00DKwYdZ6EwTvevMp0oFo8_3N0W0/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Documentation RGPD (PDF)</a>
   </p>
-<p class="doc-links" style="margin-top:1em;">
-   <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-
-  <button onclick="toggleDetails('compCRM')">⬅️ Revenir</button>
+  <button type="button" onclick="toggleDetails('c-rgpd')">⬅️ Revenir</button>
 </div>
 
-
-  <!-- COMP 10 – Accessibilité & RGPD -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp10')">
-      <strong>Accessibilité & conformité RGPD :</strong> audit, formulaires – <em>OhMyFood</em>, <em>Ferme</em>.
-    </li>
-  </ul>
-  <div id="comp10" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Projets : OhMyFood / La Ferme – accessibilité & RGPD</h4>
-    <p>
-      🔹 Tests contrastes, structure ARIA, navigation clavier<br>
-      🔹 Bannières cookies, mentions légales, politique de confidentialité<br>
-      🔹 Formulaires conformes + consentement explicite
-    </p>
-<div class="gallery">
-  <img src="image/0041.png" alt="Audit Lighthouse OhMyFood">
-  <img src="image/0042.png" alt="Audit Lighthouse Ferme des Amandiers">
-  <img src="image/0040.png" alt="Audit Lighthouse Portfolio personnel">
-</div>
-<p class="notice-dev">
-  🔧 Le site Portfolio est encore en cours de développement — certaines sections seront complétées prochainement.
-</p>
-
-    <h5> Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter --></div>
-    <button onclick="toggleDetails('comp10')">⬅️ Revenir</button>
-  </div>
-
-<!-- COMP 12 – Data Visualisation & BI -->
+<!-- 8) Data Viz & BI (Tableau Public) -->
 <ul class="competences-list">
-  <li onclick="toggleDetails('comp12')">
-    <strong>Data Visualisation & Business Intelligence :</strong> analyses interactives – <em>Tableau Public</em>.
+  <li role="button" tabindex="0"
+      aria-controls="c-bi" aria-expanded="false"
+      onclick="toggleDetails('c-bi')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-bi')}">
+    <strong>Data Visualisation & Business Intelligence</strong> — Tableau Public
     <span class="badge-en-cours">⏳ En cours</span>
   </li>
 </ul>
-
-<div id="comp12" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Analyses de données – Tableau Public</h4>
+<div id="c-bi" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <p>Dashboards interactifs (cartes, tendances, KPI). Storytelling visuel.</p>
+    <h4>Analyses de données – Tableau Public</h4>
   <p>
     🔹 Cartes, tendances, comparatifs et KPI<br>
     🔹 Tableaux de bord interactifs (filtre, hover, drill-down)<br>
@@ -830,11 +900,10 @@
       Voir le projet sur Tableau Public
     </a>
   </p>
-
-  <button onclick="toggleDetails('comp12')">⬅️ Revenir</button>
+<!-- ajoutez ici 6 captures Tableau Public -->
+  <button type="button" onclick="toggleDetails('c-bi')">⬅️ Revenir</button>
 </div>
 
-<!-- COMP – Sécurité & RGPD (Back-end & Données) -->
 
   <!-- COMP 11 – Green IT & RSE -->
   <ul class="competences-list">
@@ -863,67 +932,62 @@
     <button onclick="toggleDetails('comp11')">⬅️ Revenir</button>
   </div>
 
-  <!-- COMP – Sécurité & RGPD (Back-end & Données) -->
-   <!-- COMP – RGPD & documentation (ArtisanConnect) -->
+ 
+<!-- COMP 14 – Analyse comportementale & IA -->
+ 
+<!-- 14) Analyse comportementale & IA -->
 <ul class="competences-list">
-  <li onclick="toggleDetails('compRGPD')">
-    <strong>RGPD & documentation :</strong> Protection des données – projet <em>ArtisanConnect</em>.
+  <li role="button" tabindex="0"
+      aria-controls="c-ia" aria-expanded="false"
+      onclick="toggleDetails('c-ia')"
+      onkeypress="if(event.key==='Enter'){toggleDetails('c-ia')}">
+    <strong>Analyse comportementale & IA</strong> — usage, éthique numérique
   </li>
 </ul>
-<div id="compRGPD" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>ArtisanConnect — RGPD & documentation</h4>
+
+<div id="c-ia" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
   <p>
-    🔹 Rédaction complète d’une documentation de conformité<br>
-    🔹 Données traitées : identité, transactions, avis<br>
-    🔹 Bases légales : consentement, exécution de contrat, obligation légale<br>
-    🔹 Droits des utilisateurs : accès, rectification, effacement, opposition<br>
-    🔹 Mesures de sécurité : HTTPS/TLS, hashage bcrypt, sauvegardes, rôles & permissions<br>
-    🔹 Politique de conservation des données<br>
-    🔹 PIA (Privacy Impact Assessment)<br><br>
-    ✅ Résultat : un guide RGPD adapté à une marketplace artisanale
+    🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
+    🔹 Réalisée dans Jupyter Notebook (Python, Pandas, Matplotlib)<br>
+    🔹 Préparation intégration API Mistral<br>
+    🔹 Permet d’identifier rapidement la satisfaction et les points faibles
   </p>
 
-  <!-- Galerie avec images -->
+  <h5>🖼️ Exemples :</h5>
   <div class="gallery">
     <figure>
-      <img src="image/RGPD1.jpg" alt="Documentation RGPD – introduction et données traitées">
-      <figcaption>Documentation RGPD – Introduction & types de données</figcaption>
+      <img src="image/Jupiter.png" alt="Notebook Jupyter – analyse IA">
+      <figcaption>Notebook Jupyter – analyse IA</figcaption>
     </figure>
     <figure>
-      <img src="image/RGPD2.jpg" alt="Documentation RGPD – droits, sécurité et conservation">
-      <figcaption>Documentation RGPD – Droits, sécurité, conservation</figcaption>
+      <img src="image/Cod-KPI.png" alt="Code SQL – KPI 1–6">
+      <figcaption>Code SQL – KPI 1–6</figcaption>
+    </figure>
+    <figure>
+      <img src="image/UML1.png" alt="Diagramme UML – ArtisanConnect">
+      <figcaption>Diagramme UML – ArtisanConnect</figcaption>
     </figure>
   </div>
 
-  <p style="margin-top:1em;">
-      <a href="https://docs.google.com/document/d/1Ih1_00DKwYdZ6EwTvevMp0oFo8_3N0W0/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Documentation RGPD (PDF)</a>
+  <h5> Livrables :</h5>
+  <ul class="doc-list">
+    <li> <a href="docs/MYKHAL~2.PDF" target="_blank" rel="noopener">Rapport KPI (PDF)</a></li>
+    <li> <a href="docs/MYKHAL~4.PDF" target="_blank" rel="noopener">Documentation projet (PDF)</a></li>
+    <li> <a href="docs/MYKHAL~1.SQL" target="_blank" rel="noopener">Requêtes SQL (KPI)</a></li>
+    <li> <a href="docs/MYKHAL~1.IPY"  target="_blank" rel="noopener">Notebook Jupyter</a></li>
+  </ul>
+
+  <p>
+    🔗 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Notebook Colab</a> ·
+    <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Diagramme UML</a>
   </p>
-  <button onclick="toggleDetails('compRGPD')">⬅️ Revenir</button>
+
+  <button type="button" onclick="toggleDetails('c-ia')">⬅️ Revenir</button>
 </div>
 
-  <!-- COMP 14 – Analyse comportementale & IA -->
-  <ul class="competences-list">
-    <li onclick="toggleDetails('comp14')">
-      <strong>Analyse comportementale & IA :</strong> usage, éthique numérique.
-      <span class="badge-en-cours">⏳ En cours</span>
-    </li>
-  </ul>
-  <div id="comp14" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <h4>Analyse comportementale & IA</h4>
-    <p>
-    🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
-    🔹 Réalisée dans Jupyter Notebook<br>
-    🔹 Préparation intégration API Mistral<br>
-    🔹 Permet d’identifier rapidement la satisfaction et les points faibles
-    </p>
-      <p>
-     <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Notebook d’analyse IA</a>
-  </p>
-    <p>⏳ En développement – intégration prévue dans la prochaine mise à jour.</p>
-    <h5> Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter --></div>
-   
-  </section>
+  </div>          <!-- закрыть #comp14 -->
+</section>     <!-- закрыть #competences -->
+
 
   <!-- ========= FIN DES AJOUTS ========= -->
 
@@ -943,13 +1007,6 @@
     <p>© 2025 Olena Mykhalska – Portfolio</p>
   </footer>
 
-
-  <script>
-    function toggleDetails(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
   <!-- Лайтбокс (один на всю страницу) -->
 <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр изображения">
   <img class="lightbox-content" alt="Просматриваемое изображение" />
@@ -995,6 +1052,26 @@
     }
   })();
 </script>
+
+<script>
+  function toggleDetails(id){
+    const panel   = document.getElementById(id);
+    const trigger = document.querySelector('[aria-controls="'+id+'"]');
+    if(!panel || !trigger) return;
+
+    const isOpen = panel.style.display === 'block';
+    panel.style.display = isOpen ? 'none' : 'block';
+    trigger.setAttribute('aria-expanded', String(!isOpen));
+
+    // 🪶 ВЕЄР: якщо відкрили головну панель — відкриваємо всі <details.sub>
+    if (!isOpen) {
+      panel.querySelectorAll('details.sub').forEach(det => det.setAttribute('open',''));
+    } else {
+      panel.querySelectorAll('details.sub').forEach(det => det.removeAttribute('open'));
+    }
+  }
+</script>
+
 
 </body>
 </html>
