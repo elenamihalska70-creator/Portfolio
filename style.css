@@ -1,355 +1,146 @@
-/* ====== BASE ====== */
-body {
-  background-color: #F4F1FA; /* светло-сиреневый */
-  color: #2C2A3D; /* тёмно-серый с фиолетовым подтоном */
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-/* Полоса-уведомление сверху */
-.notice{
-  position: fixed;
-  top: 0; left: 0; right: 0;           /* занимает всю ширину без transform */
-  background: #aaf1dc;                 /* нежно-зелёный фон */
-  border-bottom: 1px solid #48f4d7;
-  color: #0a3d2e;                      /* более тёмный текст для контраста */
-  padding: 8px 48px 8px 14px;          /* место под кнопку справа */
-  font-size: 0.95rem;
-  text-align: center;
-  z-index: 9999;
-  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+/* ========== BASE ========== */
+:root{
+  --brand:#7D2D2D;
+  --ink:#2C2A3D;
+  --hover-bg:#faf6f6;
+  --notice-h:40px;             /* высота плашки */
 }
 
-/* Кнопка закрытия */
-.notice-close{
-  position: absolute; top: 0; right: 6px;
-  height: 100%;
-  padding: 0 12px;
-  border: 0; background: transparent; color: #0a3d2e;
-  font-size: 1.25rem; line-height: 1; cursor: pointer;
-}
-.notice-close:hover, .notice-close:focus { color:#063025; }
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 
-body {
-  padding-top: 50px; /* чтобы текст не налезал на шапку */
+body{
+  background:#F4F1FA;
+  color:var(--ink);
+  font-family:'Raleway',sans-serif;
+  line-height:1.6;
+  padding-top:var(--notice-h); /* отступ под фикс-уведомление */
 }
 
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #4B306A; /* тёмный сливовый */
-  margin-bottom: 0.5rem;
+/* ========== NOTICE BAR (фикс) ========== */
+ .notice{ position: fixed; top: 0;
+   left: 0; right: 0;
+    height: var(--notice-h);
+     display: flex !important;
+      align-items: center;
+       justify-content: center;
+        background: #aaf1dc ;
+        color: #0a3d2e;
+         border-bottom: 1px solid #48f4d7;
+          padding: 0 48px 0 14px;
+           z-index: 2147483647;
+            /* поверх всего */
+             font-size: .95rem;
+              box-shadow: 0 2px 6px rgba(0,0,0,.06);
+             }
+             
+/* ========== LAYOUT/TYPO ========== */
+section{ max-width:1000px; margin:0 auto; padding:2rem 1rem; }
+.subtitle{
+  font:700 1.4rem/1 'Raleway',sans-serif;
+  color:#5a2d82; text-transform:uppercase; letter-spacing:1px; margin-top:5px;
 }
 
-/* ====== HEADER ====== */
-header {
-  background-color: #8E6EBE; /* средний фиолетовый */
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+/* Заголовки */
+h1,h2,h3{
+  font-family:'Raleway',serif;
+  color:#4B306A;
+  font-weight:600;
+  line-height:1.25;
 }
+h1{ font-size:clamp(2rem,1.4rem + 1.2vw,2.4rem); }
+h2{ font-size:clamp(1.35rem,1.1rem + .7vw,1.65rem); }
+h3{ font-size:clamp(1.15rem,1rem + .4vw,1.35rem); font-weight:400; }
 
-header h1 {
-  font-size: 2.5rem;
-  margin: 0.5rem 0;
+/* Ссылки на документы */
+a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],
+a[href$=".ppt"],a[href$=".pptx"]{
+  color:#8E6EBE; font-weight:700; text-decoration:none;
+  transition:color .3s,text-decoration-color .3s;
 }
-
-header p {
-  font-size: 2rem;
-  margin: 0;
-}
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #5a2d82; /* насыщенный фиолетовый */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 5px;
-}
-
-/* ====== SECTIONS ====== */
-section {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.intro p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* ====== PROJECT CARD ====== */
-.projet-card {
-  background-color: #ffffff;
-  border-left: 6px solid #8E6EBE;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 8px rgba(142, 110, 190, 0.1);
-}
-
-.projet-card h3 {
-  margin-top: 0;
-}
-
-.projet-card p {
-  margin: 0.5rem 0;
-}
-
-.projet-card a {
-  color: #8E6EBE;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.projet-card a:hover {
-  text-decoration: underline;
-}
-
-/* ====== FOOTER ====== */
-footer {
-  background-color: #2E1A47; /* глубокий фиолетовый */
-  color: #dcd3f2;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-.competences {
-  background-color: #f0f4f8;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.competences h2 {
-  font-size: 1.6rem;
-  color: #1f2937;
-  margin-bottom: 1rem;
-}
-
-.competences ul {
-  list-style: none;
-  padding: 0;
-}
-
-.competences li {
-  margin: 0.5rem 0;
-  color: #4b5563;
-  font-size: 1rem;
-}
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-  justify-items: center;
-  align-items: start;
-}
-
-.gallery figure {
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-.gallery figure:hover {
-  background-color: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-figcaption {
-  margin-top: 8px;
-  font-size: 0.95em;
-  color: #555;
-}
-
-
-.competences-list li {
-  cursor: pointer;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.competences-list li:hover {
-  color: #7D2D2D;
-  text-shadow: 0 0 1px #7D2D2D;
-}
-/* ===== Lightbox styles ===== */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 1000;
-  overflow: auto;
-  padding: 40px;
-  text-align: center;
-}
-
-.lightbox-content {
-  display: inline-block;
-  max-width: none;
-  max-height: none;
-  width: auto;
-  height: auto;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #000;
-}
-.lightbox-controls {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 1001;
-}
-
-.lightbox-controls button {
-  background-color: #ffffffcc;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: background 0.3s;
-}
-
-.lightbox-controls button:hover {
-  background-color: #dddddd;
-}
-/* запрет прокрутки, когда открыт лайтбокс */
-body.no-scroll { overflow: hidden; }
-
-/* центрирование изображения и мягкое масштабирование */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.95);
-  z-index: 1000;
-  padding: 40px;
-  text-align: center;
-}
-
-.lightbox-content {
-  display: inline-block;
-  max-width: 90vw;   /* чтобы не вылезало за экран */
-  max-height: 80vh;
-  width: auto;
-  height: auto;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #000;
-  transition: transform 0.2s ease;
-}
-/* Ссылки на документы (PDF, DOC, PPT и т.п.) */
-a[href$=".pdf"],
-a[href$=".doc"],
-a[href$=".docx"],
-a[href$=".ppt"],
-a[href$=".pptx"] {
-    color: ; /* Фирменный фиолетовый */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
 a[href$=".pdf"]:hover,
 a[href$=".doc"]:hover,
 a[href$=".docx"]:hover,
 a[href$=".ppt"]:hover,
-a[href$=".pptx"]:hover {
-    color: #f0e6f6 ; /* Ярко-синий при наведении */
-    text-decoration: underline;
-/* Заголовки: явные размеры + адаптивность */
-h1 { font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem); }
-h2 { font-size: clamp(1.6rem, 1.2rem + 1.0vw, 2.0rem); }
-h3 { font-size: clamp(1.3rem, 1.05rem + 0.6vw, 1.6rem); }
-h4 { font-size: 1.125rem; }
-h5 { font-size: 1rem; }
-h6 { font-size: 0.875rem; }
-
-/* На всякий случай — если внутри семантических секций */
-section h1, article h1, nav h1, aside h1 { font-size: inherit; }
-/* Явный размер заголовков (оставь только этот блок) */
-section h1,
-article h1,
-nav h1,
-aside h1 {
-  font-size: 2rem;
-  line-height: 1.2;
+a[href$=".pptx"]:hover{
+  color:#5a2d82; text-decoration:underline;
 }
 
-/* Футер */
-footer {
-  background: #2e014d;
-  text-align: center;
-  padding: 20px 10px;
-  font-family: 'Open Sans', sans-serif;
+/* ========== GALLERY ========== */
+.gallery{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px; margin-top:20px; justify-items:center; align-items:start;
+}
+.gallery figure{ margin:0; width:100%; max-width:300px; text-align:center; padding:10px; border-radius:12px; }
+.gallery img{
+  display:block; width:100%; height:auto; max-height:300px; object-fit:contain;
+  border:2px solid #ccc; border-radius:10px; transition:transform .3s;
+}
+.gallery img:hover{ transform:scale(1.03); }
+.gallery figure:hover{ background:#f5f5f5; box-shadow:0 2px 10px rgba(0,0,0,.1); }
+figcaption{ margin-top:8px; font-size:.95em; color:#555; }
+
+/* ========== LIGHTBOX ========== */
+.lightbox{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:1000; padding:40px; text-align:center; }
+.lightbox-content{ display:inline-block; max-width:90vw; max-height:80vh; border-radius:10px; box-shadow:0 0 25px #000; transition:transform .2s; }
+.lightbox-controls{ position:fixed; left:50%; bottom:30px; transform:translateX(-50%); display:flex; gap:15px; z-index:1001; }
+.lightbox-controls button{ background:#fff; border:0; border-radius:50%; width:40px; height:40px; font-size:22px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,.3); transition:background .3s; }
+.lightbox-controls button:hover{ background:#ddd; }
+body.no-scroll{ overflow:hidden; }
+
+/* ========== PROJECT CARD (опционально) ========== */
+.projet-card{ background:#fff; border-left:6px solid #8E6EBE; border-radius:.5rem; padding:1.5rem; margin:1.5rem 0; box-shadow:0 2px 8px rgba(142,110,190,.1); }
+.projet-card h3{ margin-top:0; }
+
+/* ========== COMPÉTENCES ========== */
+#competences{ padding-top:.75rem; }
+#competences h2{ margin-top:.25rem; margin-bottom:2rem; }
+
+/* Внешний список компетенций */
+#competences .competences-list{ list-style:none; padding-left:0; margin:.5rem 0 .7rem; }
+#competences .competences-list > li{
+  display:list-item;                 /* нужен для ::marker */
+  margin:.35rem 0;
+  font:400 clamp(1.00rem,.94rem + .45vw,1.20rem)/1.45 'Raleway',sans-serif;
+  color:#3d2d3d;
+  cursor:pointer;
+  outline:none;
+}
+#competences .competences-list > li::marker{ content:'▸ '; color:var(--brand); }
+#competences .competences-list > li strong{
+  font-weight:600;
+  color:#4B306A;                     /* цвет заголовков */
+  font-size:clamp(1.06rem,.98rem + .55vw,1.28rem);
+}
+#competences .competences-list > li:hover strong,
+#competences .competences-list > li:focus-visible strong{
+  color:var(--brand);
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
-/* контейнер иконок */
-footer .footer-icons {
-  margin-bottom: 10px;
+/* Внутренние details/summary */
+#competences summary::-webkit-details-marker{ display:none; }
+#competences .details details.sub{
+  border-left:3px solid #eee; padding-left:.7rem; margin:.65rem 0; border-radius:8px;
 }
+#competences .details details.sub[open]{ border-color:color-mix(in srgb, var(--brand) 28%, transparent); }
+#competences .details details.sub > summary{
+  cursor:pointer; display:flex; align-items:center; gap:.5rem;
+  font-weight:500; padding:.42rem .54rem; border-radius:8px;
+  transition:background .18s, color .18s, transform .12s, box-shadow .12s;
+}
+#competences .details details.sub > summary::before{ content:"▸"; transition:transform .16s; }
+#competences .details details.sub[open] > summary::before{ transform:rotate(90deg); }
+#competences .details details.sub > summary:hover{ background:var(--hover-bg); color:var(--brand); }
 
-/* ссылки-иконки: сразу перекрашиваем + страхуем visited */
-footer .footer-icons a,
-footer .footer-icons a:visited {
-  color: #f0e6f6 !important;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 1.5rem; /* размер иконок */
-  transition: color .2s ease, text-decoration-color .2s ease;
+/* ========== FOOTER ========== */
+footer{
+  background:#2E1A47; color:#dcd3f2; text-align:center; padding:1rem; font-size:.9rem;
 }
-
-/* сами иконки берут цвет ссылки */
-footer .footer-icons i,
-footer .footer-icons svg {
-  color: inherit;
-  fill: currentColor; /* если где-то svg */
+footer .footer-icons{ margin-bottom:10px; }
+footer .footer-icons a, footer .footer-icons a:visited{
+  color:#f0e6f6!important; text-decoration:none; margin:0 10px; font-size:1.5rem; transition:color .2s, text-decoration-color .2s;
 }
-
-/* hover — подчёркивание и чуть ярче */
-footer .footer-icons a:hover {
-  color: #ffffff !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* подпись внизу */
-footer p {
-  color: #f0e6f6;
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
+footer .footer-icons a:hover{ color:#fff!important; text-decoration:underline; text-underline-offset:3px; }
+footer p{ color:#f0e6f6; font-size:.9rem; margin-top:5px; }

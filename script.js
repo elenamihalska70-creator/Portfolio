@@ -83,3 +83,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === '-') btnZoomOut.click();
   });
 });
+function toggleDetails(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const willShow = el.style.display === '' || el.style.display === 'none';
+
+  // закрыть остальные главные блоки
+  document.querySelectorAll('.details').forEach(d => {
+    if (d !== el) d.style.display = 'none';
+  });
+  document.querySelectorAll('.competences-list li[aria-expanded]')
+    .forEach(li => li.setAttribute('aria-expanded', 'false'));
+
+  // показать/скрыть текущий
+  el.style.display = willShow ? 'block' : 'none';
+  document.querySelectorAll(`.competences-list li[aria-controls="${id}"]`)
+    .forEach(li => li.setAttribute('aria-expanded', willShow ? 'true' : 'false'));
+
+  // 🔽 НОВОЕ: при открытии главного блока — автоматически раскрыть первую подплашку
+  if (willShow) {
+    // закрыть все под‑вкладки внутри
+    el.querySelectorAll('details.sub').forEach(d => d.open = false);
+    // открыть первую
+    const first = el.querySelector('details.sub');
+    if (first) first.open = true;
+  }
+}
