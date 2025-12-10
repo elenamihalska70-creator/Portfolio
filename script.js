@@ -110,3 +110,53 @@ function toggleDetails(id) {
     if (first) first.open = true;
   }
 }
+<script>
+/* CONTACT FORM (Formspree AJAX) */
+(function () {
+  const form   = document.getElementById('contactForm');
+  if (!form) return;
+
+  const status = document.getElementById('cf-status');
+
+  function showError(input, show) {
+    const wrap = input.closest('.field');
+    if (!wrap) return;
+    wrap.classList.toggle('has-error', !!show);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // HTML5 валидация
+    let ok = true;
+    ['cf-name','cf-email','cf-msg','cf-consent'].forEach(id => {
+      const el = document.getElementById(id);
+      const valid = el.type === 'checkbox' ? el.checked : el.checkValidity();
+      showError(el, !valid);
+      if (!valid) ok = false;
+    });
+    if (!ok) { status.textContent = ''; return; }
+
+    const btn = document.getElementById('cf-submit');
+    btn.disabled = true; btn.textContent = (window.i18n && i18n.t('contact.sending')) || 'Envoi…';
+
+    try {
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (resp.ok) {
+        form.reset();
+        status.textContent = (window.i18n && i18n.t('contact.ok')) || 'Merci ! Votre message a été envoyé.';
+      } else {
+        status.textContent = (window.i18n && i18n.t('contact.fail')) || 'Oups, une erreur est survenue.';
+      }
+    } catch (err) {
+      status.textContent = (window.i18n && i18n.t('contact.fail')) || 'Oups, une erreur est survenue.';
+    } finally {
+      btn.disabled = false; btn.textContent = (window.i18n && i18n.t('contact.send')) || 'Envoyer';
+    }
+  });
+})();
+</script>

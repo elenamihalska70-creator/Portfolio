@@ -94,7 +94,7 @@ body.no-scroll{ overflow:hidden; }
 
 /* ========== COMPÉTENCES ========== */
 #competences{ padding-top:.75rem; }
-#competences h2{ margin-top:.25rem; margin-bottom:2rem; }
+#competences h2{ margin-top:.25rem; margin-bottom:3rem; }
 
 /* Внешний список компетенций */
 #competences .competences-list{ list-style:none; padding-left:0; margin:.5rem 0 .7rem; }
@@ -105,6 +105,7 @@ body.no-scroll{ overflow:hidden; }
   color:#3d2d3d;
   cursor:pointer;
   outline:none;
+  margin: 0.55rem 0;   /* ⬅️ вот эта строка даёт отступ сверху и снизу */
 }
 #competences .competences-list > li::marker{ content:'▸ '; color:var(--brand); }
 #competences .competences-list > li strong{
@@ -144,3 +145,55 @@ footer .footer-icons a, footer .footer-icons a:visited{
 }
 footer .footer-icons a:hover{ color:#fff!important; text-decoration:underline; text-underline-offset:3px; }
 footer p{ color:#f0e6f6; font-size:.9rem; margin-top:5px; }
+
+/* Contact form */
+#contact .field{margin:.8rem 0}
+#contact label{display:block; font-weight:600; margin-bottom:.35rem}
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea{
+  width:100%; padding:.7rem .8rem; border:1px solid #d6cfee; border-radius:.6rem;
+  background:#fff;
+}
+#contact .consent{display:flex; gap:.5rem; align-items:flex-start; font-weight:400}
+#contact .err{display:none; color:#a33; font-size:.9rem; margin-top:.25rem}
+#contact .field.has-error .err{display:block}
+#contact .field.has-error input,
+#contact .field.has-error textarea{border-color:#e59}
+#contact .status{margin-top:.6rem; font-weight:600}
+#contact .privacy{color:#666; font-size:.9rem; margin-top:.6rem}
+
+.lang-switch{display:flex; gap:.4rem; align-items:center; margin:.5rem 0 0}
+.lang-switch button{
+  background:transparent; border:0; color:#4B306A; font-weight:700; cursor:pointer;
+  padding:.15rem .35rem; border-radius:.4rem;
+}
+.lang-switch button[aria-pressed="true"]{background:#efe9ff}
+.lang-switch button:hover{background:#f6f1ff}
+/* Plus pour indiquer le zoom dans la section Tests & recettage */
+#c-test .with-plus {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#c-test .with-plus::after {
+  content: "+";
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  pointer-events: none; /* чтобы клик уходил в картинку и вызывал лайтбокс */
+}
+
+#c-test .with-plus:hover::after {
+  transform: scale(1.05);
+}
