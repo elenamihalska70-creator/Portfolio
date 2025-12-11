@@ -1,0 +1,31 @@
+{
+  "notice.text": "This site is being updated. Some sections will be completed soon.",
+  "notice.close": "Close announcement",
+
+  "hero.name": "Olena Mykhalska",
+  "hero.role": "DIGITAL PROJECT MANAGER – HYBRID PROFILE",
+  "hero.cv": "Download my CV",
+
+  "about.title": "About",
+  "about.p1": "With more than 20 years of entrepreneurial experience, I have a deep understanding of the needs, constraints and daily challenges businesses face. I have learned to analyse operational problems, customer expectations, time pressure and the importance of having tools that are reliable and easy to use.",
+  "about.p2": "Today, thanks to my engineering background and my skills in digital project management, UX/UI, SEO/SEA, web development and automation, I help entrepreneurs and organisations simplify their processes, optimise their tools and improve efficiency through digital solutions. I enjoy turning real business problems into clear, efficient and easy-to-use digital solutions.",
+
+
+  "comp.title": "Skills & Projects",
+
+  "contact.title": "Contact me",
+  "contact.name_label": "Your name",
+  "contact.email_label": "Your email",
+  "contact.msg_label": "Your message",
+  "contact.consent": "I agree that this information will be used to reply to my request.",
+  "contact.send": "Send",
+  "contact.sending": "Sending…",
+  "contact.ok": "Thank you! Your message has been sent.",
+  "contact.fail": "Oops, something went wrong.",
+  "contact.name_err": "Please enter your name.",
+  "contact.email_err": "Invalid email address.",
+  "contact.msg_err": "Please write a message.",
+  "contact.consent_err": "Required before sending.",
+  "contact.privacy": "Your data is only used to answer you. No marketing.",
+  "contact.alt": "Or write to me directly:"
+}

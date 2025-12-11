@@ -1,0 +1,31 @@
+{
+  "notice.text": "Ce site est en cours d’enrichissement. Certaines sections seront complétées prochainement.",
+  "notice.close": "Fermer l’annonce",
+
+  "hero.name": "Olena Mykhalska",
+  "hero.role": "CHEFFE DE PROJET DIGITAL - PROFIL HYBRIDE",
+  "hero.cv": "Télécharger mon CV",
+
+  "about.title": "À propos",
+  "about.p1": "Après plus de 20 ans d’entrepreneuriat, je connais très bien les besoins, les contraintes et les douleurs quotidiennes des entreprises. J’ai appris à comprendre les problématiques métier, les attentes des clients, la pression du temps et la nécessité d’avoir des outils fiables et simples à utiliser.",
+  "about.p2": "Aujourd’hui, grâce à ma formation d’ingénieure et à mes compétences en gestion de projet digital, UX/UI, SEO/SEA, développement web et automatisation, j’aide les entrepreneurs et organisations à simplifier leurs processus, optimiser leurs outils et gagner en efficacité grâce au digital. J’aime transformer des problématiques concrètes en solutions digitales claires, performantes et faciles à utiliser.",
+
+
+  "comp.title": "Compétences & réalisations",
+
+  "contact.title": "Me contacter",
+  "contact.name_label": "Votre nom",
+  "contact.email_label": "Votre e-mail",
+  "contact.msg_label": "Votre message",
+  "contact.consent": "J’accepte que ces informations soient utilisées pour répondre à ma demande.",
+  "contact.send": "Envoyer",
+  "contact.sending": "Envoi…",
+  "contact.ok": "Merci ! Votre message a été envoyé.",
+  "contact.fail": "Oups, une erreur est survenue.",
+  "contact.name_err": "Veuillez indiquer votre nom.",
+  "contact.email_err": "Adresse e-mail invalide.",
+  "contact.msg_err": "Écrivez un message.",
+  "contact.consent_err": "Nécessaire pour envoyer.",
+  "contact.privacy": "Vos données ne sont utilisées que pour vous répondre. Aucune prospection.",
+  "contact.alt": "Ou écrivez-moi directement :"
+}
