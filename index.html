@@ -55,10 +55,16 @@
 
 
   <!-- HERO SECTION -->
-<nav class="lang-switch" aria-label="Langue / Language">
-  <button type="button" data-lang="fr" aria-pressed="true" title="Français">FR</button>
-  <span aria-hidden="true">·</span>
-  <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
+<nav class="lang-switch" aria-label="Language switcher">
+  <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">
+    <span class="flag" aria-hidden="true">🇫🇷</span>
+    <span class="code">FR</span>
+  </button>
+
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">
+    <span class="flag" aria-hidden="true">🇬🇧</span>
+    <span class="code">EN</span>
+  </button>
 </nav>
 
 <section id="hero">
@@ -72,42 +78,1166 @@
 </section>
 
   <!-- À PROPOS -->
- <section id="about" aria-labelledby="about-title">
-  <h2 id="about-title" data-i18n="about.title">À propos</h2>
+<section id="about">
+  <h2 data-i18n="about.title">À propos</h2>
+
   <p data-i18n="about.p1">
-    Entrepreneure expérimentée depuis plus de 25 ans…
+    Après plus de 20 ans d’entrepreneuriat, je connais très bien les besoins,
+    les contraintes et les douleurs quotidiennes des entreprises. J’ai appris
+    à comprendre les problématiques métier, les attentes des clients, la pression
+    du temps et la nécessité d’avoir des outils fiables et simples à utiliser.
   </p>
+
   <p data-i18n="about.p2">
-    Aujourd’hui, je suis prête à relever de nouveaux défis…
+    Aujourd’hui, grâce à ma formation d’ingénieure et à mes compétences en gestion
+    de projet digital, UX/UI, SEO/SEA, développement web et automatisation,
+    j’aide les entrepreneurs et organisations à simplifier leurs processus,
+    optimiser leurs outils et gagner en efficacité grâce au digital.
+    J’aime transformer des problématiques concrètes en solutions digitales
+    claires, performantes et faciles à utiliser.
   </p>
 </section>
 
+
   <!-- COMPÉTENCES -->
 <!-- ================= COMPÉTENCES (CLEAN) ================= -->
+ 
 <section id="competences" aria-labelledby="comp-title">
   <h2 id="comp-title" data-i18n="comp.title">Compétences & réalisations</h2>
 
-  
-     <!-- 1) Design & Front-end -->
-  <ul class="competences-list">
-    <li role="button" tabindex="0" aria-controls="c-design" aria-expanded="false"
-        onclick="toggleDetails('c-design')"
-        onkeypress="if(event.key==='Enter'){toggleDetails('c-design')}">
-      <strong>Design & Front‑end</strong> — UI/UX, intégration, accessibilité
-    </li>
-  </ul>
-  <div id="c-design" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+<ul class="competences-list">
 
-    <!-- UI/UX Design (OhMyFood) -->
-    <details class="sub" style="margin-bottom:1rem;">
-      <summary><strong>UI/UX Design</strong> — maquettes Figma (projet <em>OhMyFood</em>)</summary>
-      <div style="margin-top:.6rem;">
+  <!-- =========================
+  1) WEBMASTERING & OPTIMISATION
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-webmaster" aria-expanded="false"
+         onclick="toggleDetails('c-webmaster')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-webmaster')}">
+      <strong data-i18n="cat.webmaster">Webmastering & optimisation</strong> —
+      <span class="tag">WordPress</span>
+      <span class="tag">Performance</span>
+      <span class="tag">Sécurité</span>
+      <span class="tag">Accessibilité</span>
+    </div>
+
+    <div id="c-webmaster" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <!-- =========================
+      STAGE — ART FOR GOOD (Paris) | Télétravail | 12 sept. – 27 nov. 2025
+      À répartir dans les panels "Compétences"
+      ========================= -->
+
+      <!-- 1) WEBMASTERING & OPTIMISATION -->
+      <details class="sub">
+        <summary><strong>Stage — Art for Good (Paris)</strong> : webmastering & optimisation (12 sept. – 27 nov. 2025)</summary>
+
+        <p><strong>Contexte :</strong> audit et remise en état d’un site WordPress existant, optimisation SEO/performance, sécurité & accessibilité.</p>
+
+        <ul>
+          <li><strong>Site :</strong> <em>Art for Good (WordPress)</em></li>
+          <li><strong>Audit & corrections :</strong> structure des pages, liens internes/externes, navigation, cohérence globale.</li>
+          <li><strong>SEO :</strong> optimisation des contenus, hiérarchie des titres, maillage interne.</li>
+          <li><strong>Performance & maintenance :</strong> mises à jour thème/plugins, nettoyage, optimisation générale.</li>
+          <li><strong>Sécurité :</strong> sauvegardes, configuration de plugins de sécurité, bonnes pratiques.</li>
+          <li><strong>Contenu :</strong> création et mise à jour de pages, refonte du slider, création d’une FAQ.</li>
+        </ul>
+
+        <p><strong>Résultats :</strong> site stabilisé, structure clarifiée, formulaires fiabilisés, base de maintenance et de bonnes pratiques mise en place.</p>
+
+        <p><strong>Preuves (assets) :</strong> OVH (domaines, SSL), FTP, phpMyAdmin, réglages SMTP, liste de plugins, pages optimisées, audits Lighthouse/WAVE.</p>
+
+        <h5>🛠️ Ce que j’ai réalisé</h5>
+        <ul class="keypoints">
+          <li>Audit technique et fonctionnel d’un site WordPress existant</li>
+          <li>Correction de la structure, navigation et liens internes / externes</li>
+          <li>Optimisation SEO, performance et bonnes pratiques</li>
+          <li>Sécurisation : sauvegardes, plugins, maintenance</li>
+          <li>Gestion hébergement OVH : domaines, SSL, FTP, bases de données</li>
+        </ul>
+
+        <h5>🖼️ Exemples (preuves techniques)</h5>
+        <div class="gallery">
+          <figure>
+            <img src="stage/artforgoodhome1.png" alt="Page d’accueil Art for Good">
+            <figcaption>Accueil — avant / après optimisation</figcaption>
+          </figure>
+
+          <figure>
+            <img src="stage/artforgoogplagins.png" alt="Plugins WordPress">
+            <figcaption>Plugins — sécurité, cache, SEO</figcaption>
+          </figure>
+
+          <figure>
+            <img src="stage/artforgoodSMPT.png" alt="Réglages SMTP">
+            <figcaption>SMTP — configuration e-mails</figcaption>
+          </figure>
+
+          <figure>
+            <img src="stage/OVH1.jpeg" alt="OVH Cloud">
+            <figcaption>OVH — hébergement & SSL</figcaption>
+          </figure>
+
+          <figure>
+            <img src="stage/FTP.jpeg" alt="FTP FileZilla">
+            <figcaption>FTP — accès serveur</figcaption>
+          </figure>
+
+          <figure>
+            <img src="stage/phpadmin.jpeg" alt="phpMyAdmin">
+            <figcaption>Base de données — phpMyAdmin</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sub">
+        <summary><strong>Projet WordPress — OhMyFood (OpenClassrooms)</strong></summary>
+
         <p>
-          🔹 <strong>Design complet sur Figma</strong> : wireframe, logo, maquettes responsives (Accueil, À propos, Restaurants)<br>
-          🔹 <strong>Passage vers WordPress</strong> : intégration responsive, formulaire (CF7), pop-up, conformité RGPD<br>
-          🔹 <strong>Créations graphiques bénévoles</strong> : affiches & visuels pour événements et réseaux sociaux
+          🔹 Intégration d’un <strong>thème enfant WordPress</strong> (header, footer, pages)<br>
+          🔹 Mise en place de <strong>pop-up</strong> et <strong>formulaire Contact Form 7</strong> (réglages email)<br>
+          🔹 Mise en conformité <strong>RGPD</strong> (mentions, consentement)<br>
+          🔹 Optimisation <strong>accessibilité</strong>, <strong>responsive</strong> et <strong>SEO</strong><br>
+          🔹 Audits <strong>Lighthouse</strong> (performance & accessibilité)
         </p>
+
+        <h4>Projet WordPress — OhMyFood (OpenClassrooms)</h4>
+
         <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <!-- Nouveaux screenshots -->
+          <figure>
+            <img src="image/Ohmyfood – Accueil (desktop).jpg" alt="Page d’accueil Ohmyfood – vue bureau">
+            <figcaption>Accueil – Desktop</figcaption>
+          </figure>
+          <figure>
+            <img src="image/Ohmyfood – Accueil (mobile).jpg" alt="Page d’accueil Ohmyfood – vue mobile complète">
+            <figcaption>Accueil – Mobile (full page)</figcaption>
+          </figure>
+          <figure>
+            <img src="image/ohmyfoodcom.local_a-propos_.jpg" alt="Page À propos – vue bureau">
+            <figcaption>À propos – Desktop</figcaption>
+          </figure>
+          <figure>
+            <img src="image/ohmyfoodcom.local_a-propos_ (1).jpg" alt="Page À propos – vue mobile">
+            <figcaption>À propos – Mobile</figcaption>
+          </figure>
+          <figure>
+            <img src="image/ohmyfoodcom.local_restaurant_.jpg" alt="Page Restaurant – vue mobile complète">
+            <figcaption>Restaurant – Mobile (full page)</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (183).png" alt="Local">
+            <figcaption>local connection</figcaption>
+          </figure>
+
+          <!-- Существующие изображения -->
+          <figure><img src="image/Снимок экрана (255).png" alt="LOGO et favicon"><figcaption>LOGO et favicon</figcaption></figure>
+          <figure><img src="image/Снимок экрана (256).png" alt="Page Restaurants"><figcaption>Page Restaurants</figcaption></figure>
+          <figure><img src="image/Снимок экрана (205) — копия.png" alt="Popup réservation"><figcaption>Popup réservation</figcaption></figure>
+          <figure><img src="image/Снимок экрана (180).png" alt="Popup"><figcaption>Popup</figcaption></figure>
+
+          <figure>
+            <img src="image/Снимок экрана (155).png" alt="Contact Form 7 — настройки e-mail для формы бронирования">
+            <figcaption>CF7 — Réglages e-mail</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (156).png" alt="Audit Lighthouse — результат 95 по доступности">
+            <figcaption>Audit Lighthouse — 95 (Accessibilité)</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (164).png" alt="WordPress Customizer — aperçu desktop page d’accueil">
+            <figcaption>Customizer — Accueil (desktpo)</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (165).png" alt="WordPress Customizer — aperçu planchet page d’accueil">
+            <figcaption>Customizer — Accueil (planchet)</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (169).png" alt="Code CSS du thème enfant dans VS Code">
+            <figcaption>Thème enfant — CSS</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (177).png" alt="Code PHP du thème enfant dans VS Code">
+            <figcaption>Thème enfant — PHP</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/Снимок экрана (181).png" alt="Formulaire Contact — version test dans Customizer">
+            <figcaption>Formulaire — test</figcaption>
+          </figure>
+
+          <figure><img src="image/Снимок экрана (160).png" alt="Git Hub"><figcaption>Git Hub – code</figcaption></figure>
+        </div>
+
+        <p style="margin-top: 1em;">
+          📄 <a href="https://youtu.be/m9kf7urAnEY" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
+        </p>
+      </details>
+
+      <!-- Accessibilité & conformité -->
+      <details class="sub">
+        <summary><strong>Accessibilité & conformité</strong> — audits & formulaires (projets <em>OhMyFood</em>, <em>Ferme</em>)</summary>
+        <div style="margin-top:.6rem;">
+          <p>
+            🔹 Tests de contraste, structure ARIA, navigation clavier<br>
+            🔹 Bannières cookies, mentions légales, politique de confidentialité<br>
+            🔹 Formulaires conformes + consentement explicite
+          </p>
+          <div class="gallery">
+            <figure><img loading="lazy" src="image/0041.png" alt="Audit Lighthouse OhMyFood"><figcaption>OhMyFood — Lighthouse</figcaption></figure>
+            <figure><img loading="lazy" src="image/0042.png" alt="Audit Lighthouse Ferme"><figcaption>Ferme — Lighthouse</figcaption></figure>
+            <figure><img loading="lazy" src="image/0040.png" alt="Audit Lighthouse Portfolio"><figcaption>Portfolio — Lighthouse</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <button type="button" onclick="toggleDetails('c-webmaster')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  2) DÉVELOPPEMENT WEB
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-dev" aria-expanded="false"
+         onclick="toggleDetails('c-dev')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-dev')}">
+      <strong data-i18n="cat.dev">Développement web</strong> —
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">PHP (bases)</span>
+    </div>
+
+    <div id="c-dev" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <details class="sub">
+        <summary>
+          <strong>Stage — Art for Good</strong> : intégration & corrections front
+          (HTML / CSS / JS + PHP bases)
+        </summary>
+
+        <ul>
+          <li><strong>Restauration :</strong> <em>dialogagency.com</em> (site fortement cassé).</li>
+          <li><strong>Reconstruction :</strong> header, footer, navigation, ancres et liens.</li>
+          <li><strong>Multilingue :</strong> remise en place du switch de langues.</li>
+          <li><strong>Corrections UI :</strong> ajustements CSS, lisibilité, cohérence visuelle.</li>
+          <li><strong>PHP (bases) :</strong> corrections liées au thème et à l’intégration.</li>
+        </ul>
+
+        <p><strong>Résultats :</strong> site restauré, navigation fiable, structure propre, affichage cohérent.</p>
+
+        <h5>🖼️ Exemples (preuves techniques)</h5>
+        <div class="gallery">
+          <figure>
+            <img loading="lazy" src="stage/dialogagencypages.png" alt="Pages WordPress Dialog Agency">
+            <figcaption>Pages — structure rétablie</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/dialogagencylanguage.png" alt="Multilingue WordPress">
+            <figcaption>Multilingue — switch langues</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/dialogagencyplagin.png" alt="Plugins WordPress">
+            <figcaption>Plugins & configuration</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/dialogagencyhome.jpeg" alt="Page d’accueil Dialog Agency">
+            <figcaption>Accueil — site restauré</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/FTP.jpeg" alt="FTP accès serveur">
+            <figcaption>FTP — accès serveur</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sub" open style="margin-bottom:1rem;">
+        <summary>
+          <strong>Développement front-end</strong> — site sans CMS
+          (projet <em>La Ferme des Amandiers</em>)
+        </summary>
+
+        <div style="margin-top:.6rem;">
+          <p><em>Ce que j’ai réalisé :</em></p>
+
+          <ul class="keypoints">
+            <li>Site dynamique en PHP, MySQL, HTML, CSS, JavaScript — sans CMS</li>
+            <li>Structure HTML5/CSS3 (Flexbox, Grid, responsive)</li>
+            <li>PHP &amp; PDO pour l’affichage dynamique</li>
+            <li>BDD MySQL (4 tables : <code>produits</code>, <code>jours</code>, <code>saisons</code>, <code>produit_jour</code>)</li>
+            <li>Filtres interactifs (JS vanilla)</li>
+            <li>Lighthouse : Perf 97, Accessibilité 92</li>
+          </ul>
+
+          <h5>🖼️ Exemples :</h5>
+          <div class="gallery">
+            <figure><img loading="lazy" src="image/farm_products_1.png" alt="Produits – Vue 1"><figcaption>Produits – Vue 1</figcaption></figure>
+            <figure><img loading="lazy" src="image/farm_mock_products1.png" alt="Mock-up v1"><figcaption>Mock-up v1</figcaption></figure>
+            <figure><img loading="lazy" src="image/farm_products_2.png" alt="Produits – Vue 2"><figcaption>Produits – Vue 2</figcaption></figure>
+            <figure><img loading="lazy" src="image/farm_index.png" alt="Code HTML index"><figcaption>Code HTML</figcaption></figure>
+            <figure><img loading="lazy" src="image/php_myadmin.png" alt="BDD MySQL"><figcaption>BDD MySQL</figcaption></figure>
+            <figure><img loading="lazy" src="image/farm_lighthouse.png" alt="Audit Lighthouse"><figcaption>Lighthouse</figcaption></figure>
+          </div>
+
+          <p style="margin-top:.6rem;">
+            <a href="https://github.com/elenamihalska70-creator/fermedesamandiers"
+               class="btn" target="_blank" rel="noopener noreferrer">
+              📂 Code GitHub
+            </a>
+            <a href="#" class="btn" style="opacity:.6; pointer-events:none;">
+              🌐 Démo (à venir)
+            </a>
+          </p>
+        </div>
+      </details>
+
+      <button type="button" class="btn-back" onclick="toggleDetails('c-dev')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  3) BACK-END & SQL
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-backend" aria-expanded="false"
+         onclick="toggleDetails('c-backend')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-backend')}">
+      <strong data-i18n="cat.backend">Back-end & SQL</strong> —
+      <span class="tag">PDO</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Modélisation</span>
+    </div>
+
+    <div id="c-backend" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <details class="sub">
+        <summary><strong>Stage — Art for Good</strong> : diagnostic hébergement & gestion base de données</summary>
+
+        <p><strong>Contexte :</strong> création d’un nouveau site demandée, mais plus de base MySQL disponible sur l’hébergement.</p>
+
+        <ul>
+          <li><strong>Nouveau site :</strong> <em>artweekparis.com</em> (création).</li>
+          <li><strong>Diagnostic :</strong> vérification des ressources disponibles côté hébergement.</li>
+          <li><strong>Solution :</strong> inventaire des sites existants, identification de <strong>2 sites inutilisés</strong>.</li>
+          <li><strong>Réutilisation :</strong> nettoyage/purge d’une base inutilisée puis réaffectation pour le nouveau site.</li>
+          <li><strong>Contrôle :</strong> vérification du bon fonctionnement après mise en place.</li>
+        </ul>
+
+        <p><strong>Résultats :</strong> blocage “pas de base disponible” résolu → nouveau site rendu possible.</p>
+
+        <p><strong>Preuves (assets) :</strong> capture OVH (bases), preuve du nouveau site en place, check admin/DB.</p>
+
+        <h5>🖼️ Exemples (preuves techniques)</h5>
+        <div class="gallery">
+          <figure>
+            <img loading="lazy" src="stage/OVH4.jpeg" alt="OVH — informations générales hébergement">
+            <figcaption>OVH — hébergement (infos)</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/OVH2.jpeg" alt="OVH — liste des hébergements et accès FTP">
+            <figcaption>OVH — inventaire (hébergements/FTP)</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/OVH3.jpeg" alt="OVH — domaines associés et SSL">
+            <figcaption>OVH — domaines & SSL</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/phpadmin.jpeg" alt="phpMyAdmin — base de données WordPress">
+            <figcaption>phpMyAdmin — base de données</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/FTP.jpeg" alt="FTP — accès serveur via FileZilla">
+            <figcaption>FTP — accès serveur</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sub" style="margin-bottom:1rem;">
+        <summary><strong>La Ferme des Amandiers</strong> — MySQL, PHP / PDO</summary>
+
+        <ul class="keypoints">
+          <li>Conception de la base de données MySQL (produits, saisons, jours).</li>
+          <li>Connexion sécurisée via PDO et requêtes préparées.</li>
+          <li>Affichage dynamique du catalogue (filtres saison / jour).</li>
+          <li>Logique back-end sans CMS.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure><img src="image/0031.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 1"><figcaption>Affichage dynamique — Vue 1</figcaption></figure>
+          <figure><img src="image/0032.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 2"><figcaption>Affichage dynamique — Vue 2</figcaption></figure>
+          <figure><img src="image/0033.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 3"><figcaption>Affichage dynamique — Vue 3</figcaption></figure>
+          <figure><img src="image/0034.png" loading="lazy" alt="Schéma des tables MySQL du projet"><figcaption>Structure de la base MySQL</figcaption></figure>
+          <figure><img src="image/0035.png" loading="lazy" alt="Exemple de code de connexion PDO"><figcaption>Connexion PDO</figcaption></figure>
+          <figure><img src="image/0036.png" loading="lazy" alt="Exemple de requête SQL exécutée via PDO"><figcaption>Requête SQL via PDO</figcaption></figure>
+        </div>
+
+        <p class="actions" style="margin-top:.75em;">
+          <a class="btn" href="https://github.com/elenamihalska70-creator/fermedesamandiers" target="_blank" rel="noopener">
+            📂 Code GitHub
+          </a>
+          <span class="btn btn-ghost" aria-disabled="true">🌐 Démo (à venir)</span>
+        </p>
+      </details>
+
+      <details class="sub">
+        <summary><strong>ArtisanConnect</strong> — UML, SQLite, KPI SQL</summary>
+
+        <ul class="keypoints">
+          <li>Modélisation UML : clients, artisans, produits, commandes, avis.</li>
+          <li>Base SQLite et requêtes SQL pour indicateurs KPI.</li>
+          <li>Exploitation des données pour tableaux de bord (Looker Studio).</li>
+        </ul>
+
+        <div class="gallery">
+          <figure><img src="image/uml.png" loading="lazy" alt="Diagramme UML"><figcaption>Diagramme UML</figcaption></figure>
+          <figure><img src="image/db.png" loading="lazy" alt="Base SQLite"><figcaption>Tables SQLite</figcaption></figure>
+          <figure><img src="image/kpi.png" loading="lazy" alt="Requêtes KPI"><figcaption>Requêtes KPI</figcaption></figure>
+        </div>
+
+        <p class="actions" style="margin-top:.75em;">
+          📄 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">
+            Scripts SQL (création + KPI)
+          </a><br>
+          📄 <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">
+            Schéma UML
+          </a>
+        </p>
+      </details>
+
+      <button type="button" onclick="toggleDetails('c-backend')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  4) AUTOMATISATION & OUTILS
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-auto" aria-expanded="false"
+         onclick="toggleDetails('c-auto')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-auto')}">
+      <strong data-i18n="cat.auto">Automatisation & outils</strong> —
+      <span class="tag">Simulateur JS</span>
+      <span class="tag">CF7</span>
+      <span class="tag">Workflows</span>
+      <span class="tag">Intégration WP</span>
+      <span class="badge">en cours</span>
+    </div>
+
+    <div id="c-auto" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <details class="sub">
+        <summary>
+          <strong>Stage — Art for Good (Paris)</strong> :
+          simulateur de leasing (JavaScript) & workflow email
+        </summary>
+
+        <p><strong>Contexte :</strong> automatiser un processus métier (devis leasing) avec calcul + récapitulatif + envoi email.</p>
+
+        <ul class="keypoints">
+          <li><strong>Simulateur :</strong> logique métier définie par le directeur (calcul automatique + synthèse).</li>
+          <li><strong>Sites :</strong> <em>artforgood.com</em> et <em>artfinancement.com</em>.</li>
+          <li><strong>Workflow :</strong> envoi d’un email au client + copie au directeur (suivi immédiat).</li>
+          <li><strong>Intégration :</strong> insertion sur page WordPress, cohérence UI, tests fonctionnels.</li>
+        </ul>
+
+        <h5>🧩 Stack & outils</h5>
+        <ul class="keypoints">
+          <li>JavaScript (logique + calculs + génération du récapitulatif)</li>
+          <li>WordPress (page dédiée / intégration)</li>
+          <li>Contact Form 7 / SMTP (selon site) — envoi email & fiabilisation</li>
+          <li>Tests : cas réels + vérification des champs + contrôle des emails reçus</li>
+        </ul>
+
+        <h5>🖼️ Exemples (preuves)</h5>
+        <div class="gallery">
+          <figure>
+            <img loading="lazy" src="stage/simulatorartforgood.png" alt="Simulateur de leasing — Art for Good (interface)">
+            <figcaption>Simulateur — interface (Art for Good)</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/simulatorartfinanc.png" alt="Simulateur de leasing — Art & Financement (intégration)">
+            <figcaption>Intégration — Art & Financement</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/somulatorlisingmail.png" alt="Email reçu — récapitulatif client + copie directeur">
+            <figcaption>Email — client + copie directeur</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/simulatorcod.png" alt="Code JavaScript du simulateur de leasing">
+            <figcaption>Logique JavaScript — calculs & conditions</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/simulator-cod.png" alt="Code JavaScript du simulateur de leasing">
+            <figcaption>Logique JavaScript — calculs & conditions</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/simulator-email.png" alt="Email automatique envoyé après simulation">
+            <figcaption>Workflow email — client + directeur (CF7)</figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top:.75rem;">
+          <strong>Résultat :</strong> un outil opérationnel qui automatise un flux métier réel et réduit les échanges manuels.
+        </p>
+      </details>
+
+      <details class="sub">
+        <summary>
+          <strong>Projet personnel (MVP en cours)</strong> :
+          assistant entrepreneur — calculs & rappels administratifs
+        </summary>
+
+        <p>
+          <strong>Objectif :</strong> créer une application web qui aide les entrepreneurs à
+          <strong>calculer</strong> certains montants (ex. taxes / charges selon règles),
+          et à <strong>ne pas oublier</strong> les échéances (quoi envoyer, quand, à qui).
+        </p>
+
+        <ul class="keypoints">
+          <li><strong>Fonctions MVP :</strong> calculs automatisés + récapitulatif clair.</li>
+          <li><strong>Rappels :</strong> calendrier d’échéances + notifications (logique en cours).</li>
+          <li><strong>Approche :</strong> logique métier → scénarios → interface simple orientée usage réel.</li>
+          <li><strong>Statut :</strong> MVP en cours de finalisation (tests & amélioration UX).</li>
+        </ul>
+
+        <p><strong>Preuves :</strong> interface MVP + structure technique / logique de données.</p>
+
+        <div class="gallery">
+          <figure>
+            <img loading="lazy" src="stage/assistent.png" alt="Assistant entrepreneur — interface MVP (tableau de suivi et actions)">
+            <figcaption>Interface MVP — suivi & actions</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/react.png" alt="Environnement React avec Vite">
+            <figcaption>Stack technique — React + Vite</figcaption>
+          </figure>
+
+          <figure>
+            <img loading="lazy" src="stage/assistentsql.png" alt="Assistant entrepreneur — structure technique / logique de données (SQL)">
+            <figcaption>Logique & données — structure SQL</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <button type="button" onclick="toggleDetails('c-auto')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  5) DATA, ANALYTICS & BI
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-analytics" aria-expanded="false"
+         onclick="toggleDetails('c-analytics')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-analytics')}">
+      <strong data-i18n="cat.analytics">Data, Analytics & BI</strong> —
+      <span class="tag">SQL</span>
+      <span class="tag">KPI</span>
+      <span class="tag">Looker Studio</span>
+      <span class="tag">GA4</span>
+      <span class="tag">Tableau</span>
+    </div>
+
+    <div id="c-analytics" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <details class="sub">
+        <summary><strong>Dashboards</strong> — Looker Studio</summary>
+        <p>Audience, acquisition, performances publicitaires, KPI marketing.</p>
+
+        <section>
+          <h5>Projets Éclat Lifestyle & Ferme des Amandiers</h5>
+          <p>
+            🔹 Tableau de bord audience & engagement (Looker Studio)<br>
+            🔹 Suivi des performances publicitaires (GA/Looker)<br>
+            🔹 Analyse SEO & reporting visuel
+          </p>
+
+          <div class="gallery">
+            <figure><img src="image/page-0008.jpg" alt="Audience & Engagement"><figcaption>Audience & Engagement</figcaption></figure>
+            <figure><img src="image/page-0009.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+            <figure><img src="image/page-0010.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+            <figure><img src="image/page-0011.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+            <figure><img src="image/page-0012.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+            <figure><img src="image/page-0013.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
+          </div>
+
+          <p class="doc-links" style="margin-top:1em;">
+            📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a> |
+            🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir en ligne</a>
+          </p>
+        </section>
+
+        <hr style="margin:1.25em 0; border:none; border-top:1px solid #ccc;">
+
+        <section>
+          <h5>Projet ArtisanConnect</h5>
+          <p>
+            🔹 Tableau de bord interactif (Looker Studio)<br>
+            🔹 6 KPI : artisans actifs, panier moyen, commandes, CA, top produits, notes
+          </p>
+
+          <p style="margin-top:.5em; font-style:italic;">
+            🔗 Données issues de requêtes SQL (PDO / SQLite) — voir aussi
+            <a href="#c-backend" onclick="toggleDetails('c-backend'); return false;">Back-end & SQL</a>
+          </p>
+
+          <div class="gallery">
+            <figure>
+              <img src="image/KPI1-2.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 1 et 2">
+              <figcaption>KPI 1–2 : Nombre d’artisans actifs, panier moyen</figcaption>
+            </figure>
+            <figure>
+              <img src="image/KPI3-4.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 3 et 4">
+              <figcaption>KPI 3–4 : Répartition commandes, nombre total d’avis clients</figcaption>
+            </figure>
+            <figure>
+              <img src="image/KPI5-6.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 5 et 6">
+              <figcaption>KPI 5–6 : Top produits, note moyenne par produit</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            📊 Démos :
+            <a href="https://lookerstudio.google.com/s/mJKQ8TlTMqU" target="_blank">KPI 1</a> ·
+            <a href="https://lookerstudio.google.com/s/vWBDcBREIMw" target="_blank">KPI 2</a> ·
+            <a href="https://lookerstudio.google.com/s/ogPl5zbtDNk" target="_blank">KPI 3</a> ·
+            <a href="https://lookerstudio.google.com/s/r-GF4DHhC2Y" target="_blank">KPI 4</a> ·
+            <a href="https://lookerstudio.google.com/s/otO_LsDmDDU" target="_blank">KPI 5</a> ·
+            <a href="https://lookerstudio.google.com/s/mtNAZbqmwOs" target="_blank">KPI 6</a>
+          </p>
+        </section>
+      </details>
+
+      <details class="sub">
+        <summary><strong>Analyse de performance</strong> — Google Analytics</summary>
+        <p>Rapports personnalisés, suivi des conversions et du ROI.</p>
+        <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
+
+        <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
+        <p>
+          🔹 Sélection de mots-clés et thématiques de recherche<br>
+          🔹 Définition du budget et choix de la stratégie d’enchères<br>
+          🔹 Suivi des performances et optimisation
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
+          <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
+          <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
+          <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
+          <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+        </div>
+
+        <p style="margin-top:1em;">
+          📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
+          📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
+        </p>
+
+        <p class="doc-links" style="margin-top:1em;">
+          📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
+          |
+          🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
+        </p>
+      </details>
+
+      <details class="sub">
+        <summary><strong>Data visualisation</strong> — Tableau Public</summary>
+
+        <p style="font-style:italic; color:#555;">
+          Analyse de données orientée décision : marketing, produit et performance business.
+        </p>
+
+        <p>
+          🔹 Cartes, tendances, comparatifs et KPI<br>
+          🔹 Dashboards interactifs (filtre, hover, drill-down)<br>
+          🔹 Préparation des données et storytelling visuel
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/BD-002.png" alt="Carte des contenus par pays"><figcaption>Carte par pays</figcaption></figure>
+          <figure><img src="image/BD-001.png" alt="Répartition films vs séries"><figcaption>Films vs séries</figcaption></figure>
+          <figure><img src="image/BD-003.png" alt="Évolution des sorties"><figcaption>Évolution annuelle</figcaption></figure>
+          <figure><img src="image/BD-004.png" alt="Comparaison séries/films"><figcaption>Comparatif séries/films</figcaption></figure>
+          <figure><img src="image/BD-006.png" alt="Dashboard vue globale"><figcaption>Dashboard global</figcaption></figure>
+          <figure><img src="image/BD-005.png" alt="Analyse temporelle des ajouts"><figcaption>Ajouts dans le temps</figcaption></figure>
+        </div>
+
+        <p style="margin-top:.6rem;">
+          🌐 <a href="https://public.tableau.com/app/profile/..." target="_blank" rel="noopener">
+            Voir le projet sur Tableau Public
+          </a>
+        </p>
+      </details>
+
+      <button type="button" onclick="toggleDetails('c-analytics')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  6) MARKETING DIGITAL
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-mkt" aria-expanded="false"
+         onclick="toggleDetails('c-mkt')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-mkt')}">
+      <strong data-i18n="cat.mkt">Marketing digital</strong> —
+      <span class="tag">SEO/SEA</span>
+      <span class="tag">CRM</span>
+      <span class="tag">Emailing</span>
+      <span class="tag">Contenu</span>
+    </div>
+
+    <div id="c-mkt" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <!-- SEA -->
+      <details class="sub">
+        <summary><strong>SEA — Google Ads</strong> (Éclat Lifestyle)</summary>
+        <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
+
+        <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
+        <p>
+          🔹 Sélection de mots-clés et thématiques de recherche<br>
+          🔹 Définition du budget et choix de la stratégie d’enchères<br>
+          🔹 Suivi des performances et optimisation
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
+          <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
+          <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
+          <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
+          <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+        </div>
+
+        <p style="margin-top:1em;">
+          📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
+          📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
+        </p>
+
+        <p class="doc-links" style="margin-top:1em;">
+          📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
+          |
+          🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
+        </p>
+      </details>
+
+      <!-- Emailing -->
+      <details class="sub">
+        <summary><strong>Emailing & automatisation</strong> (Mailchimp)</summary>
+
+        <h4>Projet : Éclat Lifestyle – emailing & automatisation</h4>
+        <p>
+          🔹 Parcours automatisé (welcome → recommandation → relance)<br>
+          🔹 Personnalisation (balises, segments), A/B tests objets<br>
+          🔹 Suivi KPIs : OR, CTR, conversion
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/page-0016.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+          <figure><img src="image/page-0017.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+          <figure><img src="image/page-0018.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
+          <figure><img src="image/page-0019.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+          <figure><img src="image/page-0020.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
+          <figure><img src="image/page-0021.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+        </div>
+
+        <p class="doc-links" style="margin-top:1em;">
+          📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">Télécharger la présentation (PDF)</a>
+          |
+          🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener noreferrer">Voir la présentation en ligne</a>
+        </p>
+      </details>
+
+      <!-- CRM -->
+      <details class="sub">
+        <summary><strong>CRM & relation client</strong> (Notion)</summary>
+
+        <h4>Projet : Éclat Lifestyle – CRM & relation client</h4>
+
+        <p>
+          🔹 Analyse comparative des solutions CRM (Zoho, HubSpot, Pipedrive)<br>
+          🔹 Choix recommandé : HubSpot (version gratuite + NPS intégré)<br>
+          🔹 Gestion de la relation client : centralisation des données, automatisations<br>
+          🔹 Prochaine étape : mise en place d’un mini-CRM dans Notion
+        </p>
+
+        <div class="gallery">
+          <figure>
+            <img src="image/page-0023.jpg" alt="Comparaison CRM (Zoho, HubSpot, Pipedrive)">
+            <figcaption>Comparaison CRM – analyse des solutions</figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top:1em; font-style:italic; color:gray;">
+          Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
+        </p>
+
+        <p class="doc-links" style="margin-top:1em;">
+          <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">Télécharger la présentation (PDF)</a>
+          🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener noreferrer">Voir la présentation en ligne</a>
+        </p>
+      </details>
+
+      <!-- Contenu -->
+      <details class="sub">
+        <summary><strong>Stratégie éditoriale & contenu</strong></summary>
+
+        <h4>Projet : Éclat Lifestyle – stratégie éditoriale & marketing digital</h4>
+        <p>
+          🔹 Élaboration d’une stratégie de contenu sur 3 mois : storytelling de marque, lignes éditoriales, planning de publications<br>
+          🔹 Création d’un calendrier éditorial (thèmes : slow design, éthique, témoignages clients)<br>
+          🔹 Réalisation d’une campagne Instagram Ads (objectif : trafic web), ciblage et analyse des performances
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/carousel1.png" alt="Contenu carousel"><figcaption>Contenu carousel</figcaption></figure>
+          <figure><img src="image/carousel2.png" alt="Aperçu pub Meta"><figcaption>Aperçu pub Meta</figcaption></figure>
+          <figure><img src="image/carousel3.png" alt="Ciblage pub"><figcaption>Ciblage (audience)</figcaption></figure>
+          <figure><img src="image/publication1.png" alt="Publication client"><figcaption>Publication client</figcaption></figure>
+          <figure><img src="image/publication2.png" alt="Témoignage Instagram"><figcaption>Témoignage Instagram</figcaption></figure>
+          <figure><img src="image/publication3.png" alt="Extrait campagne"><figcaption>Extrait campagne</figcaption></figure>
+
+          <figure><img src="image/page-0003.jpg" alt="SEO Audit"><figcaption>SEO Audit</figcaption></figure>
+          <figure><img src="image/page-0007.jpg" alt="Instagram Ads"><figcaption>Campagne Instagram Ads</figcaption></figure>
+          <figure><img src="image/page-0010.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
+          <figure><img src="image/page-0012.jpg" alt="KPI global"><figcaption>KPI marketing global</figcaption></figure>
+
+          <figure>
+            <img src="image/page-0006.jpg" alt="SEO Audit – Analyse contenu">
+            <figcaption>SEO Audit – Recommandations</figcaption>
+          </figure>
+          <figure>
+            <img src="image/page-0011.jpg" alt="Taux de conversion">
+            <figcaption>SEO Audit – Taux de conversion</figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top: 1em;">
+          📄 <a href="https://drive.google.com/file/d/1v8YwxrNUMerCSWcOUC3JTEikvoL9dRf4/view?usp=sharing" target="_blank">Rapport d’analyse</a><br>
+          📄 <a href="https://drive.google.com/file/d/10BnmuvPEcuvJrs35bgBXwjVEt_nB71uK/view?usp=sharing" target="_blank">Cahier des charges</a><br>
+          📄 <a href="https://drive.google.com/file/d/1xsVbocC3hqd6mmDjW4OCfjYMrTn8sbRO/view?usp=sharing" target="_blank">Calendrier éditorial</a><br>
+          📄 <a href="https://drive.google.com/file/d/1vitoayrKufbdYw-qt7oy2BGBskTK33a_/view?usp=sharing" target="_blank">Publications Instagram</a><br>
+          📄 <a href="https://drive.google.com/file/d/1WzzL_3o1w2CPViJlSjn77bhvmTdTtQLi/view?usp=sharing" target="_blank">Instagram Ads – campagne</a>
+        </p>
+
+        <p class="doc-links" style="margin-top:1em;">
+          📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">Télécharger la présentation (PDF)</a>
+          |
+          🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener noreferrer">Voir la présentation en ligne</a>
+        </p>
+      </details>
+
+      <div class="mini-ref">
+        <p><strong>Plan marketing (Hôtel de luxe)</strong> — SEO/SEA, GA4, Looker Studio, KPI, budget.</p>
+        <p>
+          🔗 <a href="#c-innovation" onclick="toggleDetails('c-innovation'); return false;">
+            Voir le cas complet dans “Gestion de projet”
+          </a>
+        </p>
+      </div>
+
+      <button type="button" onclick="toggleDetails('c-mkt')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  7) GESTION DE PROJET
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-innovation" aria-expanded="false"
+         onclick="toggleDetails('c-innovation')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-innovation')}">
+      <strong data-i18n="cat.pm">Gestion de projet</strong> —
+      <span class="tag">Agile/SCRUM</span>
+      <span class="tag">MVP</span>
+      <span class="tag">Notion</span>
+      <span class="tag">Coordination</span>
+    </div>
+
+    <div id="c-innovation" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+
+      <details class="sub">
+        <summary><strong>Stage — Art for Good</strong> : organisation, priorisation & transfert</summary>
+
+        <ul>
+          <li><strong>Priorisation :</strong> maintenance site existant → création nouveau site → restauration site cassé → simulateur.</li>
+          <li><strong>Documentation :</strong> support de formation pour rendre le directeur autonome.</li>
+          <li><strong>Formation :</strong> ajouter pages/images, modifier slider, mettre à jour contenu, faire des sauvegardes.</li>
+          <li><strong>Communication :</strong> suivi des demandes, validation, itérations.</li>
+        </ul>
+
+        <p><strong>Résultats :</strong> autonomie du directeur + process clair de mise à jour/backup.</p>
+
+        <p><strong>Preuves (assets) :</strong> PDF/diapo de formation, checklist maintenance, captures “avant/après”.</p>
+      </details>
+
+      <details class="sub" style="margin-bottom:1rem;">
+        <summary><strong>Hello Hercule</strong> — pilotage MVP & équipe (Go Live)</summary>
+
+        <h4>Projet : Hello Hercule – assistant digital pour restaurateurs</h4>
+        <p>
+          Application destinée aux restaurateurs indépendants pour alléger la charge mentale liée à l’administratif.
+          En tant que cheffe de projet digital, j’ai piloté la livraison de la V1 (MVP) jusqu’au Go Live.
+        </p>
+
+        <h5>🎯 Rôle &amp; responsabilités</h5>
+        <ul>
+          <li>Constitution d’une équipe de freelances (Lead Tech, dev front/back, UX/UI, QA, marketing).</li>
+          <li>Cadrage : méthodologie hybride (Cascade + Agile), RACI, Gantt, jalons Go/No Go.</li>
+          <li>Pilotage dans Notion (backlog, Kanban, suivi des tâches).</li>
+          <li>Plan de validation QA : critères d’acceptation, suivi des bugs.</li>
+          <li>Plan de prévention des risques (probabilité × impact, actions, responsables).</li>
+        </ul>
+
+        <h5>🖼️ Exemples visuels</h5>
+        <div class="gallery">
+          <figure><img src="image/231718.png" alt="Risques et priorités – Hello Hercule"><figcaption>Risques &amp; priorités</figcaption></figure>
+          <figure><img src="image/231759.png" alt="RACI et planning – Hello Hercule"><figcaption>RACI &amp; planning</figcaption></figure>
+          <figure><img src="image/231836.png" alt="Gantt complet – Hello Hercule"><figcaption>Gantt complet</figcaption></figure>
+          <figure><img src="image/232244.png" alt="Plan prévention des risques – Hello Hercule"><figcaption>Plan prévention des risques</figcaption></figure>
+          <figure><img src="image/232653.png" alt="Suivi qualité et risques – Hello Hercule"><figcaption>Suivi qualité &amp; risques</figcaption></figure>
+          <figure><img src="image/231931.png" alt="Outils & collaboration – Hello Hercule"><figcaption>Outils &amp; collaboration</figcaption></figure>
+        </div>
+
+        <h5>📎 Livrables</h5>
+        <ul class="doc-list">
+          <li><a href="https://www.notion.so/2997d16d3d87800788fbcaa41e97971b?v=2997d16d3d878189a496000cc575ea89&source=copy_link" target="_blank" rel="noopener">Espace projet – Backlog &amp; Kanban (Notion)</a></li>
+          <li><a href="https://www.notion.so/2a07d16d3d8780ac9c57ce2f0024408b?v=2a07d16d3d8780cba595000ca4ccc5d2&source=copy_link" target="_blank" rel="noopener">Plan de validation &amp; risques (Notion)</a></li>
+          <li><a href="https://docs.google.com/presentation/d/1wjMJqwE31XgxajptU5F7ykZIRJMjuf-M6rjR2EfGgfU/edit?usp=sharing" target="_blank" rel="noopener">Présentation projet (Google Slides)</a></li>
+        </ul>
+      </details>
+
+      <details class="sub" style="margin-bottom:1rem;">
+        <summary><strong>Distrimarche</strong> — gestion budgétaire & KPI (≤ 150k€)</summary>
+
+        <h4>Projet : Distrimarche — gestion budgétaire d’un projet digital</h4>
+        <p>
+          Déploiement de bornes self-checkout avec contrainte budgétaire à <strong>150&nbsp;000€ HT</strong>.
+          Objectif : réviser le budget initial, formaliser les arbitrages et mettre en place un suivi KPI.
+        </p>
+
+        <h5>Rôle &amp; responsabilités</h5>
+        <ul>
+          <li>Analyse du besoin et du budget initial (190&nbsp;000€).</li>
+          <li>Arbitrages budgétaires + justification auprès des parties prenantes.</li>
+          <li>Construction du tableau budgétaire (Google Sheets / Excel).</li>
+          <li>KPI, alertes, dashboard.</li>
+        </ul>
+
+        <h5>Galerie</h5>
+        <div class="gallery">
+          <figure><img src="image/distrimarche-kpi.png" alt="Tableau budgétaire Distrimarche"><figcaption>Budget + KPI + alertes</figcaption></figure>
+          <figure><img src="image/distrimarche-dashboard.png" alt="Dashboard Distrimarche"><figcaption>Dashboard financier</figcaption></figure>
+        </div>
+
+        <h5>Livrables</h5>
+        <ul class="doc-list">
+          <li><a href="https://docs.google.com/document/d/1Hcc0E1Uq55ffERHxzUa19E537hGGaCKVvfxtdf63dhE/edit?usp=sharing" target="_blank" rel="noopener">Résumé &amp; emails de justification (Google Docs)</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1z7BKyAxxq7Bg2_kdi3K8zNSICxh5_bfzK5itKk_vWmY/edit?usp=sharing" target="_blank" rel="noopener">Budget révisé &amp; suivi budgétaire (Google Sheets)</a></li>
+        </ul>
+      </details>
+
+      <details class="sub">
+        <summary><strong>Agile / SCRUM</strong> — Purple Squirrel</summary>
+        <p>Backlog, user stories, planning de sprint, rétrospective (radar).</p>
+
+        <h4>Projet : Purple Squirrel – gestion de projet Agile / SCRUM</h4>
+        <p>
+          🔹 Gestion d’un projet d’équipe fictive dans Notion<br>
+          🔹 Création du backlog (EPICs, US, MoSCoW), sprint planning et suivi quotidien<br>
+          🔹 Rétrospective avec radar de satisfaction basé sur 5 critères collaboratifs<br>
+          🔹 Reporting clair et synthétique pour chaque jour de sprint
+        </p>
+
+        <h5>🖼️ Exemples :</h5>
+        <div class="gallery">
+          <figure><img src="image/Снимок экрана 2025-08-06 224539.png" alt="Backlog Etape 1"><figcaption>Backlog – Étape 1</figcaption></figure>
+          <figure><img src="image/Снимок экрана 2025-08-06 225044.png" alt="Reporting Sprint 1"><figcaption>Reporting – Sprint 1</figcaption></figure>
+          <figure><img src="image/Снимок экрана 2025-08-06 225200.png" alt="Backlog Etape 2"><figcaption>Backlog – Étape 2</figcaption></figure>
+          <figure><img src="image/Снимок экрана 2025-08-07 000337.png" alt="Sprint en cours"><figcaption>État des US (en cours / terminé)</figcaption></figure>
+          <figure><img src="image/Снимок экрана 2025-08-07 000911.png" alt="Reporting Sprint 1 complet"><figcaption>Suivi détaillé (Sprint 1)</figcaption></figure>
+          <figure><img src="image/Снимок экрана 2025-08-07 005326.png" alt="Radar satisfaction"><figcaption>Radar de satisfaction</figcaption></figure>
+        </div>
+
+        <p style="margin-top:.5em;">
+          🔗 Mise en pratique de cette approche sur un MVP réel :
+          <a href="#c-mvp" onclick="toggleDetails('c-mvp'); return false;">
+            Gestion d’équipe &amp; pilotage MVP – app Hello Hercule
+          </a>.
+        </p>
+
+        <h5 style="margin-top:1em;">📎 Documents :</h5>
+        <ul class="doc-list">
+          <li>📄 <a href="https://www.notion.so/1da7d16d3d87809a9216dd92f5698150?v=1da7d16d3d8781c1a79e000ce930c31f&pvs=4" target="_blank" rel="noopener">Product Backlog – Notion</a></li>
+          <li>📄 <a href="https://www.notion.so/1e47d16d3d8780c4a3a6ede1dca5dd12?v=1f17d16d3d87807d93ea000c6746f284&pvs=4" target="_blank" rel="noopener">Sprint Board – Notion</a></li>
+          <li>📄 <a href="https://docs.google.com/document/d/1VwitO0CPmRNALIpVtcCP-UtHqZ8XWaf1/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Planification des sprints (Email)</a></li>
+          <li>📄 <a href="https://docs.google.com/document/d/1Zp7Wnuamj9Z-eVqxwLPjmD2mT1jAE_S_/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Rétrospective Sprint 1 – Ordre du jour</a></li>
+          <li>📄 <a href="https://docs.google.com/document/d/1smdyHQEyV414LyhtTqrrvQXxmp7fm92b/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Plan d’action – Rétrospective Sprint 1</a></li>
+        </ul>
+      </details>
+
+      <!-- Hyatt: оставлен один блок (без вложенного дубля c-hotel2) -->
+      <details class="sub" id="c-hotel">
+        <summary><strong>Plan marketing digital – Hôtel de luxe</strong> — Hyatt Regency Paris Étoile</summary>
+
+        <h4>Projet : Plan marketing digital pour un hôtel de luxe</h4>
+        <p>
+          Conception d’une stratégie digitale complète après rénovation de l’hôtel,
+          avec pour objectifs d’augmenter la visibilité en ligne et les réservations directes.
+        </p>
+        <p>
+          Compétences mobilisées : analyse concurrentielle, définition de personas,
+          SEO/SEA, pilotage des performances via GA4, Google Ads et Looker Studio,
+          construction d’un plan marketing mesurable et d’un budget orienté ROI.
+        </p>
+
+        <h5>🖼️ Exemples visuels</h5>
+        <div class="gallery">
+          <figure>
+            <img src="image/212234.png" alt="Contexte et objectifs du plan marketing digital pour Hyatt Regency Paris Étoile">
+            <figcaption>Synthèse du contexte &amp; des objectifs<br><small>Positionnement, cibles, enjeux business</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/214813.png" alt="Persona famille culture et loisirs pour Hyatt Regency Paris Étoile">
+            <figcaption>Persona client – profil « Famille culture &amp; loisirs »<br><small>Besoins, freins, leviers de réservation directe</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215021.png" alt="Benchmark concurrentiel des hôtels autour de Hyatt Regency Paris Étoile">
+            <figcaption>Benchmark concurrentiel<br><small>Comparaison des offres &amp; indicateurs clés</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215444.png" alt="Vue d’ensemble des dashboards marketing pour Hyatt Regency Paris Étoile">
+            <figcaption>Vue globale des tableaux de bord<br><small>Vue synthétique des performances digitales</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215548.png" alt="Budget marketing digital détaillé pour Hyatt Regency Paris Étoile">
+            <figcaption>Budget marketing digital – 60&nbsp;000&nbsp;€<br><small>Répartition SEO / SEA / Social / Hotel Ads</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215622.png" alt="Plan d’actions marketing digital pour Hyatt Regency Paris Étoile">
+            <figcaption>Plan d’actions 90 jours<br><small>Lancement, optimisation, montée en puissance</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215059.png" alt="Tableau de synthèse des KPI pour la stratégie digitale Hyatt Regency Paris Étoile">
+            <figcaption>Synthèse des KPI<br><small>Objectifs, résultats et écarts principaux</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/215323.png" alt="Récapitulatif des actions du plan marketing digital pour Hyatt Regency Paris Étoile">
+            <figcaption>Récap du plan marketing<br><small>Actions clés, canaux et messages prioritaires</small></figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/213812.png" alt="Dashboards GA4 et Looker Studio pour le suivi des performances marketing de Hyatt">
+            <figcaption>Dashboards GA4 &amp; Looker Studio<br><small>Suivi trafic, conversions &amp; revenus</small></figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top:1em;">
+          🔗 Pour un exemple détaillé de <strong>construction et de suivi de budget</strong>,
+          voir la section
+          <a href="#c-budget"
+             onclick="
+               toggleDetails('c-budget');
+               document.getElementById('c-budget').scrollIntoView({behavior:'smooth'});
+             ">
+            Gestion budgétaire &amp; KPI – projet Distrimarche
+          </a>
+        </p>
+
+        <ul class="doc-list">
+          <li>
+            <a href="https://docs.google.com/presentation/d/1HjsYYnIb69hrmYXDyJKLtSIcQgykhuHkTN2eOY3518E/edit?usp=sharing"
+               target="_blank" rel="noopener">
+              Présentation stratégique (Google Slides)
+            </a>
+          </li>
+        </ul>
+
+        <p style="margin-top:.5em;">
+          🔗 Voir aussi :
+          <a href="#c-green"
+             onclick="toggleDetails('c-green'); document.getElementById('c-green').scrollIntoView({behavior:'smooth'});">
+            Green IT &amp; RSE – projet GreenFutur
+          </a>
+          ·
+          <a href="#c-ia"
+             onclick="toggleDetails('c-ia'); document.getElementById('c-ia').scrollIntoView({behavior:'smooth'});">
+            Analyse comportementale &amp; IA
+          </a>
+        </p>
+      </details>
+
+      <button type="button" onclick="toggleDetails('c-innovation')">⬅️ Revenir</button>
+    </div>
+  </li>
+
+
+  <!-- =========================
+  8) UI/UX & DESIGN
+  ========================== -->
+  <li class="competence-item">
+    <div id="btn-c-design" role="button" tabindex="0"
+         aria-controls="c-design" aria-expanded="false"
+         onclick="toggleDetails('c-design')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-design')}">
+      <strong data-i18n="cat.design">UI/UX & Design</strong> —
+      <span class="tag">Figma</span>
+      <span class="tag">Maquettes</span>
+      <span class="tag">Intégration</span>
+    </div>
+
+    <div id="c-design" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+      <details class="sub" open>
+        <summary><strong>UI/UX Design</strong> — maquettes Figma (projet <em>OhMyFood</em>)</summary>
+
         <div class="gallery">
           <figure><img loading="lazy" src="image/WIREFRAMES.png" alt="Wireframes"><figcaption>Wireframes</figcaption></figure>
           <figure><img loading="lazy" src="image/Frame 427319282.png" alt="Écran Figma"><figcaption>Écran Figma</figcaption></figure>
@@ -117,1640 +1247,355 @@
           <figure><img loading="lazy" src="image/Frame 133.png" alt="Affiche Mélodie"><figcaption>Affiche Mélodie</figcaption></figure>
           <figure><img loading="lazy" src="image/Group 23.png" alt="Affiche Bijoux"><figcaption>Affiche Bijoux</figcaption></figure>
         </div>
-      </div>
-    </details>
+      </details>
 
-    <!-- Développement front‑end (Ferme des Amandiers) -->
-    <details class="sub" style="margin-bottom:1rem;">
-      <summary><strong>Développement front‑end</strong> — site sans CMS (projet <em>La Ferme des Amandiers</em>)</summary>
-      <div style="margin-top:.6rem;">
-        <p><em>Ce que j’ai réalisé :</em></p>
-        <ul class="keypoints">
-          <li>Site dynamique en PHP, MySQL, HTML, CSS, JavaScript — sans CMS</li>
-          <li>Structure HTML5/CSS3 (Flexbox, Grid, responsive)</li>
-          <li>PHP &amp; PDO pour l’affichage dynamique</li>
-          <li>BDD MySQL (4 tables : <code>produits</code>, <code>jours</code>, <code>saisons</code>, <code>produit_jour</code>)</li>
-          <li>Filtres interactifs (JS vanilla)</li>
-          <li>Lighthouse : Perf 97, Accessibilité 92</li>
-        </ul>
-
-        <h5>🖼️ Exemples :</h5>
-        <div class="gallery">
-          <figure><img loading="lazy" src="image/farm_products_1.png" alt="Produits – Vue 1"><figcaption>Produits – Vue 1</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_mock_products1.png" alt="Mock‑up v1"><figcaption>Mock‑up v1</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_products_2.png" alt="Produits – Vue 2"><figcaption>Produits – Vue 2</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_index.png" alt="Code HTML index"><figcaption>Code HTML – index</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_mock_products2.png" alt="Mock‑up v2"><figcaption>Mock‑up v2</figcaption></figure>
-          <figure><img loading="lazy" src="image/php_myadmin.png" alt="BDD MySQL dans phpMyAdmin"><figcaption>BDD MySQL</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_mobile_1.png" alt="Version mobile"><figcaption>Mobile</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_lighthouse.png" alt="Audit Lighthouse"><figcaption>Lighthouse</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_devtools_1.png" alt="DevTools Inspecteur"><figcaption>DevTools</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_code_PHP.png" alt="Extrait de code PHP"><figcaption>Code PHP</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_code_css.png" alt="Extrait de code CSS"><figcaption>Code CSS</figcaption></figure>
-          <figure><img loading="lazy" src="image/farm_code.png" alt="Code combiné HTML/PHP/CSS"><figcaption>Code combiné</figcaption></figure>
-        </div>
-
-        <p style="margin-top:.6rem;">
-          <a href="https://github.com/elenamihalska70-creator/fermedesamandiers" class="btn" target="_blank" rel="noopener noreferrer">📂 Code GitHub</a>
-          <a href="#" class="btn" style="opacity:.6; pointer-events:none;">🌐 Démo (à venir)</a>
-        </p>
-      </div>
-          <p>Projet <em>OhMyFood</em></p>
-    <p>
-      🔹 Intégration du thème enfant avec header, footer, pages, popup, formulaire CF7<br>
-      🔹 Mise en conformité RGPD, accessibilité, responsive design et SEO<br>
-    </p>
-    <h5>🖼️ Exemples :</h5>
-<div class="gallery">
-    <!-- Nouveaux screenshots -->
-  <figure>
-    <img src="image/Ohmyfood – Accueil (desktop).jpg" alt="Page d’accueil Ohmyfood – vue bureau">
-    <figcaption>Accueil – Desktop</figcaption>
-  </figure>
-  <figure>
-    <img src="image/Ohmyfood – Accueil (mobile).jpg" alt="Page d’accueil Ohmyfood – vue mobile complète">
-    <figcaption>Accueil – Mobile (full page)</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_a-propos_.jpg" alt="Page À propos – vue bureau">
-    <figcaption>À propos – Desktop</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_a-propos_ (1).jpg" alt="Page À propos – vue mobile">
-    <figcaption>À propos – Mobile</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_restaurant_.jpg" alt="Page Restaurant – vue mobile complète">
-    <figcaption>Restaurant – Mobile (full page)</figcaption>
-  </figure>
-    <figure><img src="image/Снимок экрана (183).png" alt="Local"><figcaption>local connection
-
-    </figcaption></figure>
-  <!-- Существующие изображения -->
-  <figure><img src="image/Снимок экрана (255).png" alt="LOGO et favicon"><figcaption>LOGO et favicon</figcaption></figure>
-  <figure><img src="image/Снимок экрана (256).png" alt="Page Restaurants"><figcaption>Page Restaurants</figcaption></figure>
-
-  <figure><img src="image/Снимок экрана (205) — копия.png" alt="Popup réservation"><figcaption>Popup réservation</figcaption></figure>
-
-  
-  <figure><img src="image/Снимок экрана (180).png" alt="Popup"><figcaption>Popup</figcaption></figure>
-  
-  <!-- 155 -->
-<figure>
-  <img src="image/Снимок экрана (155).png" alt="Contact Form 7 — настройки e-mail для формы бронирования">
-  <figcaption>CF7 — Réglages e-mail</figcaption>
-</figure>
-
-<!-- 156 -->
-<figure>
-  <img src="image/Снимок экрана (156).png" alt="Audit Lighthouse — результат 95 по доступности">
-  <figcaption>Audit Lighthouse — 95 (Accessibilité)</figcaption>
-</figure>
-
-<!-- 164 -->
-<figure>
-  <img src="image/Снимок экрана (164).png" alt="WordPress Customizer — aperçu desktop page d’accueil">
-  <figcaption>Customizer — Accueil (desktpo)</figcaption>
-</figure>
-
-<!-- 165 -->
-<figure>
-  <img src="image/Снимок экрана (165).png" alt="WordPress Customizer — aperçu planchet page d’accueil">
-  <figcaption>Customizer — Accueil (planchet)</figcaption>
-</figure>
-
-<!-- 169 -->
-<figure>
-  <img src="image/Снимок экрана (169).png" alt="Code CSS du thème enfant dans VS Code">
-  <figcaption>Thème enfant — CSS</figcaption>
-</figure>
-
-<!-- 177 -->
-<figure>
-  <img src="image/Снимок экрана (177).png" alt="Code PHP du thème enfant dans VS Code">
-  <figcaption>Thème enfant — PHP</figcaption>
-</figure>
-
-<!-- 181 -->
-<figure>
-  <img src="image/Снимок экрана (181).png" alt="Formulaire Contact — version test dans Customizer">
-  <figcaption>Formulaire — test</figcaption>
-</figure>
-
-  <!-- Добавленные изображения с проверкой -->
-  
-  
-  <figure><img src="image/Снимок экрана (160).png" alt="Git Hub"><figcaption>Git Hub – code</figcaption></figure>
-</div>
-
-<p style="margin-top: 1em;">
-  📄 <a href="https://youtu.be/m9kf7urAnEY" target="_blank" rel="noopener noreferrer">
-    Voir la vidéo
-  </a>
-</p>
-
-    </details>
-
-    <!-- Accessibilité & conformité -->
-    <details class="sub">
-      <summary><strong>Accessibilité & conformité</strong> — audits & formulaires (projets <em>OhMyFood</em>, <em>Ferme</em>)</summary>
-      <div style="margin-top:.6rem;">
-        <p>
-          🔹 Tests de contraste, structure ARIA, navigation clavier<br>
-          🔹 Bannières cookies, mentions légales, politique de confidentialité<br>
-          🔹 Formulaires conformes + consentement explicite
-        </p>
-        <div class="gallery">
-          <figure><img loading="lazy" src="image/0041.png" alt="Audit Lighthouse OhMyFood"><figcaption>OhMyFood — Lighthouse</figcaption></figure>
-          <figure><img loading="lazy" src="image/0042.png" alt="Audit Lighthouse Ferme"><figcaption>Ferme — Lighthouse</figcaption></figure>
-          <figure><img loading="lazy" src="image/0040.png" alt="Audit Lighthouse Portfolio"><figcaption>Portfolio — Lighthouse</figcaption></figure>
-        </div>
-        <p class="notice-dev">🔧 Le Portfolio est en cours — certaines sections seront complétées prochainement.</p>
-      </div>
-    </details>
-
-    <button onclick="toggleDetails('c-design')">⬅️ Revenir</button>
-  </div>
-
-
-  <!-- 2) CMS & intégration (OhMyFood) -->
-  <ul class="competences-list">
-    <li role="button" tabindex="0"
-        aria-controls="c-cms" aria-expanded="false"
-        onclick="toggleDetails('c-cms')"
-        onkeypress="if(event.key==='Enter'){toggleDetails('c-cms')}">
-      <strong>CMS & intégration</strong> — WordPress, thème enfant
-    </li>
-  </ul>
-  <div id="c-cms" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-    <details class="sub">
-      <summary><strong>WordPress</strong> — thème enfant, CF7, RGPD</summary>
-    <p>
-      🔹 Développement d’un site WordPress à partir d’une maquette Figma<br>
-      🔹 Intégration du thème enfant avec header, footer, pages, popup, formulaire CF7<br>
-      🔹 Mise en conformité RGPD, accessibilité, responsive design et SEO<br>
-      🔹 Exportation du site via All-in-One WP Migration et documentation complète
-    </p>
-    <h5>🖼️ Exemples :</h5>
-<div class="gallery">
-    <!-- Nouveaux screenshots -->
-  <figure>
-    <img src="image/Ohmyfood – Accueil (desktop).jpg" alt="Page d’accueil Ohmyfood – vue bureau">
-    <figcaption>Accueil – Desktop</figcaption>
-  </figure>
-  <figure>
-    <img src="image/Ohmyfood – Accueil (mobile).jpg" alt="Page d’accueil Ohmyfood – vue mobile complète">
-    <figcaption>Accueil – Mobile (full page)</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_a-propos_.jpg" alt="Page À propos – vue bureau">
-    <figcaption>À propos – Desktop</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_a-propos_ (1).jpg" alt="Page À propos – vue mobile">
-    <figcaption>À propos – Mobile</figcaption>
-  </figure>
-  <figure>
-    <img src="image/ohmyfoodcom.local_restaurant_.jpg" alt="Page Restaurant – vue mobile complète">
-    <figcaption>Restaurant – Mobile (full page)</figcaption>
-  </figure>
-    <figure><img src="image/Снимок экрана (183).png" alt="Local"><figcaption>local connection
-
-    </figcaption></figure>
-  <!-- Существующие изображения -->
-  <figure><img src="image/Снимок экрана (255).png" alt="LOGO et favicon"><figcaption>LOGO et favicon</figcaption></figure>
-  <figure><img src="image/Снимок экрана (256).png" alt="Page Restaurants"><figcaption>Page Restaurants</figcaption></figure>
-
-  <figure><img src="image/Снимок экрана (205) — копия.png" alt="Popup réservation"><figcaption>Popup réservation</figcaption></figure>
-
-  
-  <figure><img src="image/Снимок экрана (180).png" alt="Popup"><figcaption>Popup</figcaption></figure>
-  
-  <!-- 155 -->
-<figure>
-  <img src="image/Снимок экрана (155).png" alt="Contact Form 7 — настройки e-mail для формы бронирования">
-  <figcaption>CF7 — Réglages e-mail</figcaption>
-</figure>
-
-<!-- 156 -->
-<figure>
-  <img src="image/Снимок экрана (156).png" alt="Audit Lighthouse — результат 95 по доступности">
-  <figcaption>Audit Lighthouse — 95 (Accessibilité)</figcaption>
-</figure>
-
-<!-- 164 -->
-<figure>
-  <img src="image/Снимок экрана (164).png" alt="WordPress Customizer — aperçu desktop page d’accueil">
-  <figcaption>Customizer — Accueil (desktpo)</figcaption>
-</figure>
-
-<!-- 165 -->
-<figure>
-  <img src="image/Снимок экрана (165).png" alt="WordPress Customizer — aperçu planchet page d’accueil">
-  <figcaption>Customizer — Accueil (planchet)</figcaption>
-</figure>
-
-<!-- 169 -->
-<figure>
-  <img src="image/Снимок экрана (169).png" alt="Code CSS du thème enfant dans VS Code">
-  <figcaption>Thème enfant — CSS</figcaption>
-</figure>
-
-<!-- 177 -->
-<figure>
-  <img src="image/Снимок экрана (177).png" alt="Code PHP du thème enfant dans VS Code">
-  <figcaption>Thème enfant — PHP</figcaption>
-</figure>
-
-<!-- 181 -->
-<figure>
-  <img src="image/Снимок экрана (181).png" alt="Formulaire Contact — version test dans Customizer">
-  <figcaption>Formulaire — test</figcaption>
-</figure>
-
-  <!-- Добавленные изображения с проверкой -->
-  
-  
-  <figure><img src="image/Снимок экрана (160).png" alt="Git Hub"><figcaption>Git Hub – code</figcaption></figure>
-</div>
-
-    <p style="margin-top: 1em;">
-      📄 <a href="https://youtu.be/m9kf7urAnEY" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
-    </p>
-  </details>
-
-  <button type="button" onclick="toggleDetails('c-cms')">⬅️ Revenir</button>
-</div>
-
-  <!-- ================= COMPÉTENCES : SECTIONS 3–8 (version corrigée) ================= -->
-
-<!-- 3) Data & Back-end (Ferme + ArtisanConnect) -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-data" aria-expanded="false"
-      onclick="toggleDetails('c-data')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-data')}">
-    <strong>Data & Back-end</strong> — MySQL, PDO, UML, SQLite, KPI SQL, sécurité
+      <button type="button" onclick="toggleDetails('c-design')">⬅️ Revenir</button>
+    </div>
   </li>
-</ul>
-<div id="c-data" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
-  <details class="sub">
-    <summary><strong>La Ferme des Amandiers</strong> — MySQL + PHP/PDO</summary>
-    <ul class="keypoints">
-      <li>Schéma MySQL (produits, saisons, jours), requêtes préparées PDO.</li>
-      <li>Filtres dynamiques (saison/jour), affichage catalogue type e-commerce.</li>
-    </ul>
 
-    <section aria-labelledby="proj-amandiers">
-      <h5 id="proj-amandiers">Projet 1 — La Ferme des Amandiers (MySQL, PDO)</h5>
+  <!-- =========================
+  9) RGPD & DOCUMENTATION
+  ========================== -->
+  <li class="competence-item">
+    <div id="btn-c-rgpd" role="button" tabindex="0"
+         aria-controls="c-rgpd" aria-expanded="false"
+         onclick="toggleDetails('c-rgpd')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-rgpd')}">
+      <strong data-i18n="cat.rgpd">RGPD & documentation</strong> —
+      <span class="tag">Conformité</span>
+      <span class="tag">Docs</span>
+      <span class="tag">Process</span>
+    </div>
+
+    <div id="c-rgpd" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+      <p>Projet <em>ArtisanConnect</em> : registre de traitements, bases légales, droits, sécurité, PIA.</p>
+      <h4>ArtisanConnect — RGPD & documentation</h4>
+
       <ul>
-        <li>Conception de la base MySQL (tables : produits, saisons, jours)</li>
-        <li>Connexion sécurisée via PDO + requêtes dynamiques</li>
-        <li>Catalogue type e-commerce (paniers de légumes)</li>
+        <li>Rédaction complète d’une documentation de conformité pour une marketplace artisanale.</li>
+        <li>Cartographie des données traitées&nbsp;: identité, transactions, avis, messages.</li>
+        <li>Définition des bases légales&nbsp;: consentement, exécution du contrat, obligations légales.</li>
+        <li>Description des droits des utilisateurs&nbsp;: accès, rectification, effacement, opposition.</li>
+        <li>Mesures de sécurité recommandées&nbsp;: HTTPS/TLS, sauvegardes, gestion des rôles &amp; permissions.</li>
+        <li>Politique de conservation des données et durées de stockage.</li>
+        <li>PIA (Privacy Impact Assessment)&nbsp;: analyse d’impact et identification des risques résiduels.</li>
       </ul>
 
+      <p><strong>Résultat&nbsp;:</strong> un guide RGPD complet, adapté à une marketplace artisanale.</p>
+
+      <p>
+        <a href="https://www.notion.so/Cahier_de_Recette_ArtisanConnect_FINAL-1-26d7d16d3d8780fb86afd5230029baff" target="_blank" rel="noopener">Cahier de recette</a> ·
+        <a href="https://www.notion.so/2687d16d3d87803bb622ecafa04e3dd2?v=2687d16d3d8781808825000c64fb5946&source=copy_link" target="_blank" rel="noopener">Plan de déploiement</a> ·
+        <a href="https://www.notion.so/2687d16d3d8780e68809d7dd7b7e8c19?v=2687d16d3d8781d8873d000cba9cb201&source=copy_link" target="_blank" rel="noopener">Plan de maintenance</a> ·
+        <a href="https://drive.google.com/file/d/1A0tpTekYFZeqhXvzXiUILegZQMhGer0O/view?usp=sharing" target="_blank" rel="noopener">Guide utilisateur (PDF)</a>
+      </p>
+
       <div class="gallery">
         <figure>
-          <img src="image/0031.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 1">
-          <figcaption>Affichage dynamique — Vue 1</figcaption>
-        </figure>
-        <figure>
-          <img src="image/0032.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 2">
-          <figcaption>Affichage dynamique — Vue 2</figcaption>
-        </figure>
-        <figure>
-          <img src="image/0033.png" loading="lazy" alt="Produits affichés dynamiquement — Vue 3">
-          <figcaption>Affichage dynamique — Vue 3</figcaption>
+          <img loading="lazy" src="image/ac-login.png" alt="Page de connexion ArtisanConnect">
+          <figcaption>Page de connexion ArtisanConnect<br><small>Écran de connexion (accès sécurisé)</small></figcaption>
         </figure>
 
         <figure>
-          <img src="image/0034.png" loading="lazy" alt="Schéma des tables MySQL du projet">
-          <figcaption>Structure de la base MySQL</figcaption>
+          <img loading="lazy" src="image/ac-dashboard.png" alt="Tableau de bord ArtisanConnect avec indicateurs clés">
+          <figcaption>Tableau de bord ArtisanConnect<br><small>Indicateurs clés</small></figcaption>
         </figure>
+
         <figure>
-          <img src="image/0035.png" loading="lazy" alt="Exemple de code de connexion PDO">
-          <figcaption>Connexion PDO</figcaption>
+          <img loading="lazy" src="image/ac-commandes.png" alt="Liste des commandes ArtisanConnect avec statuts et actions">
+          <figcaption>Liste des commandes<br><small>Statuts et actions</small></figcaption>
         </figure>
+
         <figure>
-          <img src="image/0036.png" loading="lazy" alt="Exemple de requête SQL exécutée via PDO">
-          <figcaption>Requête SQL via PDO</figcaption>
+          <img loading="lazy" src="image/ac-tests-notion.png" alt="Cahier de recette ArtisanConnect dans Notion">
+          <figcaption>Cahier de recette (Notion)<br><small>Extrait des tests fonctionnels</small></figcaption>
+        </figure>
+
+        <figure>
+          <img loading="lazy" src="image/RGPD1.jpg" alt="Documentation RGPD – introduction et données traitées">
+          <figcaption>Documentation RGPD — Introduction &amp; données</figcaption>
+        </figure>
+
+        <figure>
+          <img loading="lazy" src="image/RGPD2.jpg" alt="Documentation RGPD – droits, sécurité et conservation">
+          <figcaption>Documentation RGPD — Droits, sécurité, conservation</figcaption>
         </figure>
       </div>
 
-      <p class="actions" style="margin-top:.75em;">
-        <a class="btn" href="https://github.com/elenamihalska70-creator/fermedesamandiers" target="_blank" rel="noopener">📂 Code GitHub</a>
-        <a class="btn btn-ghost" href="#" target="_blank" rel="noopener" aria-disabled="true">🌐 Démo (à venir)</a>
+      <p style="margin-top:1em;">
+        <a href="https://docs.google.com/document/d/1Ih1_00DKwYdZ6EwTvevMp0oFo8_3N0W0/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true"
+           target="_blank" rel="noopener">Documentation RGPD (PDF)</a>
       </p>
-    </section>
-  </details>
 
-  <details class="sub">
-    <summary><strong>ArtisanConnect</strong> — UML, SQLite, KPI SQL</summary>
-    <ul class="keypoints">
-      <li>Modélisation UML (clients, artisans, produits, commandes, avis).</li>
-      <li>Requêtes KPI : panier moyen, CA par catégorie, top produits, notes.</li>
-    </ul>
-
-    <section aria-labelledby="proj-artisan">
-      <h5 id="proj-artisan">Projet 2 — ArtisanConnect (UML, SQLite, KPI SQL)</h5>
-      <div class="gallery">
-        <figure>
-          <img src="image/uml.png" loading="lazy" alt="Diagramme UML des entités et relations">
-          <figcaption>Schéma UML</figcaption>
-        </figure>
-        <figure>
-          <img src="image/db.png" loading="lazy" alt="Aperçu des tables peuplées dans SQLite">
-          <figcaption>SQLite — tables peuplées</figcaption>
-        </figure>
-        <figure>
-          <img src="image/kpi.png" loading="lazy" alt="Exemples de requêtes SQL pour KPI">
-          <figcaption>Extraits de requêtes KPI</figcaption>
-        </figure>
-      </div>
-
-      <p class="actions" style="margin-top:.75em;">
-        📄 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Scripts SQL (création + KPI)</a><br>
-        📄 <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Schéma UML (PDF)</a>
+      <p style="margin-top:.5em;">
+        🔗 Pour la partie <strong>tests, accessibilité et déploiement</strong>,
+        voir la section
+        <a href="#c-test" onclick="toggleDetails('c-test'); return false;">
+          Tests &amp; recettage – projet ArtisanConnect
+        </a>.
       </p>
-    </section>
-  </details>
 
-  <button type="button" onclick="toggleDetails('c-data')">⬅️ Revenir</button>
-</div>
-
-<!-- 4) Analyse & Data visualisation (Looker + GA) -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-analytics" aria-expanded="false"
-      onclick="toggleDetails('c-analytics')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-analytics')}">
-    <strong>Analyse & Data visualisation</strong> — Looker Studio, Google Analytics, KPI
+      <button type="button" onclick="toggleDetails('c-rgpd')">⬅️ Revenir</button>
+    </div>
   </li>
-</ul>
-<div id="c-analytics" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
-  <details class="sub">
-    <summary><strong>Dashboards</strong> — Looker Studio</summary>
-    <p>Audience, acquisition, performances publicitaires, KPI marketing.</p>
 
-    <section>
-      <h5>Projets Éclat Lifestyle & Ferme des Amandiers</h5>
-      <p>
-        🔹 Tableau de bord audience & engagement (Looker Studio)<br>
-        🔹 Suivi des performances publicitaires (GA/Looker)<br>
-        🔹 Analyse SEO & reporting visuel
-      </p>
-
-      <div class="gallery">
-        <figure><img src="image/page-0008.jpg" alt="Audience & Engagement"><figcaption>Audience & Engagement</figcaption></figure>
-        <figure><img src="image/page-0009.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
-        <figure><img src="image/page-0010.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
-        <figure><img src="image/page-0011.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
-        <figure><img src="image/page-0012.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
-        <figure><img src="image/page-0013.jpg" alt="Performance publicitaire"><figcaption>Performance publicitaire</figcaption></figure>
-      </div>
-
-      <p class="doc-links" style="margin-top:1em;">
-        📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a> |
-        🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir en ligne</a>
-      </p>
-    </section>
-
-    <hr style="margin:1.25em 0; border:none; border-top:1px solid #ccc;">
-
-    <section>
-      <h5>Projet ArtisanConnect</h5>
-      <p>
-        🔹 Tableau de bord interactif (Looker Studio)<br>
-        🔹 6 KPI : artisans actifs, panier moyen, commandes, CA, top produits, notes
-      </p>
-      <!-- KPIs ArtisanConnect -->
-<div class="gallery">
-  <figure>
-    <img src="image/KPI1-2.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 1 et 2">
-    <figcaption>KPI 1–2 : Nombre d’artisans actifs, panier moyen</figcaption>
-  </figure>
-  <figure>
-    <img src="image/KPI3-4.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 3 et 4">
-    <figcaption>KPI 3–4 : Répartition commandes, nombre total d’avis clients</figcaption>
-  </figure>
-  <figure>
-    <img src="image/KPI5-6.jpg" loading="lazy" alt="KPIs ArtisanConnect – KPI 5 et 6">
-    <figcaption>KPI 5–6 : Top produits, note moyenne par produit</figcaption>
-  </figure>
-</div>
-
-      <p>
-        📊 Démos : 
-        <a href="https://lookerstudio.google.com/s/mJKQ8TlTMqU" target="_blank">KPI 1</a> ·
-        <a href="https://lookerstudio.google.com/s/vWBDcBREIMw" target="_blank">KPI 2</a> ·
-        <a href="https://lookerstudio.google.com/s/ogPl5zbtDNk" target="_blank">KPI 3</a> ·
-        <a href="https://lookerstudio.google.com/s/r-GF4DHhC2Y" target="_blank">KPI 4</a> ·
-        <a href="https://lookerstudio.google.com/s/otO_LsDmDDU" target="_blank">KPI 5</a> ·
-        <a href="https://lookerstudio.google.com/s/mtNAZbqmwOs" target="_blank">KPI 6</a>
-      </p>
-    </section>
-  </details>
-
-  <details class="sub">
-    <summary><strong>Analyse de performance</strong> — Google Analytics</summary>
-    <p>Rapports personnalisés, suivi des conversions et du ROI.</p>
-        <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
-
-    <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
-    <p>
-      🔹 Sélection de mots-clés et thématiques de recherche<br>
-      🔹 Définition du budget et choix de la stratégie d’enchères<br>
-      🔹 Suivi des performances et optimisation
-    </p>
-
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-      <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
-      <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
-      <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
-      <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
-      <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+  <!-- =========================
+  10) TESTS & RECETTAGE
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-test" aria-expanded="false"
+         onclick="toggleDetails('c-test')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-test')}">
+      <strong data-i18n="cat.tests">Tests & recettage</strong> —
+      <span class="tag">QA</span>
+      <span class="tag">Scénarios</span>
+      <span class="tag">Rapport</span>
     </div>
 
-    <p style="margin-top:1em;">
-      📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
-      📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
-    </p>
+    <div id="c-test" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+      <h4>Projet : ArtisanConnect – tests fonctionnels &amp; accessibilité</h4>
 
-    <p class="doc-links" style="margin-top:1em;">
-      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
-      |
-      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
-    </p>
-  </details>
+      <h5>En deux mots</h5>
+      <p>
+        Mise à niveau d’une application PHP existante (login, tableau de bord, produits, commandes)
+        avec une démarche complète de <strong>recettage, déploiement, accessibilité, sécurité et RGPD</strong>,
+        puis création d’une documentation utilisateur.
+      </p>
 
-  <button type="button" onclick="toggleDetails('c-analytics')">⬅️ Revenir</button>
-</div>
+      <h5>Ce que j’ai fait</h5>
+      <ul>
+        <li>Construit un cahier de recette dans Notion : protocoles de tests, jeux d’essai, critères d’entrée/sortie, rapport final.</li>
+        <li>Réalisé des tests fonctionnels (parcours critiques), d’accessibilité (clavier, contrastes, ARIA, structure H1–H3) et de sécurité (CSRF, XSS, SQLi via PDO, gestion de session).</li>
+        <li>Rédigé un plan de déploiement (préprod → prod), plan de rollback, plan de sauvegarde et check-list de readiness.</li>
+        <li>Mis à jour les éléments RGPD : cartographie des données, minimisation, mentions légales, politique de confidentialité.</li>
+        <li>Créé un guide utilisateur (PDF) : procédures clés (connexion, produits, commandes), rôles et bonnes pratiques.</li>
+      </ul>
 
-<!-- 5) Marketing digital (SEO/SEA, Emailing, CRM, Contenu) -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-mkt" aria-expanded="false"
-      onclick="toggleDetails('c-mkt')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-mkt')}">
-    <strong>Marketing digital</strong> — SEO/SEA, CRM, emailing, contenu
+      <h5>Compétences clés acquises</h5>
+      <ul>
+        <li><strong>QA / Recettage</strong> : conception de cas de tests, suivi de défauts, métriques de couverture.</li>
+        <li><strong>Accessibilité (RGAA/WCAG)</strong> : navigation clavier, labels, feedback d’erreur, sémantique, contrastes.</li>
+        <li><strong>Sécurité applicative</strong> : PDO préparé, tokens CSRF, échappement côté serveur, politique de sessions, en-têtes de sécurité.</li>
+        <li><strong>Déploiement & Ops</strong> : plans de release/rollback, sauvegardes, smoke tests, monitoring post-prod.</li>
+        <li><strong>Conformité RGPD</strong> : registre de traitements simplifié, minimisation et droits des utilisateurs.</li>
+        <li><strong>Documentation</strong> : Notion (tests, plans), guide PDF clair et actionnable.</li>
+      </ul>
+
+      <h5>Stack &amp; outils</h5>
+      <p>
+        PHP (PDO), MySQL, Apache/XAMPP, Notion, Firefox/Edge (Accessibility Inspector),
+        axe DevTools/WAVE.
+      </p>
+
+      <h5>Exemple visuel :</h5>
+      <div class="gallery">
+        <figure class="with-plus">
+          <img src="image/ac-tests-notion.png" class="zoomable"
+               alt="Cahier de recette ArtisanConnect dans Notion – liste de tests fonctionnels">
+          <figcaption>
+            Cahier de recette ArtisanConnect dans Notion<br>
+            <small>Cas de test, statut, criticité, captures d’écran</small>
+          </figcaption>
+        </figure>
+      </div>
+
+      <h5>Livrables :</h5>
+      <ul class="doc-list">
+        <li><a href="https://www.notion.so/Cahier_de_Recette_ArtisanConnect_FINAL-1-26d7d16d3d8780fb86afd5230029baff" target="_blank" rel="noopener">Cahier de recette (Notion)</a></li>
+        <li><a href="https://www.notion.so/2687d16d3d87803bb622ecafa04e3dd2?v=2687d16d3d8781808825000c64fb5946&source=copy_link" target="_blank" rel="noopener">Plan de déploiement (Notion)</a></li>
+        <li><a href="https://www.notion.so/2687d16d3d8780e68809d7dd7b7e8c19?v=2687d16d3d8781d8873d000cba9cb201&source=copy_link" target="_blank" rel="noopener">Plan de maintenance (Notion)</a></li>
+        <li><a href="https://drive.google.com/file/d/1A0tpTekYFZeqhXvzXiUILegZQMhGer0O/view?usp=sharing" target="_blank" rel="noopener">Guide utilisateur (PDF)</a></li>
+      </ul>
+
+      <p style="margin-top:.5em;">
+        🔗 Pour la partie <strong>registre de traitements et documentation RGPD</strong>,
+        voir la section
+        <a href="#c-rgpd" onclick="toggleDetails('c-rgpd'); return false;">
+          RGPD &amp; documentation – projet ArtisanConnect
+        </a>.
+      </p>
+
+      <button type="button" onclick="toggleDetails('c-test')">⬅️ Revenir</button>
+    </div>
   </li>
-</ul>
 
-<div id="c-mkt" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
-  <!-- SEA -->
-  <details class="sub">
-    <summary><strong>SEA — Google Ads</strong> (Éclat Lifestyle)</summary>
-    <p>Campagne ciblée : mots-clés, budget, stratégie d’enchères, optimisation.</p>
-
-    <h4>Projet : Éclat Lifestyle – Campagne Google Ads</h4>
-    <p>
-      🔹 Sélection de mots-clés et thématiques de recherche<br>
-      🔹 Définition du budget et choix de la stratégie d’enchères<br>
-      🔹 Suivi des performances et optimisation
-    </p>
-
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-      <figure><img src="image/page-0004.jpg" alt="Audit SEO technique"><figcaption>Audit SEO technique</figcaption></figure>
-      <figure><img src="image/page-0005.jpg" alt="Campagne Google Ads"><figcaption>Campagne Google Ads</figcaption></figure>
-      <figure><img src="image/page-0013.jpg" alt="Résultats SEA"><figcaption>Résultats SEA</figcaption></figure>
-      <figure><img src="image/googleads_keywords.png" alt="Mots-clés Google Ads"><figcaption>Sélection de mots-clés</figcaption></figure>
-      <figure><img src="image/googleads_budget.png" alt="Budget Google Ads"><figcaption>Définition du budget</figcaption></figure>
+  <!-- =========================
+  11) GREEN IT & RSE
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-green" aria-expanded="false"
+         onclick="toggleDetails('c-green')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-green')}">
+      <strong data-i18n="cat.green">Green IT & RSE</strong> —
+      <span class="tag">Éco-conception</span>
+      <span class="tag">Veille</span>
     </div>
 
-    <p style="margin-top:1em;">
-      📄 <a href="https://drive.google.com/file/d/1wf3LfRnbSjIWkg_FftjcNeyoCjTPfhVL/view?usp=sharing" target="_blank" rel="noopener">Google Ads – rapport complet (PDF)</a><br>
-      📄 <a href="https://drive.google.com/file/d/1fwp1l66Wqfvu16bMyUblaWB75j_so4Jx/view?usp=sharing" target="_blank" rel="noopener">Audit SEO – Sustaina (PDF)</a>
-    </p>
+    <div id="c-green" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
-    <p class="doc-links" style="margin-top:1em;">
-      📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener">Télécharger la présentation (PDF)</a>
-      |
-      🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview" target="_blank" rel="noopener">Voir la présentation en ligne</a>
-    </p>
-  </details>
+      <h4>Projet : GreenFutur – stratégie Green IT &amp; RSE</h4>
+      <p>
+        Objectif : concevoir une stratégie de contenus plus sobre et responsable
+        (Green IT &amp; RSE) en s’appuyant sur une veille structurée, des personas
+        et des KPIs d’impact.
+      </p>
 
-  <!-- Emailing -->
-  <details class="sub">
-    <summary><strong>Emailing & automatisation</strong> (Mailchimp)</summary>
-    <h4>Projet : Éclat Lifestyle – emailing & automatisation</h4>
-    <p>
-      🔹 Parcours automatisé (welcome → recommandation → relance)<br>
-      🔹 Personnalisation (balises, segments), A/B tests objets<br>
-      🔹 Suivi KPIs : OR, CTR, conversion
-    </p>
-    
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery"><!-- images à ajouter -->
-    <figure><img src="image/page-0016.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0017.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0018.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
-    <figure><img src="image/page-0019.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0020.jpg" alt="Stats Emailing"><figcaption>Statistiques Emailing</figcaption></figure>
-    <figure><img src="image/page-0021.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-  </div>
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-  </details>
+      <p>
+        🔹 Bonnes pratiques d’éco-conception web (poids des pages, requêtes, cache)<br>
+        🔹 Veille structurée via Inoreader (sources qualifiées, dossiers thématiques)<br>
+        🔹 Personas et scoring des solutions (impact RSE, coûts, faisabilité)<br>
+        🔹 Préparation d’un plan d’action « sobriété numérique » et KPIs RSE
+      </p>
 
-  <!-- CRM -->
-  <details class="sub">
-    <summary><strong>CRM & relation client</strong> (Notion)</summary>
-    <h4>Projet : Éclat Lifestyle – CRM & relation client</h4>
+      <h5>🖼️ Exemples :</h5>
+      <div class="gallery">
+        <figure><img src="image/182817.png" alt="Tableau de synthèse GreenFutur (objectifs & critères)" /><figcaption>Vue d’ensemble du dispositif GreenFutur</figcaption></figure>
+        <figure><img src="image/183021.png" alt="Comparaison des solutions et scoring RSE" /><figcaption>Comparaison des solutions &amp; scoring RSE</figcaption></figure>
+        <figure><img src="image/183102.png" alt="Tableau de suivi des indicateurs Green IT" /><figcaption>Tableau de suivi des indicateurs Green IT</figcaption></figure>
+        <figure><img src="image/183430.png" alt="Persona client GreenFutur – profil 1" /><figcaption>Persona client – profil 1 (usage &amp; besoins)</figcaption></figure>
+        <figure><img src="image/183340.png" alt="Persona client GreenFutur – profil 2" /><figcaption>Persona client – profil 2 (freins &amp; motivations)</figcaption></figure>
+        <figure><img src="image/183404.png" alt="Persona client GreenFutur – profil décideur / direction" /><figcaption>Persona client – profil décideur (direction / budget)</figcaption></figure>
+        <figure><img src="image/233246.png" alt="Vue détaillée des flux de veille Inoreader" /><figcaption>Détail des flux de veille dans Inoreader</figcaption></figure>
+        <figure><img src="image/233001.png" alt="Organisation de la veille dans Inoreader" /><figcaption>Organisation de la veille dans Inoreader</figcaption></figure>
+        <figure><img src="image/233138.png" alt="Vue Kanban / tâches Green IT & RSE" /><figcaption>Plan d’action Green IT &amp; RSE (Kanban)</figcaption></figure>
+      </div>
 
-  <p>
-    🔹 Analyse comparative des solutions CRM (Zoho, HubSpot, Pipedrive)<br>
-    🔹 Choix recommandé : HubSpot (version gratuite + NPS intégré)<br>
-    🔹 Gestion de la relation client : centralisation des données, automatisations<br>
-    🔹 Prochaine étape : mise en place d’un mini-CRM dans Notion
-  </p>
+      <h5>📎 Livrables :</h5>
+      <ul class="doc-list">
+        <li><a href="https://whimsical.com/customer-persona-copy-VYXZEM94oTYUQWwdGGR7vC" target="_blank" rel="noopener">Persona client – carte Whimsical</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Inoreader – export OPML &amp; captures datées (veille GreenFutur)</a></li>
+        <li><a href="https://docs.google.com/presentation/d/1jG_-6XASXaYYgG-NTga-gIrUe4LbSXa7ZPz_1Vp2T8U/edit?usp=sharing" target="_blank" rel="noopener">Présentation du projet GreenFutur (Google Slides)</a></li>
+      </ul>
 
-  <div class="gallery">
-    <figure>
-      <img src="image/page-0023.jpg" alt="Comparaison CRM (Zoho, HubSpot, Pipedrive)">
-      <figcaption>Comparaison CRM – analyse des solutions</figcaption>
-    </figure>
-  </div>
+      <p style="margin-top:.5em;">
+        🔗 Voir aussi :
+        <a href="#c-ia" onclick="toggleDetails('c-ia'); return false;">Analyse comportementale &amp; IA (KPI &amp; classification des avis)</a>
+      </p>
 
-  <p style="margin-top:1em; font-style:italic; color:gray;">
-     Projet en cours : développement d’un mini-CRM sous Notion (tableaux, pipeline, automatisations).
-  </p>
-<p class="doc-links" style="margin-top:1em;">
-   <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
+      <button type="button" onclick="toggleDetails('c-green')">⬅️ Revenir</button>
+    </div>
+  </li>
 
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-  </details>
 
-  <!-- Contenu -->
-  <details class="sub">
-    <summary><strong>Stratégie éditoriale & contenu</strong></summary>
-        <h4>Projet : Éclat Lifestyle – stratégie éditoriale & marketing digital</h4>
-    <p>
-      🔹 Élaboration d’une stratégie de contenu sur 3 mois : storytelling de marque, lignes éditoriales, planning de publications<br>
-      🔹 Création d’un calendrier éditorial (thèmes : slow design, éthique, témoignages clients)<br>
-      🔹 Réalisation d’une campagne Instagram Ads (objectif : trafic web), ciblage et analyse des performances
-    </p>
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-  <figure><img src="image/carousel1.png" alt="Contenu carousel"><figcaption>Contenu carousel</figcaption></figure>
-  <figure><img src="image/carousel2.png" alt="Aperçu pub Meta"><figcaption>Aperçu pub Meta</figcaption></figure>
-  <figure><img src="image/carousel3.png" alt="Ciblage pub"><figcaption>Ciblage (audience)</figcaption></figure>
-  <figure><img src="image/publication1.png" alt="Publication client"><figcaption>Publication client</figcaption></figure>
-  <figure><img src="image/publication2.png" alt="Témoignage Instagram"><figcaption>Témoignage Instagram</figcaption></figure>
-  <figure><img src="image/publication3.png" alt="Extrait campagne"><figcaption>Extrait campagne</figcaption></figure>
+  <!-- =========================
+  12) IA & ANALYSE
+  ========================== -->
+  <li class="competence-item">
+    <div role="button" tabindex="0"
+         aria-controls="c-ia" aria-expanded="false"
+         onclick="toggleDetails('c-ia')"
+         onkeypress="if(event.key==='Enter'){toggleDetails('c-ia')}">
+      <strong data-i18n="cat.ai">IA & analyse</strong> —
+      <span class="tag">NLP (bases)</span>
+      <span class="tag">Python</span>
+      <span class="tag">Éthique</span>
+    </div>
 
-  </figure>
-      <figure><img src="image/page-0003.jpg" alt="SEO Audit"><figcaption>SEO Audit</figcaption></figure>
-    <figure><img src="image/page-0007.jpg" alt="Instagram Ads"><figcaption>Campagne Instagram Ads</figcaption></figure>
-    <figure><img src="image/page-0010.jpg" alt="Emailing automation"><figcaption>Automatisation Emailing</figcaption></figure>
-    <figure><img src="image/page-0012.jpg" alt="KPI global"><figcaption>KPI marketing global</figcaption></figure>
-  <figure>
-    <img src="image/page-0006.jpg" alt="SEO Audit – Analyse contenu">
-    <figcaption>SEO Audit – Recommandations</figcaption>
-  </figure>
-  <figure>
-    <img src="image/page-0011.jpg" alt="Taux de conversion">
-    <figcaption>SEO Audit – Taux de conversion</figcaption>
-  </figure>
-  
-</div>
-<p style="margin-top: 1em;">
-  📄 <a href="https://drive.google.com/file/d/1v8YwxrNUMerCSWcOUC3JTEikvoL9dRf4/view?usp=sharing" target="_blank">Rapport d’analyse</a><br>
-  📄 <a href="https://drive.google.com/file/d/10BnmuvPEcuvJrs35bgBXwjVEt_nB71uK/view?usp=sharing" target="_blank">Cahier des charges</a><br>
-  📄 <a href="https://drive.google.com/file/d/1xsVbocC3hqd6mmDjW4OCfjYMrTn8sbRO/view?usp=sharing" target="_blank">Calendrier éditorial</a><br>
-  📄 <a href="https://drive.google.com/file/d/1vitoayrKufbdYw-qt7oy2BGBskTK33a_/view?usp=sharing" target="_blank">Publications Instagram</a><br>
-  📄 <a href="https://drive.google.com/file/d/1WzzL_3o1w2CPViJlSjn77bhvmTdTtQLi/view?usp=sharing" target="_blank">Instagram Ads – campagne</a>
-</p>
-<p class="doc-links" style="margin-top:1em;">
-  📄 <a href="docs/Eclat_Lifestyle_Presentation.pdf" target="_blank" rel="noopener noreferrer">
-    Télécharger la présentation (PDF)
-  </a>
-  |
-  🌐 <a href="https://docs.google.com/presentation/d/1mb79r9mmaRYMSqF54ysFgYFFgBMwYoPF/preview"
-        target="_blank" rel="noopener noreferrer">
-    Voir la présentation en ligne
-  </a>
-</p>
-  </details>
-  <li>
-  Marketing digital — SEO/SEA, CRM, emailing, contenu
-  <span class="comp-link">
-    ·
-    <a href="#c-hotel"
-       onclick="
-         // открыть общий блок Gestion de projet & Innovation
-         toggleDetails('c-innovation');
-         // раскрыть именно проект Hyatt
-         const det = document.getElementById('c-hotel');
-         if (det && !det.open) det.open = true;
-         // плавно прокрутить к секции
-         document.getElementById('c-innovation')
-                 .scrollIntoView({behavior:'smooth'});
-       ">
-      voir le projet Hyatt&nbsp;Regency&nbsp;Paris&nbsp;Étoile
-    </a>
-  </span>
+    <div id="c-ia" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+      <h4>Projet : Analyse comportementale &amp; IA</h4>
+      <p>
+        🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
+        🔹 Réalisée dans Jupyter Notebook (Python, Pandas, Matplotlib)<br>
+        🔹 Préparation intégration API Mistral<br>
+        🔹 Permet d’identifier rapidement la satisfaction et les points faibles
+      </p>
+
+      <h5>🖼️ Exemples :</h5>
+      <div class="gallery">
+        <figure><img src="image/Jupiter.png" alt="Notebook Jupyter – analyse IA"><figcaption>Notebook Jupyter – analyse IA</figcaption></figure>
+        <figure><img src="image/Cod-KPI.png" alt="Code SQL – KPI 1–6"><figcaption>Code SQL – KPI 1–6</figcaption></figure>
+        <figure><img src="image/UML1.png" alt="Diagramme UML – ArtisanConnect"><figcaption>Diagramme UML – ArtisanConnect</figcaption></figure>
+      </div>
+
+      <h5>📎 Livrables :</h5>
+      <ul class="doc-list">
+        <li><a href="docs/MYKHAL~2.PDF" target="_blank" rel="noopener">Rapport KPI (PDF)</a></li>
+        <li><a href="docs/MYKHAL~4.PDF" target="_blank" rel="noopener">Documentation projet (PDF)</a></li>
+        <li><a href="docs/MYKHAL~1.SQL" target="_blank" rel="noopener">Requêtes SQL (KPI 1–6)</a></li>
+        <li><a href="docs/MYKHAL~1.IPY" target="_blank" rel="noopener">Notebook Jupyter</a></li>
+      </ul>
+
+      <p>
+        🔗 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing" target="_blank" rel="noopener">Notebook Colab</a> ·
+        <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit" target="_blank" rel="noopener">Diagramme UML</a>
+      </p>
+
+      <p style="margin-top:.5em;">
+        🔗 Voir aussi :
+        <a href="#c-green" onclick="toggleDetails('c-green');">Green IT &amp; RSE – projet GreenFutur</a>
+      </p>
+
+      <button type="button" onclick="toggleDetails('c-ia')">⬅️ Revenir</button>
+    </div>
+  </li>
+<!-- ✅ Avis & recommandations -->
+<!-- ✅ Avis & recommandations -->
+<li role="button" tabindex="0"
+    aria-controls="c-reviews" aria-expanded="false"
+    onclick="toggleDetails('c-reviews')"
+    onkeypress="if(event.key==='Enter'){toggleDetails('c-reviews')}">
+  <strong data-i18n="cat.reviews">Avis & recommandations</strong> —
+  <span class="tag">Références</span>
+  <span class="tag">Confiance</span>
 </li>
 
+<div id="c-reviews" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+  <details class="sub" open>
+    <summary><strong>Références (PDF)</strong></summary>
 
-  <button type="button" onclick="toggleDetails('c-mkt')">⬅️ Revenir</button>
-</div>
-
-
-<!-- 6) Gestion de projet & Innovation -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-innovation" aria-expanded="false"
-      onclick="toggleDetails('c-innovation')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-innovation')}">
-    <strong>Gestion de projet & Innovation</strong> — Agile/SCRUM, IA, Green IT
-  </li>
-</ul>
-
-<div id="c-innovation" class="details"
-     style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-
-  <!-- Agile / SCRUM -->
-  <details class="sub">
-    <summary><strong>Agile / SCRUM</strong> — Purple Squirrel</summary>
-    <p>Backlog, user stories, planning de sprint, rétrospective (radar).</p>
-
-    <h4>Projet : Purple Squirrel – gestion de projet Agile / SCRUM</h4>
-    <p>
-      🔹 Gestion d’un projet d’équipe fictive dans Notion<br>
-      🔹 Création du backlog (EPICs, US, MoSCoW), sprint planning et suivi quotidien<br>
-      🔹 Rétrospective avec radar de satisfaction basé sur 5 critères collaboratifs<br>
-      🔹 Reporting clair et synthétique pour chaque jour de sprint
+    <p style="margin-top:.6rem;">
+      Avis “texte” : bientôt. Pour l’instant, vous pouvez consulter mes références en PDF.
     </p>
-
-    <h5>🖼️ Exemples :</h5>
-    <div class="gallery">
-      <figure>
-        <img src="image/Снимок экрана 2025-08-06 224539.png" alt="Backlog Etape 1">
-        <figcaption>Backlog – Étape 1</figcaption>
-      </figure>
-      <figure>
-        <img src="image/Снимок экрана 2025-08-06 225044.png" alt="Reporting Sprint 1">
-        <figcaption>Reporting – Sprint 1</figcaption>
-      </figure>
-      <figure>
-        <img src="image/Снимок экрана 2025-08-06 225200.png" alt="Backlog Etape 2">
-        <figcaption>Backlog – Étape 2</figcaption>
-      </figure>
-      <figure>
-        <img src="image/Снимок экрана 2025-08-07 000337.png" alt="Sprint en cours">
-        <figcaption>État des US (en cours / terminé)</figcaption>
-      </figure>
-      <figure>
-        <img src="image/Снимок экрана 2025-08-07 000911.png" alt="Reporting Sprint 1 complet">
-        <figcaption>Suivi détaillé (Sprint 1)</figcaption>
-      </figure>
-      <figure>
-        <img src="image/Снимок экрана 2025-08-07 005326.png" alt="Radar satisfaction">
-        <figcaption>Radar de satisfaction</figcaption>
-      </figure>
-    </div>
-
-    <h5 style="margin-top:1em;">📎 Documents :</h5>
-    <ul class="doc-list">
-      <li>📄
-        <a href="https://www.notion.so/1da7d16d3d87809a9216dd92f5698150?v=1da7d16d3d8781c1a79e000ce930c31f&pvs=4"
-           target="_blank" rel="noopener">
-          Product Backlog – Notion
-        </a>
-      </li>
-      <li>📄
-        <a href="https://www.notion.so/1e47d16d3d8780c4a3a6ede1dca5dd12?v=1f17d16d3d87807d93ea000c6746f284&pvs=4"
-           target="_blank" rel="noopener">
-          Sprint Board – Notion
-        </a>
-      </li>
-      <li>📄
-        <a href="https://docs.google.com/document/d/1VwitO0CPmRNALIpVtcCP-UtHqZ8XWaf1/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true"
-           target="_blank" rel="noopener">
-          Planification des sprints (Email)
-        </a>
-      </li>
-      <li>📄
-        <a href="https://docs.google.com/document/d/1Zp7Wnuamj9Z-eVqxwLPjmD2mT1jAE_S_/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true"
-           target="_blank" rel="noopener">
-          Rétrospective Sprint 1 – Ordre du jour
-        </a>
-      </li>
-      <li>📄
-        <a href="https://docs.google.com/document/d/1smdyHQEyV414LyhtTqrrvQXxmp7fm92b/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true"
-           target="_blank" rel="noopener">
-          Plan d’action – Rétrospective Sprint 1
-        </a>
-      </li>
-    </ul>
-      <p style="margin-top:.5em;">
-    🔗 Mise en pratique de cette approche sur un MVP réel :
-    <a href="#c-mvp" onclick="toggleDetails('c-mvp'); return false;">
-      Gestion d’équipe &amp; pilotage MVP – app Hello Hercule
-    </a>.
-  </p>
-
-  </details>
-
-  <!-- Plan marketing digital – Hyatt -->
-  <details class="sub" id="c-hotel">
-    <summary><strong>Plan marketing digital – Hôtel de luxe</strong> — Hyatt Regency Paris Étoile</summary>
-
-    <h4>Projet : Plan marketing digital pour un hôtel de luxe</h4>
-    <p>
-      Conception d’une stratégie digitale complète après rénovation de l’hôtel,
-      avec pour objectifs d’augmenter la visibilité en ligne et les réservations directes.
-    </p>
-    <p>
-      Compétences mobilisées : analyse concurrentielle, définition de personas,
-      SEO/SEA, pilotage des performances via GA4, Google Ads et Looker Studio,
-      construction d’un plan marketing mesurable et d’un budget orienté ROI.
-    </p>
-
-    <h5>🖼️ Exemples visuels</h5>
-    <div class="gallery">
-      <!-- Contexte & positionnement -->
-      <figure>
-        <img src="image/212234.png"
-             alt="Contexte et objectifs du plan marketing digital pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Synthèse du contexte &amp; des objectifs<br>
-          <small>Positionnement, cibles, enjeux business</small>
-        </figcaption>
-      </figure>
-
-      <!-- Persona -->
-      <figure>
-        <img src="image/214813.png"
-             alt="Persona famille culture et loisirs pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Persona client – profil « Famille culture &amp; loisirs »<br>
-          <small>Besoins, freins, leviers de réservation directe</small>
-        </figcaption>
-      </figure>
-
-      <!-- Benchmark concurrents -->
-      <figure>
-        <img src="image/215021.png"
-             alt="Benchmark concurrentiel des hôtels autour de Hyatt Regency Paris Étoile">
-        <figcaption>
-          Benchmark concurrentiel<br>
-          <small>Comparaison des offres &amp; indicateurs clés</small>
-        </figcaption>
-      </figure>
-
-                  <!-- Vue globale des dashboards -->
-      <figure>
-        <img src="image/215444.png"
-             alt="Vue d’ensemble des dashboards marketing pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Vue globale des tableaux de bord<br>
-          <small>Vue synthétique des performances digitales</small>
-        </figcaption>
-      </figure>
-
-      <!-- Budget -->
-      <figure>
-        <img src="image/215548.png"
-             alt="Budget marketing digital détaillé pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Budget marketing digital – 60&nbsp;000&nbsp;€<br>
-          <small>Répartition SEO / SEA / Social / Hotel Ads</small>
-        </figcaption>
-      </figure>
-
-      <!-- Plan d’actions -->
-      <figure>
-        <img src="image/215622.png"
-             alt="Plan d’actions marketing digital pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Plan d’actions 90 jours<br>
-          <small>Lancement, optimisation, montée en puissance</small>
-        </figcaption>
-      </figure>
-
-      <!-- Synthèse KPI & résultats -->
-      <figure>
-        <img src="image/215059.png"
-             alt="Tableau de synthèse des KPI pour la stratégie digitale Hyatt Regency Paris Étoile">
-        <figcaption>
-          Synthèse des KPI<br>
-          <small>Objectifs, résultats et écarts principaux</small>
-        </figcaption>
-      </figure>
-
-      <!-- Récapitulatif du plan marketing -->
-      <figure>
-        <img src="image/215323.png"
-             alt="Récapitulatif des actions du plan marketing digital pour Hyatt Regency Paris Étoile">
-        <figcaption>
-          Récap du plan marketing<br>
-          <small>Actions clés, canaux et messages prioritaires</small>
-        </figcaption>
-      </figure>
-            <!-- Dashboards GA4 / Looker -->
-      <figure>
-        <img src="image/213812.png"
-             alt="Dashboards GA4 et Looker Studio pour le suivi des performances marketing de Hyatt">
-        <figcaption>
-
-          Dashboards GA4 &amp; Looker Studio<br>
-          <small>Suivi trafic, conversions &amp; revenus</small>
-        </figcaption>
-      </figure>
-
-  <p style="margin-top:1em;">
-    🔗 Pour un exemple détaillé de <strong>construction et de suivi de budget</strong>,
-    voir la section
-<a href="#c-budget"
-   onclick="
-     toggleDetails('c-budget');
-     document.getElementById('c-budget')
-             .scrollIntoView({behavior:'smooth'});
-   ">
-  Gestion budgétaire &amp; KPI – projet Distrimarche
-</a>
-
-  </p>
-    </div>
-
 
     <ul class="doc-list">
       <li>
-        <a href="https://docs.google.com/presentation/d/1HjsYYnIb69hrmYXDyJKLtSIcQgykhuHkTN2eOY3518E/edit?usp=sharing"
-           target="_blank" rel="noopener">
-          Présentation stratégique (Google Slides)
+        <a href="./docs/recommandation-artforgood.pdf" target="_blank" rel="noopener">
+          Recommandation — Art for Good (PDF)
         </a>
       </li>
-      <!-- Если положишь PDF в папку docs, можно добавить ещё одну строку -->
-      <!--
       <li>
-        <a href="docs/Mykhalska_Olena_1_plan_marketing_digital_101025f.pdf"
-           target="_blank" rel="noopener">
-          Plan marketing digital (PDF)
+        <a href="./docs/Bilan_d_immersion.pdf" target="_blank" rel="noopener">
+          Bilan d’immersion (PDF)
         </a>
       </li>
-      -->
     </ul>
 
-    <p style="margin-top:.5em;">
-      🔗 Voir aussi :
-     <a href="#c-green"
-   onclick="
-     toggleDetails('c-green');
-     document.getElementById('c-green')
-             .scrollIntoView({behavior:'smooth'});
-   ">
-  Green IT &amp; RSE – projet GreenFutur
-</a>
-
-·
-
-<a href="#c-ia"
-   onclick="
-     toggleDetails('c-ia');
-     document.getElementById('c-ia')
-             .scrollIntoView({behavior:'smooth'});
-   ">
-  Analyse comportementale &amp; IA
-</a>
-
-    </p>
+    <div class="actions" style="margin-top:1rem;">
+      <a class="btn" href="#contact"
+         onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); return false;">
+        ✍️ Laisser un avis (bientôt)
+      </a>
+      <span class="btn btn-ghost" aria-disabled="true"
+            style="pointer-events:none; opacity:.7;">
+        🔒 Publication après validation
+      </span>
+    </div>
   </details>
 
-  <button type="button" onclick="toggleDetails('c-innovation')">⬅️ Revenir</button>
+  <button type="button" onclick="toggleDetails('c-reviews')">⬅️ Revenir</button>
 </div>
 
-<!-- 7) Gestion d’équipe & pilotage MVP – projet Hello Hercule -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-hello" aria-expanded="false"
-      onclick="toggleDetails('c-hello')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-hello')}">
-    <strong>Gestion d’équipe &amp; pilotage MVP :</strong>
-    app FoodTech <em>Hello Hercule</em>.
-  </li>
+
+
 </ul>
-
-<div id="c-hello" class="details"
-     style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-
-  <h4>Projet : Hello Hercule – assistant digital pour restaurateurs</h4>
-
-  <p>
-    Hello Hercule est une application destinée aux restaurateurs indépendants
-    pour alléger la charge mentale liée à l’administratif (URSSAF, RH, hygiène,
-    contrats, échéances). En tant que cheffe de projet digital, j’ai piloté la
-    livraison de la V1 (MVP) jusqu’au Go Live.
-  </p>
-
-  <h5>🎯 Rôle &amp; responsabilités</h5>
-  <ul>
-    <li>Constitution d’une équipe de freelances (Lead Tech, dev front/back, UX/UI, QA, marketing).</li>
-    <li>Cadrage du projet : méthodologie hybride (Cascade + Agile), RACI, Gantt, jalons Go/No Go.</li>
-    <li>Mise en place de l’espace de pilotage dans Notion (backlog, Kanban, suivi des tâches).</li>
-    <li>Plan de validation QA : tests, critères d’acceptation, gestion des bugs critiques.</li>
-    <li>Plan de prévention des risques (probabilité × impact, actions de prévention et remédiation).</li>
-  </ul>
-
-  <h5>🖼️ Exemples visuels</h5>
-  <div class="gallery">
-    <!-- Tableau risques & priorités -->
-    <figure>
-      <img src="image/231718.png"
-           alt="Consolidation des risques et priorités – projet Hello Hercule">
-      <figcaption>
-        Consolidation des risques &amp; priorités<br>
-        <small>Vue globale des risques projet</small>
-      </figcaption>
-    </figure>
-
-    <!-- RACI + planning / Gantt -->
-    <figure>
-      <img src="image/231759.png"
-           alt="Matrice RACI et planning de projet Hello Hercule">
-      <figcaption>
-        Matrice RACI &amp; planning<br>
-        <small>Répartition claire des responsabilités</small>
-      </figcaption>
-    </figure>
-
-    <!-- Gantt / jalons -->
-    <figure>
-      <img src="image/231836.png"
-           alt="Diagramme de Gantt Hello Hercule – de la préparation au Go Live">
-      <figcaption>
-        Diagramme de Gantt complet<br>
-        <small>Phases, jalons Go/No Go, Go Live</small>
-      </figcaption>
-    </figure>
-
-    <!-- Plan de prévention des risques -->
-    <figure>
-      <img src="image/232244.png"
-           alt="Plan de prévention des risques pour Hello Hercule">
-      <figcaption>
-        Plan de prévention des risques<br>
-        <small>Prévention, remédiation, responsables</small>
-      </figcaption>
-    </figure>
-
-    <!-- Suivi qualité / risques (KPI) -->
-    <figure>
-      <img src="image/232653.png"
-           alt="Suivi qualité et risques – KPI projet Hello Hercule">
-      <figcaption>
-        Suivi qualité &amp; risques (KPI)<br>
-        <small>État des tests, bugs, risques critiques</small>
-      </figcaption>
-    </figure>
-        <!-- Suivi des outils & collaboration -->
-    <figure>
-      <img src="image/231931.png"
-           alt="Suivi des outils collaboratifs dans le projet Hello Hercule">
-      <figcaption>
-        Suivi des outils &amp; collaboration<br>
-        <small>Vue d’ensemble des outils utilisés par l’équipe</small>
-      </figcaption>
-    </figure>
-
-  </div>
-
-  <h5>📎 Livrables</h5>
-  <ul class="doc-list">
-    <li>
-      <a href="https://www.notion.so/2997d16d3d87800788fbcaa41e97971b?v=2997d16d3d878189a496000cc575ea89&source=copy_link"
-         target="_blank" rel="noopener">
-        Espace projet – Backlog &amp; Kanban (Notion)
-      </a>
-    </li>
-    <li>
-      <a href="https://www.notion.so/2a07d16d3d8780ac9c57ce2f0024408b?v=2a07d16d3d8780cba595000ca4ccc5d2&source=copy_link"
-         target="_blank" rel="noopener">
-        Plan de validation &amp; risques (Notion)
-      </a>
-    </li>
-    <li>
-      <a href="https://docs.google.com/presentation/d/1wjMJqwE31XgxajptU5F7ykZIRJMjuf-M6rjR2EfGgfU/edit?usp=sharing"
-         target="_blank" rel="noopener">
-        Présentation projet Hello Hercule (Google Slides)
-      </a>
-    </li>
-  </ul>
-
-  <h5>🧩 Types de missions que je peux prendre en charge</h5>
-  <ul>
-    <li>Cadrage et pilotage d’un MVP digital jusqu’à la V1.</li>
-    <li>Mise en place d’un pilotage hybride (Gantt + Agile / Kanban).</li>
-    <li>Coordination d’une équipe pluridisciplinaire (tech, UX/UI, QA, marketing).</li>
-    <li>Création d’un plan de validation QA et d’un plan de prévention des risques.</li>
-    <li>Construction d’un espace de pilotage tout-en-un dans Notion.</li>
-  </ul>
-    <p style="margin-top:.5em;">
-    🔗 Pour la partie <strong>méthode Agile / SCRUM</strong> (backlog, sprints, rétrospectives),
-    voir la section
-    <a href="#c-innovation" onclick="toggleDetails('c-innovation'); return false;">
-      Gestion de projet &amp; Innovation – Purple Squirrel
-    </a>.
-  </p>
-
-
-  <button type="button" onclick="toggleDetails('c-hello')">⬅️ Revenir</button>
-</div>
-
-
-<!-- 7) Gestion budgétaire & KPI – projet Distrimarche -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-budget" aria-expanded="false"
-      onclick="toggleDetails('c-budget')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-budget')}">
-    <strong>Gestion budgétaire & KPI :</strong>
-    Distrimarche — bornes self-checkout, budget ≤ 150&nbsp;000&nbsp;€.
-  </li>
-</ul>
-
-<div id="c-budget" class="details"
-     style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-
-  <h4>Projet : Distrimarche — gestion budgétaire d’un projet digital</h4>
-
-  <h5>Contexte &amp; objectif</h5>
-  <p>
-    Distrimarche souhaite déployer des bornes self-checkout dans ses magasins,
-    avec une contrainte budgétaire fixée à <strong>150&nbsp;000&nbsp;€ HT</strong>.
-    Mon rôle : <strong>réviser le budget initial de 190&nbsp;000&nbsp;€</strong>,
-    formaliser les arbitrages et créer un <strong>suivi budgétaire opérationnel</strong>
-    (KPI, alertes, dashboard).
-  </p>
-
-  <h5>Rôle &amp; responsabilités</h5>
-  <ul>
-    <li>Analyse du besoin et du budget initial (190&nbsp;000&nbsp;€).</li>
-    <li>Arbitrages budgétaires et justification par email auprès des parties prenantes.</li>
-    <li>Construction du tableau budgétaire (Excel / Google Sheets).</li>
-    <li>Définition des KPI, configuration des alertes et création d’un dashboard.</li>
-    <li>Préparation des livrables et de la fiche d’auto-évaluation.</li>
-  </ul>
-
-  <h5>Outils &amp; stack</h5>
-  <p>
-    Google Sheets, Microsoft Excel, mises en forme conditionnelles,
-    graphiques (histogrammes, camemberts).
-  </p>
-
-  <h5>Galerie</h5>
-  <div class="gallery">
-    <figure class="with-plus">
-      <img src="image/distrimarche-kpi.png" class="zoomable"
-           alt="Tableau budgétaire Distrimarche avec KPI et alertes en rouge et vert">
-      <figcaption>
-        Tableau budgétaire avec KPI et alertes<br>
-        <small>Écarts &gt; 5&nbsp;% en rouge, économies en vert</small>
-      </figcaption>
-    </figure>
-
-    <figure class="with-plus">
-      <img src="image/distrimarche-dashboard.png" class="zoomable"
-           alt="Dashboard financier Distrimarche avec histogramme et camembert">
-      <figcaption>
-        Dashboard financier : budget prévu vs réel et répartition des dépenses<br>
-        <small>Histogramme + camembert</small>
-      </figcaption>
-    </figure>
-  </div>
-
-  <h5>Livrables</h5>
-  <ul class="doc-list">
-    <li>
-      <a href="https://docs.google.com/document/d/1Hcc0E1Uq55ffERHxzUa19E537hGGaCKVvfxtdf63dhE/edit?usp=sharing"
-         target="_blank" rel="noopener">
-        Résumé du projet &amp; emails de justification (Google Docs)
-      </a>
-    </li>
-    <li>
-      <a href="https://docs.google.com/spreadsheets/d/1z7BKyAxxq7Bg2_kdi3K8zNSICxh5_bfzK5itKk_vWmY/edit?usp=sharing"
-         target="_blank" rel="noopener">
-        Budget révisé &amp; suivi budgétaire (Google Sheets – 3 tableaux)
-      </a>
-    </li>
-  </ul>
-
-  <h5>Résultats clés</h5>
-  <ul>
-    <li>Budget ramené de <strong>190&nbsp;k€ → 150&nbsp;k€</strong>.</li>
-    <li>Alerte rouge si écart &gt; +5&nbsp;%, vert en cas d’économie.</li>
-    <li>% consommé global ≈ 99&nbsp;% (sur l’exemple de données).</li>
-    <li>Dashboard : comparaison prévu/réel et répartition des dépenses.</li>
-  </ul>
-
-  <h5>KPI suivis (explication simple)</h5>
-  <ul>
-    <li><strong>Écart (€ / %)</strong> : différence prévu vs réel, repère immédiat des dépassements.</li>
-    <li><strong>% consommé</strong> : part du budget déjà utilisée (seuils de 90&nbsp;% et 100&nbsp;%).</li>
-    <li><strong>Reste à dépenser</strong> : montant disponible avant dépassement (valeur négative = alerte).</li>
-    <li><strong>Imprévus utilisés</strong> : suivi de la réserve (50&nbsp;% / 80&nbsp;%).</li>
-    <li><strong>Coût par borne</strong> : coût unitaire (matériel seul puis coût complet).</li>
-  </ul>
-
-  <h5>Ce que j’ai appris / compétences</h5>
-  <ul>
-    <li>Gestion budgétaire de projet (construction, arbitrage, justification).</li>
-    <li>Mise en place de KPI financiers et d’alertes dans Google Sheets.</li>
-    <li>Data-visualisation financière (histogrammes comparatifs, camemberts).</li>
-    <li>Communication projet : emails clairs, décision conjointe avec la direction.</li>
-  </ul>
-
-  <h5>Pour aller plus loin</h5>
-  <p>
-    <a href="#contact">📩 Me contacter pour un projet similaire</a>
-  </p>
-    <p style="margin-top:.5em;">
-    🔗 Ce projet complète la <strong>stratégie marketing d’un hôtel de luxe</strong> :
-    voir la section
-    <a href="#c-innovation" onclick="toggleDetails('c-innovation'); return false;">
-      Gestion de projet &amp; Innovation – plan marketing Hyatt Regency Paris Étoile
-    </a>
-  </p>
-   <p style="margin-top:.5em;">
-    🔗 Mise en pratique de cette approche sur un MVP réel :
-    <a href="#c-mvp" onclick="toggleDetails('c-mvp'); return false;">
-      Gestion d’équipe &amp; pilotage MVP – app Hello Hercule
-    </a>
-  </p>
-  <p style="margin-top:.5em;">
-    🔗 Ce projet complète la <strong>stratégie marketing d’un hôtel de luxe</strong> :
-    voir la section
-    <a href="#c-innovation" onclick="toggleDetails('c-innovation'); return false;">
-      Gestion de projet &amp; Innovation – plan marketing Hyatt Regency Paris Étoile
-    </a>
-  </p>
-
-
-  <button type="button" onclick="toggleDetails('c-budget')">⬅️ Revenir</button>
-</div>
-
-<!-- 7) RGPD & documentation -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-rgpd" aria-expanded="false"
-      onclick="toggleDetails('c-rgpd')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-rgpd')}">
-    <strong>RGPD & documentation</strong> — Protection des données
-  </li>
-</ul>
-<div id="c-rgpd" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <p>Projet <em>ArtisanConnect</em> : registre de traitements, bases légales, droits, sécurité, PIA.</p>
-    <h4>ArtisanConnect — RGPD & documentation</h4>
-    
-
-<ul>
-  <li>Rédaction complète d’une documentation de conformité pour une marketplace artisanale.</li>
-  <li>Cartographie des données traitées&nbsp;: identité, transactions, avis, messages.</li>
-  <li>Définition des bases légales&nbsp;: consentement, exécution du contrat, obligations légales.</li>
-  <li>Description des droits des utilisateurs&nbsp;: accès, rectification, effacement, opposition.</li>
-  <li>Mesures de sécurité recommandées&nbsp;: HTTPS/TLS, sauvegardes, gestion des rôles &amp; permissions.</li>
-  <li>Politique de conservation des données et durées de stockage.</li>
-  <li>PIA (Privacy Impact Assessment)&nbsp;: analyse d’impact et identification des risques résiduels.</li>
-</ul>
-
-<p><strong>Résultat&nbsp;:</strong> un guide RGPD complet, adapté à une marketplace artisanale.</p>
-
-<p>
-  <a href="https://www.notion.so/Cahier_de_Recette_ArtisanConnect_FINAL-1-26d7d16d3d8780fb86afd5230029baff" target="_blank">Cahier de recette</a> ·
-  <a href="https://www.notion.so/2687d16d3d87803bb622ecafa04e3dd2?v=2687d16d3d8781808825000c64fb5946&source=copy_link" target="_blank">Plan de déploiement</a> ·
-  <a href="https://www.notion.so/2687d16d3d8780e68809d7dd7b7e8c19?v=2687d16d3d8781d8873d000cba9cb201&source=copy_link" target="_blank">Plan de maintenance</a> ·
-  <a href="https://drive.google.com/file/d/1A0tpTekYFZeqhXvzXiUILegZQMhGer0O/view?usp=sharing" target="_blank">Guide utilisateur (PDF)</a>
-</p>
-
-  
-  <!-- Galerie avec images -->
-  <div class="gallery">
-  <figure>
-    <img src="image/ac-login.png" alt="Page de connexion ArtisanConnect" />
-    <figcaption>
-      Page de connexion ArtisanConnect<br />
-      <small>ArtisanConnect – écran de connexion (accès sécurisé)</small>
-    </figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/ac-dashboard.png" alt="Tableau de bord ArtisanConnect avec indicateurs clés" />
-    <figcaption>
-      Tableau de bord ArtisanConnect avec indicateurs clés<br />
-      <small>ArtisanConnect – tableau de bord avec indicateurs clés</small>
-    </figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/ac-commandes.png" alt="Liste des commandes ArtisanConnect avec statuts et actions" />
-    <figcaption>
-      Liste des commandes ArtisanConnect avec statuts et actions<br />
-      <small>ArtisanConnect – liste des commandes</small>
-    </figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/ac-tests-notion.png" alt="Cahier de recette ArtisanConnect dans Notion" />
-    <figcaption>
-      Cahier de recette ArtisanConnect dans Notion<br />
-      <small>ArtisanConnect – extrait du cahier de recette (tests fonctionnels)</small>
-    </figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/RGPD1.jpg" alt="Documentation RGPD – introduction et données traitées" />
-    <figcaption>Documentation RGPD – Introduction &amp; types de données</figcaption>
-  </figure>
-
-  <figure>
-    <img src="image/RGPD2.jpg" alt="Documentation RGPD – droits, sécurité et conservation" />
-    <figcaption>Documentation RGPD – Droits, sécurité, conservation</figcaption>
-  </figure>
-</div>
-
-
-
-  <p style="margin-top:1em;">
-      <a href="https://docs.google.com/document/d/1Ih1_00DKwYdZ6EwTvevMp0oFo8_3N0W0/edit?usp=sharing&ouid=115764666179436541678&rtpof=true&sd=true" target="_blank" rel="noopener">Documentation RGPD (PDF)</a>
-  </p>
-  <p style="margin-top:.5em;">
-  🔗 Pour la partie <strong>tests, accessibilité et déploiement</strong>,
-  voir la section <a href="#c-test" onclick="toggleDetails('c-test'); return false;">Tests &amp; recettage – projet ArtisanConnect</a>.
-</p>
-
-  <button type="button" onclick="toggleDetails('c-rgpd')">⬅️ Revenir</button>
-</div>
-
-
-<!-- COMP 12 – Tests & recettage -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-test" aria-expanded="false"
-      onclick="toggleDetails('c-test')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-test')}">
-    <strong>Tests &amp; recettage :</strong> QA fonctionnelle, scénarios de test – projet <em>ArtisanConnect</em>.
-  </li>
-</ul>
-
-<div id="c-test" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
- <h4>Projet : ArtisanConnect – tests fonctionnels &amp; accessibilité</h4>
-
-  <h5>En deux mots</h5>
-  <p>
-    Mise à niveau d’une application PHP existante (login, tableau de bord, produits, commandes)
-    avec une démarche complète de <strong>recettage, déploiement, accessibilité, sécurité et RGPD</strong>,
-    puis création d’une documentation utilisateur.
-  </p>
-
-  <h5>Ce que j’ai fait</h5>
-  <ul>
-    <li>Construit un cahier de recette dans Notion : protocoles de tests, jeux d’essai, critères d’entrée/sortie, rapport final.</li>
-    <li>Réalisé des tests fonctionnels (parcours critiques), d’accessibilité (clavier, contrastes, ARIA, structure H1–H3) et de sécurité (CSRF, XSS, SQLi via PDO, gestion de session).</li>
-    <li>Rédigé un plan de déploiement (préprod → prod), plan de rollback, plan de sauvegarde et check-list de readiness.</li>
-    <li>Mis à jour les éléments RGPD : cartographie des données, minimisation, mentions légales, politique de confidentialité.</li>
-    <li>Créé un guide utilisateur (PDF) : procédures clés (connexion, produits, commandes), rôles et bonnes pratiques.</li>
-  </ul>
-
-  <h5>Compétences clés acquises</h5>
-  <ul>
-    <li><strong>QA / Recettage</strong> : conception de cas de tests, suivi de défauts, métriques de couverture.</li>
-    <li><strong>Accessibilité (RGAA/WCAG)</strong> : navigation clavier, labels, feedback d’erreur, sémantique, contrastes.</li>
-    <li><strong>Sécurité applicative</strong> : PDO préparé, tokens CSRF, échappement côté serveur, politique de sessions, en-têtes de sécurité.</li>
-    <li><strong>Déploiement & Ops</strong> : plans de release/rollback, sauvegardes, smoke tests, monitoring post-prod.</li>
-    <li><strong>Conformité RGPD</strong> : registre de traitements simplifié, minimisation et droits des utilisateurs.</li>
-    <li><strong>Documentation</strong> : Notion (tests, plans), guide PDF clair et actionnable.</li>
-  </ul>
-
-  <h5>Stack &amp; outils</h5>
-  <p>
-    PHP (PDO), MySQL, Apache/XAMPP, Notion, Firefox/Edge (Accessibility Inspector),
-    axe DevTools/WAVE.
-  </p>
-  <h5>Exemple visuel :</h5>
-<div class="gallery">
-  <figure class="with-plus">
-    <img src="image/ac-tests-notion.png"
-         class="zoomable"
-         alt="Cahier de recette ArtisanConnect dans Notion – liste de tests fonctionnels">
-    <figcaption>
-      Cahier de recette ArtisanConnect dans Notion<br>
-      <small>Cas de test, statut, criticité, captures d’écran</small>
-    </figcaption>
-  </figure>
-</div>
-
-
-
-    <h5>Livrables :</h5>
-  <ul class="doc-list">
-    <li>
-      <a href="https://www.notion.so/Cahier_de_Recette_ArtisanConnect_FINAL-1-26d7d16d3d8780fb86afd5230029baff"
-         target="_blank" rel="noopener">
-        Cahier de recette (Notion)
-      </a>
-    </li>
-    <li>
-      <a href="https://www.notion.so/2687d16d3d87803bb622ecafa04e3dd2?v=2687d16d3d8781808825000c64fb5946&source=copy_link"
-         target="_blank" rel="noopener">
-        Plan de déploiement (Notion)
-      </a>
-    </li>
-    <li>
-      <a href="https://www.notion.so/2687d16d3d8780e68809d7dd7b7e8c19?v=2687d16d3d8781d8873d000cba9cb201&source=copy_link"
-         target="_blank" rel="noopener">
-        Plan de maintenance (Notion)
-      </a>
-    </li>
-    <li>
-      <a href="https://drive.google.com/file/d/1A0tpTekYFZeqhXvzXiUILegZQMhGer0O/view?usp=sharing"
-         target="_blank" rel="noopener">
-        Guide utilisateur (PDF)
-      </a>
-    </li>
-  </ul>
-
-  <p style="margin-top:.5em;">
-    🔗 Pour la partie <strong>registre de traitements et documentation RGPD</strong>,
-    voir la section
-    <a href="#c-rgpd" onclick="toggleDetails('c-rgpd'); return false;">
-      RGPD &amp; documentation – projet ArtisanConnect
-    </a>.
-  </p>
-
-  <button type="button" onclick="toggleDetails('c-test')">⬅️ Revenir</button>
-</div>
-
-
-<!-- 8) Data Viz & BI (Tableau Public) -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-bi" aria-expanded="false"
-      onclick="toggleDetails('c-bi')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-bi')}">
-    <strong>Data Visualisation & Business Intelligence</strong> — Tableau Public
-    <span class="badge-en-cours">⏳ En cours</span>
-  </li>
-</ul>
-<div id="c-bi" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <p>Dashboards interactifs (cartes, tendances, KPI). Storytelling visuel.</p>
-    <h4>Analyses de données – Tableau Public</h4>
-  <p>
-    🔹 Cartes, tendances, comparatifs et KPI<br>
-    🔹 Tableaux de bord interactifs (filtre, hover, drill-down)<br>
-    🔹 Préparation des données et storytelling visuel
-  </p>
-
-  <h5> Exemples :</h5>
-  <div class="gallery">
-    <figure><img src="image/BD-002.png" alt="Carte des contenus par pays"><figcaption>Carte par pays</figcaption></figure>
-    <figure><img src="image/BD-001.png" alt="Répartition films vs séries"><figcaption>Films vs séries</figcaption></figure>
-    <figure><img src="image/BD-003.png" alt="Évolution des sorties"><figcaption>Évolution annuelle</figcaption></figure>
-    <figure><img src="image/BD-004.png" alt="Comparaison séries/films"><figcaption>Comparatif séries/films</figcaption></figure>
-    <figure><img src="image/BD-006.png" alt="Dashboard vue globale"><figcaption>Dashboard global</figcaption></figure>
-    <figure><img src="image/BD-005.png" alt="Analyse temporelle des ajouts"><figcaption>Ajouts dans le temps</figcaption></figure>
-  </div>
-
-  <p class="notice-dev">
-    🔧 La publication complète sur Tableau Public et la documentation sont en cours de finalisation.
-  </p>
-
-  <p style="margin-top:.6rem;">
-    🌐 <a href="https://public.tableau.com/app/profile/..." target="_blank" rel="noopener">
-      Voir le projet sur Tableau Public
-    </a>
-  </p>
-<!-- ajoutez ici 6 captures Tableau Public -->
-  <button type="button" onclick="toggleDetails('c-bi')">⬅️ Revenir</button>
-</div>
-
-
-<!-- COMP 11 – Green IT & RSE -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-green" aria-expanded="false"
-      onclick="toggleDetails('c-green')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-green')}">
-    <strong>Green IT & RSE :</strong>
-    solutions responsables – projet <em>GreenFutur</em> (à venir).
-  </li>
-</ul>
-
-<div id="c-green" class="details"
-     style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-
-  <h4>Projet : GreenFutur – stratégie Green IT &amp; RSE</h4>
-  <p>
-    Objectif : concevoir une stratégie de contenus plus sobre et responsable
-    (Green IT &amp; RSE) en s’appuyant sur une veille structurée, des personas
-    et des KPIs d’impact.
-  </p>
-
-  <p>
-    🔹 Bonnes pratiques d’éco-conception web (poids des pages, requêtes, cache)<br>
-    🔹 Veille structurée via Inoreader (sources qualifiées, dossiers thématiques)<br>
-    🔹 Personas et scoring des solutions (impact RSE, coûts, faisabilité)<br>
-    🔹 Préparation d’un plan d’action « sobriété numérique » et KPIs RSE
-  </p>
-
-  <h5>🖼️ Exemples :</h5>
-  <div class="gallery">
-    <!-- Vue d’ensemble / tableau comparatif -->
-    <figure>
-      <img src="image/182817.png"
-           alt="Tableau de synthèse GreenFutur (objectifs & critères)" />
-      <figcaption>Vue d’ensemble du dispositif GreenFutur</figcaption>
-    </figure>
-
-    <!-- Comparaison des solutions / scoring -->
-    <figure>
-      <img src="image/183021.png"
-           alt="Comparaison des solutions et scoring RSE" />
-      <figcaption>Comparaison des solutions &amp; scoring RSE</figcaption>
-    </figure>
-
-    <!-- Tableaux de suivi / KPI -->
-    <figure>
-      <img src="image/183102.png"
-           alt="Tableau de suivi des indicateurs Green IT" />
-      <figcaption>Tableau de suivi des indicateurs Green IT</figcaption>
-    </figure>
-
-    <!-- Personas (exemple 1) -->
-    <figure>
-      <img src="image/183430.png"
-           alt="Persona client GreenFutur – profil 1" />
-      <figcaption>Persona client – profil 1 (usage &amp; besoins)</figcaption>
-    </figure>
-
-    <!-- Personas (exemple 2) -->
-    <figure>
-      <img src="image/183340.png"
-           alt="Persona client GreenFutur – profil 2" />
-      <figcaption>Persona client – profil 2 (freins &amp; motivations)</figcaption>
-    </figure>
-        <!-- Persona (profil décideur / direction) -->
-    <figure>
-      <img src="image/183404.png"
-           alt="Persona client GreenFutur – profil décideur / direction" />
-      <figcaption>Persona client – profil décideur (direction / budget)</figcaption>
-    </figure>
-
-    <!-- Vue détaillée de la veille Inoreader -->
-    <figure>
-      <img src="image/233246.png"
-           alt="Vue détaillée des flux de veille Inoreader" />
-      <figcaption>Détail des flux de veille dans Inoreader</figcaption>
-    </figure>
-
-
-    <!-- Organisation de la veille / Inoreader -->
-    <figure>
-      <img src="image/233001.png"
-           alt="Organisation de la veille dans Inoreader" />
-      <figcaption>Organisation de la veille dans Inoreader</figcaption>
-    </figure>
-
-    <!-- Tableau Kanban / plan d’action -->
-    <figure>
-      <img src="image/233138.png"
-           alt="Vue Kanban / tâches Green IT & RSE" />
-      <figcaption>Plan d’action Green IT &amp; RSE (Kanban)</figcaption>
-    </figure>
-  </div>
-
-  <h5>📎 Livrables :</h5>
-  <ul class="doc-list">
-    <li>
-      <a href="https://whimsical.com/customer-persona-copy-VYXZEM94oTYUQWwdGGR7vC"
-         target="_blank" rel="noopener">
-        Persona client – carte Whimsical
-      </a>
-    </li>
-    <li>
-      <!-- Когда будет точная ссылка, просто подмени href -->
-      <a href="#"
-         target="_blank" rel="noopener">
-        Inoreader – export OPML &amp; captures datées (veille GreenFutur)
-      </a>
-    </li>
-    <li>
-      <a href="https://docs.google.com/presentation/d/1jG_-6XASXaYYgG-NTga-gIrUe4LbSXa7ZPz_1Vp2T8U/edit?usp=sharing"
-         target="_blank" rel="noopener">
-        Présentation du projet GreenFutur (Google Slides)
-      </a>
-    </li>
-  </ul>
-
-  <p style="margin-top:.5em;">
-    🔗 Voir aussi :
-    <a href="#c-ia"
-       onclick="toggleDetails('c-ia'); return false;">
-      Analyse comportementale &amp; IA (KPI &amp; classification des avis)
-    </a>
-  </p>
-
-  <button type="button" onclick="toggleDetails('c-green')">⬅️ Revenir</button>
-</div>
-
-
-
-<!-- COMP 12 – Analyse comportementale & IA -->
-<ul class="competences-list">
-  <li role="button" tabindex="0"
-      aria-controls="c-ia" aria-expanded="false"
-      onclick="toggleDetails('c-ia')"
-      onkeypress="if(event.key==='Enter'){toggleDetails('c-ia')}">
-    <strong>Analyse comportementale &amp; IA</strong> — usage, éthique numérique
-  </li>
-</ul>
-
-<div id="c-ia" class="details"
-     style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
-  <h4>Projet : Analyse comportementale &amp; IA</h4>
-  <p>
-    🔹 Classification automatique des avis clients (positif, neutre, négatif)<br>
-    🔹 Réalisée dans Jupyter Notebook (Python, Pandas, Matplotlib)<br>
-    🔹 Préparation intégration API Mistral<br>
-    🔹 Permet d’identifier rapidement la satisfaction et les points faibles
-  </p>
-
-  <h5>🖼️ Exemples :</h5>
-  <div class="gallery">
-    <figure>
-      <img src="image/Jupiter.png" alt="Notebook Jupyter – analyse IA">
-      <figcaption>Notebook Jupyter – analyse IA</figcaption>
-    </figure>
-    <figure>
-      <img src="image/Cod-KPI.png" alt="Code SQL – KPI 1–6">
-      <figcaption>Code SQL – KPI 1–6</figcaption>
-    </figure>
-    <figure>
-      <img src="image/UML1.png" alt="Diagramme UML – ArtisanConnect">
-      <figcaption>Diagramme UML – ArtisanConnect</figcaption>
-    </figure>
-  </div>
-
-  <h5>📎 Livrables :</h5>
-  <ul class="doc-list">
-    <li><a href="docs/MYKHAL~2.PDF" target="_blank" rel="noopener">Rapport KPI (PDF)</a></li>
-    <li><a href="docs/MYKHAL~4.PDF" target="_blank" rel="noopener">Documentation projet (PDF)</a></li>
-    <li><a href="docs/MYKHAL~1.SQL" target="_blank" rel="noopener">Requêtes SQL (KPI 1–6)</a></li>
-    <li><a href="docs/MYKHAL~1.IPY"  target="_blank" rel="noopener">Notebook Jupyter</a></li>
-  </ul>
-
-  <p>
-    🔗 <a href="https://colab.research.google.com/drive/1HgCIRRb7k4Q7KBF2fekjkzbEKIysKVF1?usp=sharing"
-          target="_blank" rel="noopener">Notebook Colab</a> ·
-    <a href="https://www.mermaidchart.com/app/projects/cd2b4ee9-6b7c-43c0-8b08-7e0b5e6017f0/diagrams/e41c6196-1372-49f7-b853-8bbe9106ea81/version/v0.1/edit"
-       target="_blank" rel="noopener">Diagramme UML</a>
-  </p>
-
-  <p style="margin-top:.5em;">
-    🔗 Voir aussi :
-    <a href="#c-green"
-       onclick="toggleDetails('c-green');">
-      Green IT &amp; RSE – projet GreenFutur
-    </a>
-  </p>
-
-  <button type="button" onclick="toggleDetails('c-ia')">⬅️ Revenir</button>
-</div>
-
-
-
- 
-</section>     <!-- закрыть #competences -->
-
+</section>
 
   <!-- ========= FIN DES AJOUTS ========= -->
 
   <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-title">
   <h2 id="contact-title" data-i18n="contact.title">Me contacter</h2>
+<!-- Remplace XXXXYYYY par ton endpoint Formspree -->
+<form id="contactForm"
+      action="https://formspree.io/f/XXXXYYYY"
+      method="POST" novalidate>
 
-  < id="contactForm"
-        action="https://formspree.io/f/XXXXYYYY"  <!-- ← замени на свой endpoint из Formspree -->
-        method="POST" novalidate>
+
     <!-- honeypot -->
     <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
 
@@ -1800,14 +1645,15 @@
   </p>
 </section>
 
-  <section id="contact">
-    <p>
-  🌐 Retrouvez-moi sur 
-  <a href="https://www.linkedin.com/in/olena-mykhalska-90ab5730b" target="_blank" rel="noopener noreferrer">
+
+  <section id="social">
+  <p>🌐 Retrouvez-moi sur 
+      <a href="https://www.linkedin.com/in/olena-mykhalska-90ab5730b" target="_blank" rel="noopener noreferrer">
     LinkedIn
   </a>
-</p>
-  </section>
+  </p>
+</section>
+
 
   <footer>
     <p>© 2025 Olena Mykhalska – Portfolio</p>
@@ -1828,150 +1674,7 @@
 
 <!-- Если ещё не подключён -->
 <script src="script.js" defer></script>
-<script>
-  (function () {
-    const bar = document.getElementById('siteNotice');
-    if (!bar) return;
 
-    // если ранее закрывали — не показываем
-    if (localStorage.getItem('noticeHidden') === '1') {
-      bar.style.display = 'none';
-      return;
-    }
-
-    // добавить отступ, чтобы контент не прятался под полосой
-    function applyBodyOffset() {
-      document.body.style.paddingTop = bar.offsetHeight + 'px';
-    }
-    applyBodyOffset();
-    // на случай изменения размеров шрифта/масштаба
-    window.addEventListener('resize', applyBodyOffset);
-
-    // обработчик закрытия
-    const btn = bar.querySelector('.notice-close');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        localStorage.setItem('noticeHidden', '1');
-        bar.remove();
-        document.body.style.paddingTop = '';
-      });
-    }
-  })();
-</script>
-
-<script>
-  function toggleDetails(id){
-    const panel   = document.getElementById(id);
-    const trigger = document.querySelector('[aria-controls="'+id+'"]');
-    if(!panel || !trigger) return;
-
-    const isOpen = panel.style.display === 'block';
-    panel.style.display = isOpen ? 'none' : 'block';
-    trigger.setAttribute('aria-expanded', String(!isOpen));
-
-    // 🪶 ВЕЄР: якщо відкрили головну панель — відкриваємо всі <details.sub>
-    if (!isOpen) {
-      panel.querySelectorAll('details.sub').forEach(det => det.setAttribute('open',''));
-    } else {
-      panel.querySelectorAll('details.sub').forEach(det => det.removeAttribute('open'));
-    }
-  }
-</script>
-
-
-<script>
-window.i18n = (function(){
-  const store = { dict:null, lang:'fr' };
-
-  function t(key){ return store.dict?.[key] ?? ''; }
-
-  async function setLang(lang){
-    try{
-      const res = await fetch(`i18n/${lang}.json?v=${Date.now()}`);
-      store.dict = await res.json();
-      store.lang = lang;
-      document.documentElement.lang = lang;
-      localStorage.setItem('lang', lang);
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const key = el.getAttribute('data-i18n');
-        const val = store.dict[key];
-        if (val) el.innerHTML = val;
-      });
-      document.querySelectorAll('.lang-switch [data-lang]').forEach(b=>{
-        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-      });
-    }catch(e){ console.error('i18n error', e); }
-  }
-
-  async function init(){
-    const qp = new URLSearchParams(location.search).get('lang');
-    const saved = localStorage.getItem('lang');
-    const nav = (navigator.language || 'fr').slice(0,2);
-    const lang = qp || saved || (nav === 'en' ? 'en' : 'fr');
-    await setLang(lang);
-    document.querySelectorAll('.lang-switch [data-lang]').forEach(btn=>{
-      btn.addEventListener('click', ()=> setLang(btn.dataset.lang));
-    });
-  }
-
-  return { init, setLang, t };
-})();
-document.addEventListener('DOMContentLoaded', () => i18n.init());
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const lightbox    = document.querySelector('.lightbox');
-    const lightboxImg = document.querySelector('.lightbox-content');
-    const closeBtn    = document.getElementById('close-lightbox');
-
-    if (!lightbox || !lightboxImg) return;
-
-    function openLightbox(src, alt) {
-      lightboxImg.src = src;
-      if (alt) {
-        lightboxImg.alt = alt;
-      }
-      lightbox.style.display = 'flex';
-      lightbox.setAttribute('aria-hidden', 'false');
-    }
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-      lightboxImg.alt = '';
-    }
-
-    // Клик по картинке или figure в блоке Tests & recettage
-    document.querySelectorAll('#c-test img.zoomable, #c-test figure.with-plus').forEach(el => {
-      el.style.cursor = 'zoom-in';
-      el.addEventListener('click', () => {
-        const img = el.tagName.toLowerCase() === 'img'
-          ? el
-          : el.querySelector('img.zoomable');
-
-        if (!img) return;
-        openLightbox(img.src, img.alt);
-      });
-    });
-
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeLightbox);
-    }
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-  });
-</script>
 
 </body>
 </html>

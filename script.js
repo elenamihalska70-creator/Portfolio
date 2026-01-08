@@ -1,162 +1,168 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------- Toggle details (видимость блоков по id) ---------- */
+  /* ---------------- Toggle details ---------------- */
   window.toggleDetails = function (id) {
-    const el = document.getElementById(id);
-    if (!el) return;
+    const panel = document.getElementById(id);
+    if (!panel) return;
 
-    const visible = el.style.display === 'block';
+    const trigger = document.querySelector(`[aria-controls="${id}"]`);
+    const isOpen = panel.style.display === 'block';
+    const willShow = !isOpen;
+
+    // fermer tous les panels
     document.querySelectorAll('.details').forEach(d => (d.style.display = 'none'));
-    el.style.display = visible ? 'none' : 'block';
-    if (!visible) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // reset aria-expanded
+    document.querySelectorAll('.competences-list [aria-controls]').forEach(el => {
+      el.setAttribute('aria-expanded', 'false');
+    });
+
+    // ouvrir/fermer celui-ci
+    panel.style.display = willShow ? 'block' : 'none';
+    if (trigger) trigger.setAttribute('aria-expanded', String(willShow));
+
+    // option : ouvrir la première sous-section <details.sub>
+    if (willShow) {
+      panel.querySelectorAll('details.sub').forEach(d => (d.open = false));
+      const first = panel.querySelector('details.sub');
+      if (first) first.open = true;
+
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
-  /* ---------- Lightbox gallery ---------- */
-  let currentIndex = 0;
-  let scale = 1;
-
-  const images = document.querySelectorAll('.gallery img');
+  /* ---------------- Lightbox (toutes les .gallery img) ---------------- */
+  const images = Array.from(document.querySelectorAll('.gallery img'));
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = document.querySelector('.lightbox-content');
+
   const btnClose = document.getElementById('close-lightbox');
   const btnZoomIn = document.getElementById('zoom-in');
   const btnZoomOut = document.getElementById('zoom-out');
   const btnPrev = document.getElementById('prev');
   const btnNext = document.getElementById('next');
 
-  if (!images.length || !lightbox || !lightboxImg) return;
+  let currentIndex = 0;
+  let scale = 1;
 
   function showImage(i) {
     currentIndex = (i + images.length) % images.length;
     lightboxImg.src = images[currentIndex].src;
+    lightboxImg.alt = images[currentIndex].alt || '';
     scale = 1;
     lightboxImg.style.transform = 'scale(1)';
   }
 
   function openLightbox(i) {
+    if (!lightbox || !lightboxImg || images.length === 0) return;
     showImage(i);
-    lightbox.style.display = 'block';
+    lightbox.style.display = 'flex';
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.classList.add('no-scroll');
   }
 
   function closeLightbox() {
+    if (!lightbox || !lightboxImg) return;
     lightbox.style.display = 'none';
     lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    lightboxImg.alt = '';
     document.body.classList.remove('no-scroll');
-    scale = 1;
-    lightboxImg.style.transform = 'scale(1)';
   }
 
-  images.forEach((img, i) => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', () => openLightbox(i));
-    img.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') openLightbox(i);
-    });
-    img.setAttribute('tabindex', '0');
-  });
-
-  btnClose.addEventListener('click', closeLightbox);
-  btnZoomIn.addEventListener('click', () => {
-    scale = Math.min(scale + 0.1, 3);
-    lightboxImg.style.transform = `scale(${scale})`;
-  });
-  btnZoomOut.addEventListener('click', () => {
-    scale = Math.max(scale - 0.1, 0.2);
-    lightboxImg.style.transform = `scale(${scale})`;
-  });
-  btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
-  btnNext.addEventListener('click', () => showImage(currentIndex + 1));
-
-  // Закрытие по клику вне картинки
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  // Клавиатура: Esc / стрелки / +/- / Enter
-  document.addEventListener('keydown', (e) => {
-    if (lightbox.style.display !== 'block') return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-    if (e.key === '+') btnZoomIn.click();
-    if (e.key === '-') btnZoomOut.click();
-  });
-});
-function toggleDetails(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-
-  const willShow = el.style.display === '' || el.style.display === 'none';
-
-  // закрыть остальные главные блоки
-  document.querySelectorAll('.details').forEach(d => {
-    if (d !== el) d.style.display = 'none';
-  });
-  document.querySelectorAll('.competences-list li[aria-expanded]')
-    .forEach(li => li.setAttribute('aria-expanded', 'false'));
-
-  // показать/скрыть текущий
-  el.style.display = willShow ? 'block' : 'none';
-  document.querySelectorAll(`.competences-list li[aria-controls="${id}"]`)
-    .forEach(li => li.setAttribute('aria-expanded', willShow ? 'true' : 'false'));
-
-  // 🔽 НОВОЕ: при открытии главного блока — автоматически раскрыть первую подплашку
-  if (willShow) {
-    // закрыть все под‑вкладки внутри
-    el.querySelectorAll('details.sub').forEach(d => d.open = false);
-    // открыть первую
-    const first = el.querySelector('details.sub');
-    if (first) first.open = true;
-  }
-}
-<script>
-/* CONTACT FORM (Formspree AJAX) */
-(function () {
-  const form   = document.getElementById('contactForm');
-  if (!form) return;
-
-  const status = document.getElementById('cf-status');
-
-  function showError(input, show) {
-    const wrap = input.closest('.field');
-    if (!wrap) return;
-    wrap.classList.toggle('has-error', !!show);
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // HTML5 валидация
-    let ok = true;
-    ['cf-name','cf-email','cf-msg','cf-consent'].forEach(id => {
-      const el = document.getElementById(id);
-      const valid = el.type === 'checkbox' ? el.checked : el.checkValidity();
-      showError(el, !valid);
-      if (!valid) ok = false;
-    });
-    if (!ok) { status.textContent = ''; return; }
-
-    const btn = document.getElementById('cf-submit');
-    btn.disabled = true; btn.textContent = (window.i18n && i18n.t('contact.sending')) || 'Envoi…';
-
-    try {
-      const resp = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
+  if (lightbox && lightboxImg && images.length) {
+    images.forEach((img, i) => {
+      img.style.cursor = 'zoom-in';
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('click', () => openLightbox(i));
+      img.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') openLightbox(i);
       });
-      if (resp.ok) {
-        form.reset();
-        status.textContent = (window.i18n && i18n.t('contact.ok')) || 'Merci ! Votre message a été envoyé.';
-      } else {
-        status.textContent = (window.i18n && i18n.t('contact.fail')) || 'Oups, une erreur est survenue.';
-      }
-    } catch (err) {
-      status.textContent = (window.i18n && i18n.t('contact.fail')) || 'Oups, une erreur est survenue.';
-    } finally {
-      btn.disabled = false; btn.textContent = (window.i18n && i18n.t('contact.send')) || 'Envoyer';
+    });
+
+    btnClose && btnClose.addEventListener('click', closeLightbox);
+
+    btnZoomIn && btnZoomIn.addEventListener('click', () => {
+      scale = Math.min(scale + 0.1, 3);
+      lightboxImg.style.transform = `scale(${scale})`;
+    });
+
+    btnZoomOut && btnZoomOut.addEventListener('click', () => {
+      scale = Math.max(scale - 0.1, 0.2);
+      lightboxImg.style.transform = `scale(${scale})`;
+    });
+
+    btnPrev && btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
+    btnNext && btnNext.addEventListener('click', () => showImage(currentIndex + 1));
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox || lightbox.style.display !== 'flex') return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === '+') btnZoomIn && btnZoomIn.click();
+      if (e.key === '-') btnZoomOut && btnZoomOut.click();
+    });
+  }
+
+  /* ---------------- Contact form (Formspree AJAX) ---------------- */
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const status = document.getElementById('cf-status');
+
+    function showError(input, show) {
+      const wrap = input.closest('.field');
+      if (!wrap) return;
+      wrap.classList.toggle('has-error', !!show);
     }
-  });
-})();
-</script>
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      let ok = true;
+      ['cf-name', 'cf-email', 'cf-msg', 'cf-consent'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const valid = el.type === 'checkbox' ? el.checked : el.checkValidity();
+        showError(el, !valid);
+        if (!valid) ok = false;
+      });
+
+      if (!ok) {
+        if (status) status.textContent = '';
+        return;
+      }
+
+      const btn = document.getElementById('cf-submit');
+      if (btn) btn.disabled = true;
+      if (btn) btn.textContent = 'Envoi…';
+
+      try {
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (resp.ok) {
+          form.reset();
+          if (status) status.textContent = 'Merci ! Votre message a été envoyé.';
+        } else {
+          if (status) status.textContent = 'Oups, une erreur est survenue.';
+        }
+      } catch {
+        if (status) status.textContent = 'Oups, une erreur est survenue.';
+      } finally {
+        if (btn) btn.disabled = false;
+        if (btn) btn.textContent = 'Envoyer';
+      }
+    });
+  }
+});
+document.querySelectorAll('.lang-switch [data-lang]').forEach(b=>{
+  const active = b.dataset.lang === lang;
+  b.setAttribute('aria-pressed', String(active));
+  b.classList.toggle('is-active', active);
+});

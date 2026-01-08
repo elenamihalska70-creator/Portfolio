@@ -95,6 +95,7 @@ body.no-scroll{ overflow:hidden; }
 /* ========== COMPÉTENCES ========== */
 #competences{ padding-top:.75rem; }
 #competences h2{ margin-top:.25rem; margin-bottom:3rem; }
+#competences h2{ margin-top:.25rem; margin-bottom:3rem; }
 
 /* Внешний список компетенций */
 #competences .competences-list{ list-style:none; padding-left:0; margin:.5rem 0 .7rem; }
@@ -123,7 +124,7 @@ body.no-scroll{ overflow:hidden; }
 /* Внутренние details/summary */
 #competences summary::-webkit-details-marker{ display:none; }
 #competences .details details.sub{
-  border-left:3px solid #eee; padding-left:.7rem; margin:.65rem 0; border-radius:8px;
+  border-left:3px solid hsl(0, 28%, 87%); padding-left:.7rem; margin:.65rem 0; border-radius:8px;
 }
 #competences .details details.sub[open]{ border-color:color-mix(in srgb, var(--brand) 28%, transparent); }
 #competences .details details.sub > summary{
@@ -134,6 +135,7 @@ body.no-scroll{ overflow:hidden; }
 #competences .details details.sub > summary::before{ content:"▸"; transition:transform .16s; }
 #competences .details details.sub[open] > summary::before{ transform:rotate(90deg); }
 #competences .details details.sub > summary:hover{ background:var(--hover-bg); color:var(--brand); }
+
 
 /* ========== FOOTER ========== */
 footer{
@@ -197,3 +199,97 @@ footer p{ color:#f0e6f6; font-size:.9rem; margin-top:5px; }
 #c-test .with-plus:hover::after {
   transform: scale(1.05);
 }
+/* === Tags (mots-clés recruteur) === */
+.tag {
+  display: inline-block;
+  padding: .15rem .45rem;
+  margin: 0 .25rem .2rem 0;
+  border: 1px solid rgba(125,45,45,.25);
+  border-radius: 999px;
+  font-size: .88em;
+  line-height: 1.2;
+  background: rgba(244,228,205,.55);
+  white-space: nowrap;
+}
+
+/* Met un peu plus de punch sur les titres de compétences */
+.competences-list li strong {
+  letter-spacing: .2px;
+}
+
+/* Petit badge "en cours" */
+.badge {
+  display:inline-block;
+  padding:.15rem .5rem;
+  border-radius:999px;
+  font-size:.82em;
+  border:1px solid rgba(90,61,189,.25);
+  background: rgba(90,61,189,.08);
+}
+.lang-switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: .5rem;
+  z-index: 1000;
+}
+
+/* базовая круглая кнопка */
+.lang-btn {
+  position: relative;            /* важно для ::after */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  font-size: 1.3rem;             /* размер флага */
+  line-height: 1;
+
+  background: rgba(255,255,255,.85);
+  border: 1px solid #ddd;
+  cursor: pointer;
+
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+}
+
+.lang-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+/* ✅ активная кнопка — и цвет, и рамка, и "кольцо" */
+.lang-btn[aria-pressed="true"] {
+  background: #7D2D2D;
+  border-color: #7D2D2D;
+  box-shadow: 0 0 0 3px rgba(125,45,45,.35), 0 4px 10px rgba(0,0,0,.12);
+}
+
+/* если внутри есть .code (FR/EN), делаем читаемым на активной */
+.lang-btn[aria-pressed="true"] .code {
+  color: #a456e0;
+}
+
+/* подсказка снизу */
+.lang-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .75rem;
+  white-space: nowrap;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: .15rem .4rem;
+  border-radius: .35rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.lang-btn:hover::after { opacity: 1; }
+
