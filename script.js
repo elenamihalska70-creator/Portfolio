@@ -1,5 +1,128 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------------- Toggle details ---------------- */
+  /* =========================================================
+   * 0) Helpers
+   * ======================================================= */
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  /* =========================================================
+   * 1) Language / i18n (FR/EN) — FIXED + GitHub Pages safe
+   * ======================================================= */
+
+  function getRepoBasePath() {
+    // GitHub Pages: https://username.github.io/<repo>/
+    if (!location.hostname.endsWith('github.io')) return '';
+    const parts = location.pathname.split('/').filter(Boolean);
+    return parts.length ? `/${parts[0]}` : '';
+  }
+
+function getI18nUrl(lang) {
+  return new URL(`i18n/${lang}.json`, document.baseURI).toString();
+}
+
+/* =========================================================
+ * 5) Notice bar — close + remember
+ * ======================================================= */
+const notice = document.getElementById('siteNotice');
+const noticeClose = document.querySelector('.notice-close');
+
+if (notice) {
+  const dismissed = localStorage.getItem('noticeDismissed') === '1';
+
+  if (dismissed) {
+    notice.style.display = 'none';
+    document.body.classList.add('notice-hidden'); // убираем padding-top через CSS
+  }
+
+  if (noticeClose) {
+    noticeClose.addEventListener('click', () => {
+      notice.style.display = 'none';
+      document.body.classList.add('notice-hidden');
+      localStorage.setItem('noticeDismissed', '1');
+    });
+  }
+}
+
+  function normalizeLang(value) {
+    const v = (value || '').toLowerCase();
+    return v.startsWith('en') ? 'en' : 'fr';
+  }
+
+  function getStoredLang() {
+    return normalizeLang(
+      localStorage.getItem('lang') ||
+      document.documentElement.getAttribute('lang') ||
+      'fr'
+    );
+  }
+
+  function setLangUI(lang) {
+    $$('.lang-switch [data-lang]').forEach((btn) => {
+      const active = btn.dataset.lang === lang;
+      btn.setAttribute('aria-pressed', String(active));
+      btn.classList.toggle('is-active', active);
+    });
+  }
+
+  async function loadDict(lang) {
+    const url = getI18nUrl(lang);
+    const resp = await fetch(url, { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`i18n load failed: ${resp.status} ${url}`);
+    return resp.json();
+  }
+
+  function applyTranslations(dict) {
+  // 1) Текстовые узлы: <span data-i18n="hero.name">...</span>
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (!key) return;
+
+    const value = dict[key];
+    if (typeof value !== 'string') return;
+
+    // 2) Перевод атрибутов (placeholder, aria-label и т.д.)
+    const attr = el.getAttribute('data-i18n-attr');
+    if (attr) {
+      el.setAttribute(attr, value);
+      return;
+    }
+
+    el.textContent = value;
+  });
+}
+
+
+  async function setLanguage(lang) {
+    const normalized = normalizeLang(lang);
+    localStorage.setItem('lang', normalized);
+    document.documentElement.setAttribute('lang', normalized);
+
+    setLangUI(normalized);
+
+    try {
+      const dict = await loadDict(normalized);
+      applyTranslations(dict);
+    } catch (err) {
+      // If EN fails on GitHub (path issue), you will see it here
+      console.error(err);
+    }
+  }
+
+  // Init language
+  const initialLang = getStoredLang();
+  setLanguage(initialLang);
+
+  // Click handlers on language buttons
+  $$('.lang-switch [data-lang]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.lang || 'fr';
+      setLanguage(target);
+    });
+  });
+
+  /* =========================================================
+   * 2) Toggle details
+   * ======================================================= */
   window.toggleDetails = function (id) {
     const panel = document.getElementById(id);
     if (!panel) return;
@@ -10,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // fermer tous les panels
     document.querySelectorAll('.details').forEach(d => (d.style.display = 'none'));
+
     // reset aria-expanded
     document.querySelectorAll('.competences-list [aria-controls]').forEach(el => {
       el.setAttribute('aria-expanded', 'false');
@@ -29,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  /* ---------------- Lightbox (toutes les .gallery img) ---------------- */
+  /* =========================================================
+   * 3) Lightbox (toutes les .gallery img)
+   * ======================================================= */
   const images = Array.from(document.querySelectorAll('.gallery img'));
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = document.querySelector('.lightbox-content');
@@ -107,7 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------------- Contact form (Formspree AJAX) ---------------- */
+  /* =========================================================
+   * 4) Contact form (Formspree AJAX)
+   * ======================================================= */
   const form = document.getElementById('contactForm');
   if (form) {
     const status = document.getElementById('cf-status');
@@ -160,9 +288,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
-document.querySelectorAll('.lang-switch [data-lang]').forEach(b=>{
-  const active = b.dataset.lang === lang;
-  b.setAttribute('aria-pressed', String(active));
-  b.classList.toggle('is-active', active);
 });

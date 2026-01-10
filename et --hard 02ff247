@@ -1,0 +1,15 @@
+[33m2332513[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Finalize rebase and portfolio updates
+[33m088fcc2[m  upload images
+[33m4605cba[m Upload files
+[33m2785fe1[m Update images
+[33m2334ab7[m Update docs.
+[33m5c2c108[m Update images (part 2).
+[33m072e4f1[m Update images (part 2).
+[33m02ff247[m Update index, CSS, JS → Commit changes.
+[33m6bd57ef[m Merge: nouvelle version du portfolio
+[33mb5a7578[m[33m ([m[1;32mrefactor-competences[m[33m)[m Nettoyage CSS, fix notice verte et marges du titre Compétences
+[33mdcb5e98[m[33m ([m[1;31morigin/archive-2025-08-27[m[33m, [m[1;32marchive-2025-08-27[m[33m)[m Backup before competence regrouping
+[33m5c2ef3d[m Corrections image + maj compétences
+[33mdf154df[m Simplify footer: remove icons, text-only links; clean CSS
+[33m3b86e61[m Add favicons and og-cover image
+[33mc304910[m meta: favicons + social preview + head cleanup
