@@ -428,3 +428,36 @@ footer a:hover{
   text-decoration:underline;
   text-underline-offset:3px;
 }
+
+/* ===== Lightbox: always on top (fix under-footer) ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;              /* JS will turn it on */
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,.92);
+  z-index: 2147483646;        /* ниже notice (2147483647), но выше всего остального */
+  padding: 24px;
+}
+
+.lightbox[aria-hidden="false"]{
+  display: flex;
+}
+
+.lightbox-content{
+  max-width: 92vw;
+  max-height: 82vh;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.45);
+}
+
+/* Controls above image */
+.lightbox-controls{
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+}
