@@ -21,27 +21,23 @@ function getI18nUrl(lang) {
 }
 
 /* =========================================================
- * 5) Notice bar — close + remember
+ * 5) Notice bar — close (no memory)
  * ======================================================= */
 const notice = document.getElementById('siteNotice');
-const noticeClose = document.querySelector('.notice-close');
+const noticeClose = notice?.querySelector('.notice-close');
 
 if (notice) {
-  const dismissed = localStorage.getItem('noticeDismissed') === '1';
+  // показываем всегда при загрузке
+  notice.style.display = 'flex';
+  document.body.classList.remove('notice-hidden');
 
-  if (dismissed) {
+  // закрытие крестиком (до перезагрузки)
+  noticeClose?.addEventListener('click', () => {
     notice.style.display = 'none';
-    document.body.classList.add('notice-hidden'); // убираем padding-top через CSS
-  }
-
-  if (noticeClose) {
-    noticeClose.addEventListener('click', () => {
-      notice.style.display = 'none';
-      document.body.classList.add('notice-hidden');
-      localStorage.setItem('noticeDismissed', '1');
-    });
-  }
+    document.body.classList.add('notice-hidden');
+  });
 }
+
 
   function normalizeLang(value) {
     const v = (value || '').toLowerCase();

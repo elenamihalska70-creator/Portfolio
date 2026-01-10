@@ -30,22 +30,35 @@ body{
    ========================================================= */
 
 .notice{
-  position:fixed;
-  top:0; left:0; right:0;
-  height:var(--notice-h);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--notice-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background:#aaf1dc;
-  color:#0a3d2e;
-  border-bottom:1px solid #48f4d7;
+  background: #aaf1dc;
+  color: #0a3d2e;
+  border-bottom: 1px solid #48f4d7;
 
-  padding:0 48px 0 14px;
-  z-index:2147483647;
-  font-size:.95rem;
-  box-shadow:0 2px 6px rgba(0,0,0,.06);
+  padding: 0 48px 0 14px;
+  z-index: 2147483647;
+  font-size: .95rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
 }
+
+body{
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  padding-top: var(--notice-h);
+}
+
+body.notice-hidden{
+  padding-top: 0;
+}
+
 
 
 /* =========================================================
@@ -412,7 +425,7 @@ figcaption{
 /* =========================================================
    FOOTER
    ========================================================= */
-
+   
 footer{
   background:#2E1A47;
   color:#dcd3f2;
@@ -429,17 +442,21 @@ footer a:hover{
   text-underline-offset:3px;
 }
 
-/* ===== Lightbox: always on top (fix under-footer) ===== */
 .lightbox{
   position: fixed;
   inset: 0;
-  display: none;              /* JS will turn it on */
+  z-index: 2147483646;
+}
+/* ===== Lightbox overlay ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;                 /* JS ставит flex */
   align-items: center;
   justify-content: center;
-
-  background: rgba(0,0,0,.92);
-  z-index: 2147483646;        /* ниже notice (2147483647), но выше всего остального */
   padding: 24px;
+  background: rgba(0,0,0,.72);
+  z-index: 2147483646;
 }
 
 .lightbox[aria-hidden="false"]{
@@ -447,17 +464,33 @@ footer a:hover{
 }
 
 .lightbox-content{
-  max-width: 92vw;
-  max-height: 82vh;
+  max-width: min(92vw, 1100px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 18px 50px rgba(0,0,0,.45);
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  transform-origin: center;
 }
 
-/* Controls above image */
-.lightbox-controls{
-  position: fixed;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
+/* buttons */
+#close-lightbox,
+#prev,#next,
+#zoom-in,#zoom-out{
+  position: absolute;
   z-index: 2147483647;
+  border: 0;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: .45rem .7rem;
+  background: rgba(255,255,255,.9);
 }
+
+#close-lightbox{ top: 12px; right: 12px; font-size: 1.4rem; line-height: 1; }
+#prev{ left: 12px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; }
+#next{ right: 12px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; }
+#zoom-out{ left: 12px; bottom: 12px; font-size: 1.2rem; }
+#zoom-in{ left: 56px; bottom: 12px; font-size: 1.2rem; }
+
+/* disable page scroll when open */
+.no-scroll{ overflow: hidden; }
