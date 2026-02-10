@@ -229,59 +229,58 @@ if (notice) {
     });
   }
 
-  /* =========================================================
-   * 4) Contact form (Formspree AJAX)
-   * ======================================================= */
-  const form = document.getElementById('contactForm');
-  if (form) {
-    const status = document.getElementById('cf-status');
+/* =========================================================
+ * 4) Contact form — mailto + message "Merci..."
+ * ======================================================= */
 
-    function showError(input, show) {
-      const wrap = input.closest('.field');
-      if (!wrap) return;
-      wrap.classList.toggle('has-error', !!show);
+const form = document.getElementById('contactForm');
+const status = document.getElementById('cf-status');
+const mailBtn = document.getElementById('cf-mailto');
+
+function showError(input, show) {
+  const wrap = input?.closest('.field');
+  if (!wrap) return;
+  wrap.classList.toggle('has-error', !!show);
+}
+
+if (form && mailBtn) {
+  mailBtn.addEventListener('click', (e) => {
+    let ok = true;
+
+    const nameEl = document.getElementById('cf-name');
+    const emailEl = document.getElementById('cf-email');
+    const msgEl = document.getElementById('cf-msg');
+    const consentEl = document.getElementById('cf-consent');
+
+    if (nameEl) nameEl.value = nameEl.value.trim();
+    if (emailEl) emailEl.value = emailEl.value.trim();
+    if (msgEl) msgEl.value = msgEl.value.trim();
+
+    if (nameEl) { const v = nameEl.checkValidity(); showError(nameEl, !v); if (!v) ok = false; }
+    if (emailEl) { const v = emailEl.checkValidity(); showError(emailEl, !v); if (!v) ok = false; }
+    if (msgEl) { const v = msgEl.checkValidity(); showError(msgEl, !v); if (!v) ok = false; }
+    if (consentEl) { const v = consentEl.checked; showError(consentEl, !v); if (!v) ok = false; }
+
+    if (!ok) {
+      e.preventDefault();
+      if (status) status.textContent = '';
+      return;
     }
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    const subject = encodeURIComponent('Contact Portfolio');
+    const body = encodeURIComponent(
+      `Nom: ${nameEl?.value || ''}\n` +
+      `Email: ${emailEl?.value || ''}\n\n` +
+      `${msgEl?.value || ''}`
+    );
 
-      let ok = true;
-      ['cf-name', 'cf-email', 'cf-msg', 'cf-consent'].forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        const valid = el.type === 'checkbox' ? el.checked : el.checkValidity();
-        showError(el, !valid);
-        if (!valid) ok = false;
-      });
+    mailBtn.href = `mailto:elenamihalska70@gmail.com?subject=${subject}&body=${body}`;
 
-      if (!ok) {
-        if (status) status.textContent = '';
-        return;
-      }
+    if (status) status.textContent = 'Merci, je vous répondrai rapidement.';
 
-      const btn = document.getElementById('cf-submit');
-      if (btn) btn.disabled = true;
-      if (btn) btn.textContent = 'Envoi…';
-
-      try {
-        const resp = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-
-        if (resp.ok) {
-          form.reset();
-          if (status) status.textContent = 'Merci ! Votre message a été envoyé.';
-        } else {
-          if (status) status.textContent = 'Oups, une erreur est survenue.';
-        }
-      } catch {
-        if (status) status.textContent = 'Oups, une erreur est survenue.';
-      } finally {
-        if (btn) btn.disabled = false;
-        if (btn) btn.textContent = 'Envoyer';
-      }
-    });
-  }
+    setTimeout(() => {
+      if (status) status.textContent = '';
+    }, 6000);
+  });
+}
 });

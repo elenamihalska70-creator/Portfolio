@@ -346,6 +346,26 @@ figcaption{
   align-items:flex-start;
   font-size:.95rem;
 }
+#contact .consent{
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  font-size: .95rem;
+  width: 100%;
+}
+
+#contact .consent input{
+  margin-top: 4px;
+}
+
+#contact .consent span{
+  display: block;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
 
 #contact .btn{
   margin-top:14px;
