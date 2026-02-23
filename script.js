@@ -283,4 +283,188 @@ if (form && mailBtn) {
     }, 6000);
   });
 }
+/* =========================================================
+ * 6) AI Chatbot → Cloudflare Worker (stable, no conflicts)
+ * ======================================================= */
+
+const chatContainer = document.getElementById("chatbot-container");
+const chatMessages  = document.getElementById("chatbot-messages");
+const chatInput     = document.getElementById("chatbot-input");
+const chatSend      = document.getElementById("chatbot-send");
+const chatClose     = document.getElementById("chatbot-close");   // должен быть в HTML
+const chatReopen    = document.getElementById("chatbot-reopen");  // должен быть в HTML
+
+// --- helpers
+const normalizeBotLang = (v) => {
+  const x = String(v || "").toLowerCase().trim();
+  if (x === "fr") return "fr";
+  if (x === "en") return "en";
+  if (x === "ua" || x === "uk" || x.startsWith("ua")) return "ua";
+  return "fr";
+};
+
+let botLang = normalizeBotLang(localStorage.getItem("chatbot_lang")) || "fr";
+
+function getSessionId() {
+  let id = localStorage.getItem("chat_session_id");
+  if (!id) {
+    id =
+      (crypto.randomUUID && crypto.randomUUID()) ||
+      (String(Date.now()) + Math.random().toString(16).slice(2));
+    localStorage.setItem("chat_session_id", id);
+  }
+  return id;
+}
+
+function scrollChat() {
+  if (!chatMessages) return;
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function addMessage(text, role = "bot", extraClass = "") {
+  if (!chatMessages) return null;
+
+  const div = document.createElement("div");
+  div.className = `message ${role === "user" ? "user-message" : "bot-message"} ${extraClass}`.trim();
+  div.textContent = text;
+
+  chatMessages.appendChild(div);
+  scrollChat();
+  return div;
+}
+
+function getGreetingText() {
+  const t = {
+    fr: "Bonjour 👋 Décrivez votre projet en 1 phrase (objectif + contexte).",
+    en: "Hello 👋 Describe your project in 1 sentence (goal + context).",
+    ua: "Вітаю 👋 Опишіть запит одним реченням (ціль + контекст).",
+  };
+  return t[botLang] || t.fr;
+}
+
+function setBotLangUI(lang) {
+  botLang = normalizeBotLang(lang);
+  localStorage.setItem("chatbot_lang", botLang);
+
+  // active state on buttons
+  document.querySelectorAll("[data-chat-lang]").forEach((btn) => {
+    btn.classList.toggle("active", normalizeBotLang(btn.dataset.chatLang) === botLang);
+  });
+
+  // placeholder per language
+  const placeholders = {
+    fr: "Décrivez votre projet…",
+    en: "Describe your project…",
+    ua: "Опишіть ваш проєкт…",
+  };
+  if (chatInput) chatInput.placeholder = placeholders[botLang] || placeholders.fr;
+
+  // update greeting if already exists
+  const greet = chatMessages?.querySelector(".message.greeting");
+  if (greet) greet.textContent = getGreetingText();
+}
+
+function ensureGreeting() {
+  if (!chatMessages) return;
+
+  // greeting should be visible immediately, but only once per page load
+  const existing = chatMessages.querySelector(".message.greeting");
+  if (existing) {
+    existing.textContent = getGreetingText();
+    return;
+  }
+  addMessage(getGreetingText(), "bot", "greeting");
+}
+
+async function sendToWorker(message) {
+  const sessionId = getSessionId();
+
+  const response = await fetch("https://curly-thunder-a822.elenamihalska70.workers.dev/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message, sessionId, lang: botLang }),
+  });
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    throw new Error(data?.error || `Worker error (${response.status})`);
+  }
+  return data.reply || "";
+}
+
+async function handleSend() {
+  const msg = (chatInput?.value || "").trim();
+  if (!msg) return;
+  // удалить приветствие при первом сообщении пользователя
+const greet = chatMessages?.querySelector(".message.greeting");
+if (greet) greet.remove();
+
+  addMessage(msg, "user");
+  if (chatInput) chatInput.value = "";
+
+  const loading = addMessage("…", "bot");
+
+  try {
+    const reply = await sendToWorker(msg);
+    const fallback =
+      botLang === "fr" ? "Je comprends. Pouvez-vous préciser ?" :
+      botLang === "en" ? "I understand. Could you clarify?" :
+                         "Розумію. Можете уточнити?";
+    if (loading) loading.textContent = reply || fallback;
+  } catch (err) {
+    console.error(err);
+    const errText =
+      botLang === "fr" ? "Erreur temporaire. Réessayez." :
+      botLang === "en" ? "Temporary error. Please retry." :
+                         "Тимчасова помилка. Спробуйте ще раз.";
+    if (loading) loading.textContent = errText;
+  }
+
+  scrollChat();
+}
+
+/* --- INIT --- */
+if (chatContainer && chatMessages && chatInput && chatSend) {
+  // show chat on load
+  chatContainer.style.display = "flex";
+
+  // reopen hidden by default
+  if (chatReopen) chatReopen.style.display = "none";
+
+  // init language UI + greeting
+  setBotLangUI(botLang);
+  ensureGreeting();
+
+  // send handlers
+  chatSend.addEventListener("click", handleSend);
+  chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleSend();
+  });
+
+  // language buttons: UI only
+  document.querySelectorAll("[data-chat-lang]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setBotLangUI(btn.dataset.chatLang || "fr");
+    });
+  });
+
+  // close -> hide chat, show reopen
+  if (chatClose) {
+    chatClose.addEventListener("click", () => {
+      chatContainer.style.display = "none";
+      if (chatReopen) chatReopen.style.display = "block";
+    });
+  }
+
+  // reopen -> show chat again
+  if (chatReopen) {
+    chatReopen.addEventListener("click", () => {
+      chatContainer.style.display = "flex";
+      chatReopen.style.display = "none";
+      ensureGreeting();
+    });
+  }
+}
+
 });

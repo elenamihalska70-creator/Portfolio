@@ -1680,5 +1680,26 @@
 <script src="script.js" defer></script>
 
 
+<!-- ================= CHATBOT ================= -->
+<div id="chatbot-container" class="chatbot">
+  <div class="chat-header">
+    <div class="chat-title">AI Assistant</div>
+    <button type="button" id="chatbot-close" class="chat-close" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chat-lang-switch">
+    <button type="button" data-chat-lang="fr">FR</button>
+    <button type="button" data-chat-lang="en">EN</button>
+    <button type="button" data-chat-lang="ua">UA</button>
+  </div>
+
+  <div id="chatbot-messages" class="chat-messages"></div>
+
+  <div class="chat-input-area">
+    <input type="text" id="chatbot-input" placeholder="Describe your project." />
+    <button type="button" id="chatbot-send">Send</button>
+  </div>
+</div>
+<button type="button" id="chatbot-reopen" class="chatbot-reopen" aria-label="Open chat">💬</button>
 </body>
 </html>
