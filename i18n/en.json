@@ -28,5 +28,13 @@
   "contact.msg_err": "Please write a message.",
   "contact.consent_err": "Required before sending.",
   "contact.privacy": "Your data is only used to answer you. No marketing.",
-  "contact.alt": "Or write to me directly:"
+  "contact.alt": "Or write to me directly:",
+  
+  "solutions.title": "Ready-to-use solutions",
+  "solutions.subtitle": "Concrete MVPs you can test in 1 minute.",
+
+  "demo.booking.title": "24/7 Booking — Lead capture via QR / Instagram",
+  "demo.booking.desc": "A shareable page: QR code, Instagram bio, or Google Business link.",
+  "demo.booking.cta": "Try the demo (1 min)"
+
 }

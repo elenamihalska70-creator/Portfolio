@@ -24,7 +24,23 @@ body{
   padding-top:var(--notice-h);
 }
 
-
+.card-block{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:16px;
+  padding:18px;
+  margin: 18px 0;
+}
+.btn-demo{
+  display:inline-block;
+  margin: 10px 0 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+}
+.btn-demo:hover{ opacity:.92; }
 /* =========================================================
    NOTICE BAR
    ========================================================= */

@@ -99,6 +99,27 @@
   </p>
 </section>
 
+<section id="solutions">
+  <h2 data-i18n="solutions.title">Solutions prêtes à installer</h2>
+  <p data-i18n="solutions.subtitle">Des MVP concrets, testables en 1 minute.</p>
+
+  <section id="demo-bot" class="solution-card">
+    <h3 data-i18n="demo.booking.title">Réservation 24/7 — Prise de demandes via QR / Instagram</h3>
+    <p data-i18n="demo.booking.desc">Page prête à partager : QR code, Instagram bio ou lien Google Business.</p>
+
+    <a href="https://reservation-bot-demo.pages.dev" target="_blank" rel="noopener" class="btn-demo"
+       data-i18n="demo.booking.cta">Tester la démo (1 min)</a>
+
+    <iframe
+      src="https://reservation-bot-demo.pages.dev"
+      width="100%"
+      height="800"
+      style="border:none; border-radius:16px;"
+      loading="lazy"
+      title="Démo Réservation 24/7">
+    </iframe>
+  </section>
+</section>
 
   <!-- COMPÉTENCES -->
 <!-- ================= COMPÉTENCES (CLEAN) ================= -->
@@ -649,6 +670,44 @@
           </figure>
         </div>
       </details>
+
+      <details class="sub">
+  <summary>
+    <strong>Réservation 24/7 — MVP (sans IA)</strong> :
+    page publique + bot scénarisé + QR
+  </summary>
+
+  <p>
+    <strong>Objectif :</strong> permettre à un petit business (restaurant / coiffeur / artisan)
+    de collecter des demandes 24/7 via un lien public (Instagram bio / Google Business / QR code).
+  </p>
+
+  <ul class="keypoints">
+    <li><strong>Front :</strong> interface chat HTML/CSS/JS + boutons + aperçu “ce que voit le gérant”.</li>
+    <li><strong>Flow :</strong> scénario guidé (date → heure → personnes → nom → contact) + options (horaires/adresse/annulation).</li>
+    <li><strong>QR :</strong> génération automatique + téléchargement.</li>
+    <li><strong>Back :</strong> endpoint <em>/chat</em> (Cloudflare Worker) + sessions/logs côté serveur.</li>
+  </ul>
+
+  <h5>🔗 Liens</h5>
+  <ul class="keypoints">
+    <li>
+      <a href="https://reservation-bot-demo.pages.dev" target="_blank" rel="noopener">
+        Ouvrir la démo en ligne
+      </a>
+    </li>
+    <li>
+      <a href="https://reservation-bot-demo.pages.dev?debug=1" target="_blank" rel="noopener">
+        Mode debug (tests)
+      </a>
+    </li>
+  </ul>
+
+  <p style="margin-top:.75rem;">
+    <strong>Résultat :</strong> une solution légère, partageable et compréhensible,
+    qui remplace les messages dispersés (Instagram/WhatsApp) par une demande structurée.
+  </p>
+</details>
 
       <button type="button" onclick="toggleDetails('c-auto')">⬅️ Revenir</button>
     </div>
@@ -1633,9 +1692,6 @@
   Envoyer
 </a>
 
-<p id="cf-status" role="status" aria-live="polite" class="status"></p>
-
-
     <p id="cf-status" role="status" aria-live="polite" class="status"></p>
 
     <p class="privacy" data-i18n="contact.privacy">
@@ -1678,7 +1734,6 @@
 
 <!-- Если ещё не подключён -->
 <script src="script.js" defer></script>
-
 
 <!-- ================= CHATBOT ================= -->
 <div id="chatbot-container" class="chatbot">

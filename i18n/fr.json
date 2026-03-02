@@ -27,5 +27,10 @@
   "contact.msg_err": "Écrivez un message.",
   "contact.consent_err": "Nécessaire pour envoyer.",
   "contact.privacy": "Vos données ne sont utilisées que pour vous répondre. Aucune prospection.",
-  "contact.alt": "Ou écrivez-moi directement :"
+  "contact.alt": "Ou écrivez-moi directement :",
+  "solutions.title": "Solutions prêtes à installer",
+  "solutions.subtitle": "Des MVP concrets, testables en 1 minute.",
+  "demo.booking.title": "Réservation 24/7 — Prise de demandes via QR / Instagram",
+  "demo.booking.desc": "Page prête à partager : QR code, Instagram bio ou lien Google Business.",
+  "demo.booking.cta": "Tester la démo (1 min)"
 }
