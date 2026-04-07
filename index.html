@@ -67,15 +67,63 @@
   </button>
 </nav>
 
-<section id="hero">
-  <h1 data-i18n="hero.name">Olena Mykhalska</h1>
-  <p class="subtitle" data-i18n="hero.role">
-    CHEFFE DE PROJET DIGITAL - PROFIL HYBRIDE
-  </p>
-<a href="docs/CV_Olena_Mykhalska.pdf" class="btn-primary" target="_blank" rel="noopener" data-i18n="hero.cv">
-  Télécharger mon CV
-</a>
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <h1 data-i18n="hero.name">Olena Mykhalska</h1>
+    <p class="subtitle">CHEFFE DE PROJET DIGITAL - PROFIL HYBRIDE</p>
 
+    <p class="hero-intro" data-i18n="hero.intro">
+      Je conçois et structure des solutions digitales concrètes : sites web, MVP, automatisations et interfaces utiles, avec une approche à la fois produit, technique et utilisateur.
+    </p>
+
+    <p class="hero-intro secondary" data-i18n="hero.intro2">
+      Mon objectif : transformer des besoins complexes en solutions claires, testables et réellement utiles.
+    </p>
+
+    <div class="hero-actions">
+      <a href="docs/CV_Olena_Mykhalska.pdf" class="btn-primary" target="_blank" rel="noopener" data-i18n="hero.cv">
+        Télécharger mon CV
+      </a>
+
+      <a href="#microassist-featured" class="btn-secondary" data-i18n="hero.ctaProject">
+        Voir le projet phare
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="value" class="value-section">
+  <h2 data-i18n="value.title">Ce que je peux apporter</h2>
+
+  <div class="value-grid">
+    <article class="value-card">
+      <h3 data-i18n="value.1.title">Structurer un projet digital</h3>
+      <p data-i18n="value.1.desc">
+        Cadrer les besoins, organiser les priorités et transformer une idée en solution concrète.
+      </p>
+    </article>
+
+    <article class="value-card">
+      <h3 data-i18n="value.2.title">Concevoir des interfaces utiles</h3>
+      <p data-i18n="value.2.desc">
+        Penser l’expérience utilisateur, simplifier les parcours et rendre les outils plus clairs.
+      </p>
+    </article>
+
+    <article class="value-card">
+      <h3 data-i18n="value.3.title">Optimiser l’existant</h3>
+      <p data-i18n="value.3.desc">
+        Améliorer un site ou un produit sur les aspects SEO, accessibilité, performance et contenu.
+      </p>
+    </article>
+
+    <article class="value-card">
+      <h3 data-i18n="value.4.title">Créer des MVP testables</h3>
+      <p data-i18n="value.4.desc">
+        Développer des solutions simples, démontrables rapidement et prêtes à être testées sur le terrain.
+      </p>
+    </article>
+  </div>
 </section>
 
   <!-- À PROPOS -->
@@ -99,50 +147,281 @@
   </p>
 </section>
 
+
+
+<section id="projects-highlight" class="projects-highlight">
+  <h2 data-i18n="projects.title">Projets phares</h2>
+
+  <div class="projects-grid">
+    <article class="project-card">
+      <h3>MicroAssist</h3>
+      <p data-i18n="projects.microassist">
+        MVP SaaS pour micro-entrepreneurs : obligations, charges, logique d’accompagnement.
+      </p>
+      <a href="#microassist-featured" data-i18n="projects.seeMore">Voir plus</a>
+    </article>
+
+    <article class="project-card">
+      <h3>Réservation 24/7</h3>
+      <p data-i18n="projects.booking">
+        Solution de prise de demandes via QR code, Instagram ou Google Business.
+      </p>
+      <a href="#demo-bot" data-i18n="projects.seeMore">Voir plus</a>
+    </article>
+
+    <article class="project-card">
+      <h3>Art for Good</h3>
+      <p>
+        Webmastering WordPress, optimisation SEO, maintenance, sécurité et gestion technique.
+      </p>
+      <a href="#webmastering">Voir plus</a>
+    </article>
+
+    <article class="project-card">
+      <h3>La Ferme des Amandiers</h3>
+      <p>
+        Site dynamique sans CMS : PHP, MySQL, PDO, filtres interactifs et responsive.
+      </p>
+      <a href="#devweb">Voir plus</a>
+    </article>
+  </div>
+</section>
+
+
 <section id="solutions">
+
+<section id="microassist-featured" class="featured-project">
+  <div class="featured-header">
+    <p class="eyebrow" data-i18n="microassist.label">Projet phare</p>
+    <h2 data-i18n="microassist.title">MicroAssist — Assistant fiscal SaaS pour micro-entrepreneurs</h2>
+    <p class="featured-subtitle" data-i18n="microassist.subtitle">
+      Un prototype SaaS avancé conçu pour aider les indépendants à comprendre leurs obligations, anticiper leurs charges et mieux piloter leur activité.
+    </p>
+    
+  </div>
+
+  <div class="featured-tags">
+    <span class="tag">SaaS</span>
+    <span class="tag">MVP</span>
+    <span class="tag">UX/UI</span>
+    <span class="tag">Front-end</span>
+    <span class="tag">Logique produit</span>
+  </div>
+
+  <div class="featured-grid">
+    <div class="featured-text">
+      <div class="mini-block">
+        <h3 data-i18n="microassist.problemTitle">Problème</h3>
+        <p data-i18n="microassist.problem">
+          Beaucoup de micro-entrepreneurs ne savent pas toujours quoi déclarer, quand agir ni comment anticiper leurs charges.
+        </p>
+      </div>
+
+      <div class="mini-block">
+        <h3 data-i18n="microassist.solutionTitle">Solution</h3>
+        <p data-i18n="microassist.solution">
+          Un assistant digital guidé, pensé pour transformer un sujet complexe en parcours simple, lisible et rassurant.
+        </p>
+      </div>
+
+      <div class="mini-block">
+        <h3 data-i18n="microassist.statusTitle">Statut</h3>
+        <p data-i18n="microassist.status">
+          Prototype avancé, pratiquement prêt pour tests utilisateurs.
+        </p>
+      </div>
+
+      <div class="featured-actions">
+        <a href="https://microassist.vercel.app/" target="_blank" rel="noopener" class="btn-primary" data-i18n="microassist.cta">
+          Tester la démo
+        </a>
+        <a href="#competences" class="btn-secondary" data-i18n="microassist.cta2">
+          Voir les compétences liées
+        </a>
+      </div>
+    </div>
+
+    <div class="featured-visual">
+      <img src="image/microassist-preview.jpg" alt="Aperçu du prototype SaaS MicroAssist">
+    </div>
+  </div>
+</section>
+
   <h2 data-i18n="solutions.title">Solutions prêtes à installer</h2>
-  <p data-i18n="solutions.subtitle">Des MVP concrets, testables en 1 minute.</p>
+  <p data-i18n="solutions.subtitle">Des MVP concrets, testables rapidement.</p>
 
   <section id="demo-bot" class="solution-card">
     <h3 data-i18n="demo.booking.title">Réservation 24/7 — Prise de demandes via QR / Instagram</h3>
-    <p data-i18n="demo.booking.desc">Page prête à partager : QR code, Instagram bio ou lien Google Business.</p>
+    <p data-i18n="demo.booking.desc">
+      Page prête à partager : QR code, bio Instagram ou lien Google Business.
+    </p>
+
+    <div class="solution-tags">
+      <span class="tag">Bot</span>
+      <span class="tag">Réservation</span>
+      <span class="tag">Lead capture</span>
+      <span class="tag">Démo live</span>
+    </div>
 
     <a href="https://reservation-bot-demo.pages.dev" target="_blank" rel="noopener" class="btn-demo"
        data-i18n="demo.booking.cta">Tester la démo (1 min)</a>
 
-    <iframe
-      src="https://reservation-bot-demo.pages.dev"
-      width="100%"
-      height="800"
-      style="border:none; border-radius:16px;"
-      loading="lazy"
-      title="Démo Réservation 24/7">
-    </iframe>
+    <div class="solution-preview">
+      <img src="image/booking-bot-preview.jpg" alt="Aperçu de la démo Réservation 24/7">
+    </div>
   </section>
 </section>
 
-  <!-- COMPÉTENCES -->
-<!-- ================= COMPÉTENCES (CLEAN) ================= -->
- 
+
+<!-- COMPÉTENCES -->
 <section id="competences" aria-labelledby="comp-title">
   <h2 id="comp-title" data-i18n="comp.title">Compétences & réalisations</h2>
 
-<ul class="competences-list">
+  <ul class="competences-list">
 
-  <!-- =========================
-  1) WEBMASTERING & OPTIMISATION
-  ========================== -->
-  <li class="competence-item">
-    <div role="button" tabindex="0"
-         aria-controls="c-webmaster" aria-expanded="false"
-         onclick="toggleDetails('c-webmaster')"
-         onkeypress="if(event.key==='Enter'){toggleDetails('c-webmaster')}">
-      <strong data-i18n="cat.webmaster">Webmastering & optimisation</strong> —
-      <span class="tag">WordPress</span>
-      <span class="tag">Performance</span>
-      <span class="tag">Sécurité</span>
-      <span class="tag">Accessibilité</span>
-    </div>
+    <!-- PRODUITS DIGITAUX & MVP -->
+    <li class="competence-item">
+      <div role="button" tabindex="0"
+           aria-controls="c-products" aria-expanded="false"
+           onclick="toggleDetails('c-products')"
+           onkeypress="if(event.key==='Enter'){toggleDetails('c-products')}">
+        <strong>Produits digitaux & MVP</strong> —
+        <span class="tag">SaaS</span>
+        <span class="tag">MVP</span>
+        <span class="tag">UX/UI</span>
+        <span class="tag">Produit</span>
+        <span class="tag">Front-end</span>
+      </div>
+
+      <div id="c-products" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+        <details class="sub">
+          <summary><strong>MicroAssist — Assistant fiscal SaaS pour micro-entrepreneurs</strong></summary>
+
+          <p>
+            <strong>Contexte :</strong> conception et développement d’un prototype SaaS destiné
+            à aider les micro-entrepreneurs à mieux comprendre leurs obligations fiscales,
+            anticiper leurs charges et structurer leur gestion quotidienne.
+          </p>
+
+          <p>
+            <strong>Objectif :</strong> rendre un sujet complexe plus simple, plus lisible et plus rassurant
+            grâce à une interface guidée et une logique produit centrée utilisateur.
+          </p>
+
+          <ul>
+            <li><strong>Analyse du besoin :</strong> compréhension des difficultés concrètes des indépendants</li>
+            <li><strong>Logique MVP :</strong> priorisation des fonctionnalités essentielles</li>
+            <li><strong>UX/UI :</strong> parcours guidé, lisibilité, clarté de l’interface</li>
+            <li><strong>Développement front-end :</strong> structuration d’une interface interactive</li>
+            <li><strong>Vision produit :</strong> réflexion SaaS, test utilisateur, valeur d’usage</li>
+          </ul>
+
+          <p><strong>Statut :</strong> prototype avancé, pratiquement prêt pour tests utilisateurs.</p>
+
+          <p>
+            🌐 <a href="https://microassist.vercel.app/" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+          </p>
+
+          <div class="featured-visual">
+  <div class="gallery microassist-gallery">
+    <figure>
+      <img src="image/MVP/Assistant_fiscal_pour_microentrepreneurs.png" alt="Accueil de MicroAssist">
+      <figcaption>Accueil — assistant fiscal</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/MVP/Creer_mon_profil_fiscal.png" alt="Création du profil fiscal dans MicroAssist">
+      <figcaption>Création du profil fiscal</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/MVP/Mon_espace_fiscal.png" alt="Espace fiscal de MicroAssist">
+      <figcaption>Mon espace fiscal</figcaption>
+    </figure>
+  </div>
+</div>
+        </details>
+      </div>
+    </li>
+
+    <!-- 1) WEBMASTERING & OPTIMISATION -->
+<li class="competence-item" id="webmastering">
+  <div role="button" tabindex="0"
+       aria-controls="c-webmaster" aria-expanded="false"
+       onclick="toggleDetails('c-webmaster')"
+       onkeypress="if(event.key==='Enter'){toggleDetails('c-webmaster')}">
+    <strong data-i18n="cat.webmaster">Webmastering & optimisation</strong> —
+    <span class="tag">WordPress</span>
+    <span class="tag">Performance</span>
+    <span class="tag">Sécurité</span>
+    <span class="tag">Accessibilité</span>
+  </div>
+
+      <div id="c-webmaster" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
+        <details class="sub">
+          <summary><strong>Stage — Art for Good (Paris)</strong> : webmastering & optimisation (12 sept. – 27 nov. 2025)</summary>
+
+          <p><strong>Contexte :</strong> audit et remise en état d’un site WordPress existant, optimisation SEO/performance, sécurité & accessibilité.</p>
+
+          <ul>
+            <li><strong>Site :</strong> <em>Art for Good (WordPress)</em></li>
+            <li><strong>Audit & corrections :</strong> structure des pages, liens internes/externes, navigation, cohérence globale.</li>
+            <li><strong>SEO :</strong> optimisation des contenus, hiérarchie des titres, maillage interne.</li>
+            <li><strong>Performance & maintenance :</strong> mises à jour thème/plugins, nettoyage, optimisation générale.</li>
+            <li><strong>Sécurité :</strong> sauvegardes, configuration de plugins de sécurité, bonnes pratiques.</li>
+            <li><strong>Contenu :</strong> création et mise à jour de pages, refonte du slider, création d’une FAQ.</li>
+          </ul>
+
+          <p><strong>Résultats :</strong> site stabilisé, structure clarifiée, formulaires fiabilisés, base de maintenance et de bonnes pratiques mise en place.</p>
+
+          <p><strong>Preuves (assets) :</strong> OVH (domaines, SSL), FTP, phpMyAdmin, réglages SMTP, liste de plugins, pages optimisées, audits Lighthouse/WAVE.</p>
+
+          <h5>🛠️ Ce que j’ai réalisé</h5>
+          <ul class="keypoints">
+            <li>Audit technique et fonctionnel d’un site WordPress existant</li>
+            <li>Correction de la structure, navigation et liens internes / externes</li>
+            <li>Optimisation SEO, performance et bonnes pratiques</li>
+            <li>Sécurisation : sauvegardes, plugins, maintenance</li>
+            <li>Gestion hébergement OVH : domaines, SSL, FTP, bases de données</li>
+          </ul>
+
+          <h5>🖼️ Exemples (preuves techniques)</h5>
+          <div class="gallery">
+            <figure>
+              <img src="stage/artforgoodhome1.png" alt="Page d’accueil Art for Good">
+              <figcaption>Accueil — avant / après optimisation</figcaption>
+            </figure>
+
+            <figure>
+              <img src="stage/artforgoogplagins.png" alt="Plugins WordPress">
+              <figcaption>Plugins — sécurité, cache, SEO</figcaption>
+            </figure>
+
+            <figure>
+              <img src="stage/artforgoodSMPT.png" alt="Réglages SMTP">
+              <figcaption>SMTP — configuration e-mails</figcaption>
+            </figure>
+
+            <figure>
+              <img src="stage/OVH1.jpeg" alt="OVH Cloud">
+              <figcaption>OVH — hébergement & SSL</figcaption>
+            </figure>
+
+            <figure>
+              <img src="stage/FTP.jpeg" alt="FTP FileZilla">
+              <figcaption>FTP — accès serveur</figcaption>
+            </figure>
+
+            <figure>
+              <img src="stage/phpadmin.jpeg" alt="phpMyAdmin">
+              <figcaption>Base de données — phpMyAdmin</figcaption>
+            </figure>
+          </div>
+        </details>
+      </div>
+    </li>
+
+
 
     <div id="c-webmaster" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
@@ -329,17 +608,19 @@
   <!-- =========================
   2) DÉVELOPPEMENT WEB
   ========================== -->
-  <li class="competence-item">
-    <div role="button" tabindex="0"
-         aria-controls="c-dev" aria-expanded="false"
-         onclick="toggleDetails('c-dev')"
-         onkeypress="if(event.key==='Enter'){toggleDetails('c-dev')}">
-      <strong data-i18n="cat.dev">Développement web</strong> —
-      <span class="tag">HTML</span>
-      <span class="tag">CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">PHP (bases)</span>
-    </div>
+<li class="competence-item" id="devweb">
+  <div role="button" tabindex="0"
+       aria-controls="c-dev" aria-expanded="false"
+       onclick="toggleDetails('c-dev')"
+       onkeypress="if(event.key==='Enter'){toggleDetails('c-dev')}">
+    <strong data-i18n="cat.dev">Développement web</strong> —
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">PHP (bases)</span>
+  </div>
+
+
 
     <div id="c-dev" class="details" style="display:none; padding:1em; border-left:3px solid #7D2D2D;">
 
@@ -1646,6 +1927,7 @@
 </section>
 
   <!-- ========= FIN DES AJOUTS ========= -->
+   
 
   <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-title">
